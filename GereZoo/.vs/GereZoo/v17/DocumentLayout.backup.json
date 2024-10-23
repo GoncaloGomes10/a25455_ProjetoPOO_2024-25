@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B0FC1CD5-EE0A-433C-810D-5EB2CAAAF741}|DLLs\\TipodeComida\\TipodeComida.csproj|c:\\users\\gonca\\onedrive\\ambiente de trabalho\\a25455_projetopoo_2024-25\\gerezoo\\dlls\\tipodecomida\\tipodecomida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0FC1CD5-EE0A-433C-810D-5EB2CAAAF741}|DLLs\\TipodeComida\\TipodeComida.csproj|solutionrelative:dlls\\tipodecomida\\tipodecomida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4006A451-C1E2-4BC7-9A0B-C7AB234C335E}|DLLs\\Alimenta\u00E7\u00E3o\\Alimenta\u00E7\u00E3o.csproj|c:\\users\\gonca\\onedrive\\ambiente de trabalho\\a25455_projetopoo_2024-25\\gerezoo\\dlls\\alimenta\u00E7\u00E3o\\alimenta\u00E7\u00E3o.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4006A451-C1E2-4BC7-9A0B-C7AB234C335E}|DLLs\\Alimenta\u00E7\u00E3o\\Alimenta\u00E7\u00E3o.csproj|solutionrelative:dlls\\alimenta\u00E7\u00E3o\\alimenta\u00E7\u00E3o.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9874975E-48AA-4472-8B0E-BCE583977BF6}|DLLs\\Animal\\Animal.csproj|c:\\users\\gonca\\onedrive\\ambiente de trabalho\\a25455_projetopoo_2024-25\\gerezoo\\dlls\\animal\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9874975E-48AA-4472-8B0E-BCE583977BF6}|DLLs\\Animal\\Animal.csproj|solutionrelative:dlls\\animal\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBE05FE1-FF89-4239-BF6E-F8B421A715CF}|DLLs\\Bilhete\\Bilhete.csproj|c:\\users\\gonca\\onedrive\\ambiente de trabalho\\a25455_projetopoo_2024-25\\gerezoo\\dlls\\bilhete\\bilhete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBE05FE1-FF89-4239-BF6E-F8B421A715CF}|DLLs\\Bilhete\\Bilhete.csproj|solutionrelative:dlls\\bilhete\\bilhete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA5B7A8E-5FF5-4D72-99E1-CA42F538D1BA}|GereZoo\\GereZoo.csproj|c:\\users\\gonca\\onedrive\\ambiente de trabalho\\a25455_projetopoo_2024-25\\gerezoo\\gerezoo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA5B7A8E-5FF5-4D72-99E1-CA42F538D1BA}|GereZoo\\GereZoo.csproj|solutionrelative:gerezoo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Alimenta\u00E7\u00E3o.cs",
+              "DocumentMoniker": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoo\\DLLs\\Alimenta\u00E7\u00E3o\\Alimenta\u00E7\u00E3o.cs",
+              "RelativeDocumentMoniker": "DLLs\\Alimenta\u00E7\u00E3o\\Alimenta\u00E7\u00E3o.cs",
+              "ToolTip": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoo\\DLLs\\Alimenta\u00E7\u00E3o\\Alimenta\u00E7\u00E3o.cs",
+              "RelativeToolTip": "DLLs\\Alimenta\u00E7\u00E3o\\Alimenta\u00E7\u00E3o.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T15:34:14.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TipodeComida.cs",
+              "DocumentMoniker": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoo\\DLLs\\TipodeComida\\TipodeComida.cs",
+              "RelativeDocumentMoniker": "DLLs\\TipodeComida\\TipodeComida.cs",
+              "ToolTip": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoo\\DLLs\\TipodeComida\\TipodeComida.cs",
+              "RelativeToolTip": "DLLs\\TipodeComida\\TipodeComida.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T15:33:13.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Bilhete.cs",
+              "DocumentMoniker": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoo\\DLLs\\Bilhete\\Bilhete.cs",
+              "RelativeDocumentMoniker": "DLLs\\Bilhete\\Bilhete.cs",
+              "ToolTip": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoo\\DLLs\\Bilhete\\Bilhete.cs",
+              "RelativeToolTip": "DLLs\\Bilhete\\Bilhete.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T15:30:51.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Animal.cs",
+              "DocumentMoniker": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoo\\DLLs\\Animal\\Animal.cs",
+              "RelativeDocumentMoniker": "DLLs\\Animal\\Animal.cs",
+              "ToolTip": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoo\\DLLs\\Animal\\Animal.cs",
+              "RelativeToolTip": "DLLs\\Animal\\Animal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T15:17:36.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoo\\GereZoo\\Program.cs",
+              "RelativeDocumentMoniker": "GereZoo\\Program.cs",
+              "ToolTip": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoo\\GereZoo\\Program.cs",
+              "RelativeToolTip": "GereZoo\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T15:05:58.453Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

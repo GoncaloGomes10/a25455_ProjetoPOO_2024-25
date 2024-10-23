@@ -1,0 +1,5 @@
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoo\DLLs\Alimentação\obj\Debug\net8.0\Alimentação.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoo\DLLs\Alimentação\obj\Debug\net8.0\Alimentação.AssemblyInfoInputs.cache
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoo\DLLs\Alimentação\obj\Debug\net8.0\Alimentação.AssemblyInfo.cs
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoo\DLLs\Alimentação\obj\Debug\net8.0\Alimentação.csproj.CoreCompileInputs.cache
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoo\DLLs\Alimentação\obj\Debug\net8.0\Alimentação.sourcelink.json
