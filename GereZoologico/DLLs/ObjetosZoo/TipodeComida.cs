@@ -14,9 +14,9 @@ namespace ObjetosZoo
     }
     public class TipoComida
     {
-        Dieta dieta;
-        string nome;
-        double calorias;
+        public Dieta dieta;
+        public string nome;
+        public double calorias;
 
         public TipoComida(string nome, double calorias, Dieta dieta)
         {
@@ -25,9 +25,10 @@ namespace ObjetosZoo
             this.dieta = dieta;
         }
         
-        public void MostraDetalhesTipodeComida()
+        public bool MostraDetalhesTipodeComida()
         {
-            Console.WriteLine($"Comida: {nome}, Calorias: {calorias}");
+            Console.WriteLine($"Comida: {nome}, Calorias: {calorias}, Tipo:{dieta}");
+            return true;
         }
 
     }
