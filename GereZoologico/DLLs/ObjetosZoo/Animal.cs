@@ -15,6 +15,8 @@ namespace ObjetosZoo
     }
     public class Animal
     {
+        #region Atributes
+        
         DIETA dieta;
         string nome;
         string especie;
@@ -22,6 +24,11 @@ namespace ObjetosZoo
         double peso;
         internal static List<Animal> animais = new List<Animal>();
 
+        #endregion
+
+        #region Methods
+
+        #region Constructor
         public Animal(string nome,string especie, int idade, double peso, DIETA dieta)
         {
             this.nome = nome;
@@ -30,6 +37,7 @@ namespace ObjetosZoo
             this.peso = peso;
             this.dieta = dieta;
         }
+        #endregion    
 
         public void MostraAnimal()
         {
@@ -44,12 +52,19 @@ namespace ObjetosZoo
             return true;
         }
 
-
+        #region Overrides
         public override string ToString()
         {
-            string outStr = String.Format("Nome: {0} Especie: {1} Idade: {2} Peso: {3} Tipo: {4}", nome,especie,idade,peso,dieta);
+            string outStr = String.Format("Nome: {0} Especie: {1} Idade: {2} Peso: {3} Tipo: {4}", nome, especie, idade, peso, dieta);
             return outStr;
         }
+        #endregion
+
+        #region Destructor
+        #endregion
+
+        #endregion
+
     }
 
 }

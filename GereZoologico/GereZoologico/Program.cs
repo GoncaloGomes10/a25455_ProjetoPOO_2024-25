@@ -24,7 +24,7 @@ namespace Main // Note: actual namespace depends on the project name.
             LimpezaJaula limpezajaula1 =new LimpezaJaula(jaula1,DateTime.Now);
             limpezajaula1.JaulaLimpa();
 
-            Animal.CriarAnimal("Manel","Leao",20,34.6,DIETA.Carnivoro);
+            Animal.CriarAnimal("Manel","Leao",12,250.3,DIETA.Carnivoro);
 
 
         }
