@@ -13,3 +13,7 @@ C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoolo
 C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\GereZoologico\obj\Debug\net8.0\Main.pdb
 C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\GereZoologico\obj\Debug\net8.0\Main.genruntimeconfig.cache
 C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\GereZoologico\obj\Debug\net8.0\ref\Main.dll
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\GereZoologico\bin\Debug\net8.0\ObjetosZoo.dll
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\GereZoologico\bin\Debug\net8.0\ObjetosZoo.pdb
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\GereZoologico\obj\Debug\net8.0\Main.csproj.AssemblyReference.cache
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\GereZoologico\obj\Debug\net8.0\Main.csproj.Up2Date

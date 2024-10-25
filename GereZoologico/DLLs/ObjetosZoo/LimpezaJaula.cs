@@ -8,7 +8,24 @@ namespace ObjetosZoo
 {
     public class LimpezaJaula
     {
-        int idjaula;
+        Jaula jaula;
+        DateTime horalimpeza;
+
+
+        public LimpezaJaula (Jaula jaula, DateTime horalimpeza)
+        {
+            this.jaula = jaula;
+            this.horalimpeza = horalimpeza;
+        }
+
+        public void JaulaLimpa()
+        {
+            Console.WriteLine($"{jaula} foi limpa: {horalimpeza}");
+        }
+
+        
+        
+
 
     }
 }

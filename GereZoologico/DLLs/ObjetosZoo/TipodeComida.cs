@@ -1,34 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ObjetosZoo
-{
-    public enum Dieta
-    {
-        Carnivoro,
-        Herbivoro,
-        Omnivoro
-    }
+{ 
     public class TipoComida
     {
-        public Dieta dieta;
         public string nome;
         public double calorias;
 
-        public TipoComida(string nome, double calorias, Dieta dieta)
+        public TipoComida(string nome, double calorias)
         {
             this.nome = nome;
             this.calorias = calorias;
-            this.dieta = dieta;
         }
         
         public bool MostraDetalhesTipodeComida()
         {
-            Console.WriteLine($"Comida: {nome}, Calorias: {calorias}, Tipo:{dieta}");
+            Console.WriteLine($"Comida: {nome}, Calorias: {calorias}");
             return true;
+        }
+
+        public override string ToString()  
+        {
+            string outStr = String.Format("Nome: {0}\t Calorias: {1}\t",nome,calorias);
+            return outStr;
         }
 
     }

@@ -1,0 +1,12 @@
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\ObjetosZoo\bin\Debug\net8.0\ObjetosZoo.deps.json
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\ObjetosZoo\bin\Debug\net8.0\ObjetosZoo.dll
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\ObjetosZoo\bin\Debug\net8.0\ObjetosZoo.pdb
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\ObjetosZoo\obj\Debug\net8.0\ObjetosZoo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\ObjetosZoo\obj\Debug\net8.0\ObjetosZoo.AssemblyInfoInputs.cache
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\ObjetosZoo\obj\Debug\net8.0\ObjetosZoo.AssemblyInfo.cs
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\ObjetosZoo\obj\Debug\net8.0\ObjetosZoo.csproj.CoreCompileInputs.cache
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\ObjetosZoo\obj\Debug\net8.0\ObjetosZoo.sourcelink.json
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\ObjetosZoo\obj\Debug\net8.0\ObjetosZoo.dll
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\ObjetosZoo\obj\Debug\net8.0\refint\ObjetosZoo.dll
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\ObjetosZoo\obj\Debug\net8.0\ObjetosZoo.pdb
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\ObjetosZoo\obj\Debug\net8.0\ref\ObjetosZoo.dll

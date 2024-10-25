@@ -7,14 +7,30 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "Main/1.0.0": {
+        "dependencies": {
+          "ObjetosZoo": "1.0.0"
+        },
         "runtime": {
           "Main.dll": {}
+        }
+      },
+      "ObjetosZoo/1.0.0": {
+        "runtime": {
+          "ObjetosZoo.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
   },
   "libraries": {
     "Main/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ObjetosZoo/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
