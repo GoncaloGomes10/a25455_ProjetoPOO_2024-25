@@ -3,20 +3,28 @@
 *		Copyright (c) 2024 All Rights Reserved
 *	</copyright>
 * 	<author>gonca</author>
-*   <date>26/10/2024 16:24:23</date>
+*   <date>26/10/2024 17:05:05</date>
 *	<description></description>
 */
 
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ObjetosZoo
 {
+    /// <summary>
+    /// Purpose: 
+    /// Created by: gonca
+    /// Created on: 26/10/2024 17:05:05
+    /// </summary>
+    /// <remarks></remarks>
+    /// <example></example>
     public class AssistênciaVeterinária
     {
+
+        //habitat que foi tratar o animal
+        //qual animal foi tratado
+        //quando foi tratado
         #region Attributes
         #endregion
 
@@ -41,8 +49,5 @@ namespace ObjetosZoo
         #endregion
 
         #endregion
-       
-
-
     }
 }

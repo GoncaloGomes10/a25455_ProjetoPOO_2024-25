@@ -16,6 +16,13 @@ using System.Threading.Tasks;
 
 namespace ObjetosZoo
 {
+    /// <summary>
+    /// Purpose: 
+    /// Created by: gonca
+    /// Created on: 26/10/2024 16:24:23
+    /// </summary>
+    /// <remarks></remarks>
+    /// <example></example>
     public class Alimentacao
     {
         #region Attributes  
@@ -51,7 +58,7 @@ namespace ObjetosZoo
         #region OtherMethods
         public void RegistraAlimentacao()
         {
-            Console.WriteLine($"Animal: {animal} Tempo: {tempoAlimentacao}, Quantidade(kg): {quantidade}, Tipo:{tipocomida}");
+            Console.WriteLine($"{animal}\n DD/MM/AA HORAS: {tempoAlimentacao}, Comeu:{tipocomida}\n Quantidade(kg): {quantidade}");
 
         }
         #endregion

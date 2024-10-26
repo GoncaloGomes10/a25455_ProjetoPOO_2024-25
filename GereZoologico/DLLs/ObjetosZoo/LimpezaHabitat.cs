@@ -15,9 +15,17 @@ using System.Threading.Tasks;
 
 namespace ObjetosZoo
 {
+    /// <summary>
+    /// Purpose: 
+    /// Created by: gonca
+    /// Created on: 26/10/2024 16:24:23
+    /// </summary>
+    /// <remarks></remarks>
+    /// <example></example>
     public class LimpezaHabitat
     {
         #region Attributes
+
         Habitat habitat;
         DateTime horalimpeza;
 

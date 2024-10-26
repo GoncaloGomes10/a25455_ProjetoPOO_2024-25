@@ -16,7 +16,14 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ObjetosZoo
-{ 
+{
+    /// <summary>
+    /// Purpose: 
+    /// Created by: gonca
+    /// Created on: 26/10/2024 16:24:23
+    /// </summary>
+    /// <remarks></remarks>
+    /// <example></example>
     public class TipoComida
     {
         #region Attributes
@@ -46,7 +53,7 @@ namespace ObjetosZoo
         #region Overrides 
         public override string ToString()  
         {
-            string outStr = String.Format("Nome: {0}\t Calorias: {1}\t",nome,calorias);
+            string outStr = String.Format(" {0} ,Calorias: {1}",nome,calorias);
             return outStr;
         }
         #endregion

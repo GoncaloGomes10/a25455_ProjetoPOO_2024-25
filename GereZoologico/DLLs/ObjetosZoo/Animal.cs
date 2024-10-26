@@ -16,6 +16,13 @@ using System.Threading.Tasks;
 
 namespace ObjetosZoo
 {
+    /// <summary>
+    /// Purpose: 
+    /// Created by: gonca
+    /// Created on: 26/10/2024 16:24:23
+    /// </summary>
+    /// <remarks></remarks>
+    /// <example></example>
     public enum DIETA
     {
         Carnivoro,
@@ -57,7 +64,7 @@ namespace ObjetosZoo
         #region Overrides 
         public override string ToString()
         {
-            string outStr = String.Format("Nome: {0} Especie: {1} Idade: {2} Peso: {3} Tipo: {4}", nome, especie, idade, peso, dieta);
+            string outStr = String.Format("Nome: {0} Especie: {1} Idade: {2} Peso: {3} kg Tipo: {4}", nome, especie, idade, peso, dieta);
             return outStr;
         }
        

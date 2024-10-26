@@ -15,11 +15,19 @@ using System.Threading.Tasks;
 
 namespace ObjetosZoo
 {
+    /// <summary>
+    /// Purpose: 
+    /// Created by: gonca
+    /// Created on: 26/10/2024 16:24:23
+    /// </summary>
+    /// <remarks></remarks>
+    /// <example></example>
     public class Habitat
     {
         #region Attributes
 
         int idhabitat;
+        string nomehabitat;
         List<Animal> animaishabitat;
 
         #endregion
@@ -27,10 +35,11 @@ namespace ObjetosZoo
         #region Methods
 
         #region Constructors   
-        public Habitat(int idhabitat)
+        public Habitat(int idhabitat, string nomehabitat)
         {
             this.idhabitat = idhabitat;
             animaishabitat = new List<Animal>();
+            this.nomehabitat = nomehabitat;
         }
 
         #endregion
@@ -44,7 +53,7 @@ namespace ObjetosZoo
         #region Overrides 
         public override string ToString()  
         {
-            string outStr = String.Format("IDHabitat: {0}",idhabitat);
+            string outStr = String.Format("IDHabitat: {0} Nome Habitat: {1}",idhabitat,nomehabitat);
             return outStr;
         }
         #endregion
@@ -52,7 +61,7 @@ namespace ObjetosZoo
         #region OtherMethods
         public void MostraHabitat()
         {
-            Console.WriteLine($"Habitat com ID:{idhabitat}");
+            Console.WriteLine($"Habitat dos/as {nomehabitat} com ID:{idhabitat}");
         }
 
         #endregion
