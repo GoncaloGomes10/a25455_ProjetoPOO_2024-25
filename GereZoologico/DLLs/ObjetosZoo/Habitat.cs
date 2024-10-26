@@ -10,52 +10,49 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ObjetosZoo
-{ 
-    public class TipoComida
+{
+    public class Habitat
     {
         #region Attributes
 
-        public string nome;
-        public double calorias;
+        int idhabitat;
+        List<Animal> animaishabitat;
 
         #endregion
 
         #region Methods
 
-        #region Constructors
-        public TipoComida(string nome, double calorias)
+        #region Constructors   
+        public Habitat(int idhabitat)
         {
-            this.nome = nome;
-            this.calorias = calorias;
+            this.idhabitat = idhabitat;
+            animaishabitat = new List<Animal>();
         }
-        
+
         #endregion
 
         #region Properties
         #endregion
 
-        #region Operators
+        #region Operators 
         #endregion
 
         #region Overrides 
         public override string ToString()  
         {
-            string outStr = String.Format("Nome: {0}\t Calorias: {1}\t",nome,calorias);
+            string outStr = String.Format("IDHabitat: {0}",idhabitat);
             return outStr;
         }
         #endregion
 
         #region OtherMethods
-        public bool MostraDetalhesTipodeComida()
+        public void MostraHabitat()
         {
-            Console.WriteLine($"Comida: {nome}, Calorias: {calorias}");
-            return true;
+            Console.WriteLine($"Habitat com ID:{idhabitat}");
         }
 
         #endregion
@@ -65,8 +62,13 @@ namespace ObjetosZoo
 
         #endregion
         
-        
+
+
+
+     
+
        
-        
+
+
     }
 }

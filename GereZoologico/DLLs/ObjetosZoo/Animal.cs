@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+*	<copyright file="ObjetosZoo" company="IPCA">
+*		Copyright (c) 2024 All Rights Reserved
+*	</copyright>
+* 	<author>gonca</author>
+*   <date>26/10/2024 16:24:23</date>
+*	<description></description>
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,13 +31,13 @@ namespace ObjetosZoo
         string especie;
         int idade;
         double peso;
-        internal static List<Animal> animais = new List<Animal>();
+        public static List<Animal> animais = new List<Animal>();
 
         #endregion
 
         #region Methods
 
-        #region Constructor
+        #region Constructors  
         public Animal(string nome,string especie, int idade, double peso, DIETA dieta)
         {
             this.nome = nome;
@@ -37,13 +46,24 @@ namespace ObjetosZoo
             this.peso = peso;
             this.dieta = dieta;
         }
-        #endregion    
+        #endregion
 
-        public void MostraAnimal()
+        #region Properties
+        #endregion
+
+        #region Operators
+        #endregion
+
+        #region Overrides 
+        public override string ToString()
         {
-            Console.WriteLine($"");
+            string outStr = String.Format("Nome: {0} Especie: {1} Idade: {2} Peso: {3} Tipo: {4}", nome, especie, idade, peso, dieta);
+            return outStr;
         }
+       
+        #endregion
 
+        #region OtherMethods  
         public static bool CriarAnimal(string nome,string especie,int idade,double peso,DIETA dieta)
         {
             Animal animal = new Animal(nome,especie,idade,peso,dieta);
@@ -51,12 +71,9 @@ namespace ObjetosZoo
 
             return true;
         }
-
-        #region Overrides
-        public override string ToString()
+        public void MostraAnimal()
         {
-            string outStr = String.Format("Nome: {0} Especie: {1} Idade: {2} Peso: {3} Tipo: {4}", nome, especie, idade, peso, dieta);
-            return outStr;
+            Console.WriteLine($"");
         }
         #endregion
 
@@ -64,6 +81,16 @@ namespace ObjetosZoo
         #endregion
 
         #endregion
+      
+            
+
+      
+
+
+       
+       
+
+      
 
     }
 

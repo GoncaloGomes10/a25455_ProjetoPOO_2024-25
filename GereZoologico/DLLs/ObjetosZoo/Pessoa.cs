@@ -7,28 +7,21 @@
 *	<description></description>
 */
 
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ObjetosZoo
 {
-    public enum TIPOESPETÁCULO
+    /// <summary>
+    /// Purpose: 
+    /// Created by: gonca
+    /// Created on: 26/10/2024 16:24:23
+    /// </summary>
+    /// <remarks></remarks>
+    /// <example></example>
+    public class Pessoa
     {
-        Elefante,
-        Macaco,
-        Golfinho,
-        Orcas,
-        Leão
-    }
-    public class Espetáculo
-    {
-        #region Attributes 
-
-        TIPOESPETÁCULO tipoespetaculo;
-
+        #region Attributes
         #endregion
 
         #region Methods
@@ -52,8 +45,5 @@ namespace ObjetosZoo
         #endregion
 
         #endregion
-        
-
-
     }
 }

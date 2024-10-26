@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+*	<copyright file="ObjetosZoo" company="IPCA">
+*		Copyright (c) 2024 All Rights Reserved
+*	</copyright>
+* 	<author>gonca</author>
+*   <date>26/10/2024 16:24:23</date>
+*	<description></description>
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,10 +30,17 @@ namespace ObjetosZoo
     }
     public class Bilhete
     {
+        #region Attributes 
+
         ZONA zona;
         TIPOBILHETE tipobilhete;
         double preço;
 
+        #endregion
+
+        #region Methods
+
+        #region Constructors 
         public Bilhete(ZONA zona, TIPOBILHETE tipobilhete, double preço)
         {
             this.zona = zona;
@@ -32,11 +48,33 @@ namespace ObjetosZoo
             this.tipobilhete = tipobilhete;
 
         }
+        #endregion
 
+        #region Properties
+        #endregion
+
+        #region Operators
+        #endregion
+
+        #region Overrides
+        #endregion
+
+        #region OtherMethods
         public void VerBilhete()
         {
             Console.WriteLine($"O teu bilhete do tipo {tipobilhete} custou {preço} euros para a zona: {zona}");
         }
+        #endregion
+
+        #region Destructor
+        #endregion
+
+        #endregion
+       
+
+        
+
+        
 
     }
 }

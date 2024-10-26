@@ -13,29 +13,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace ObjetosZoo
 {
-    public class Alimentacao
+    public class LimpezaHabitat
     {
-        #region Attributes  
-
-        Animal animal;
-        DateTime tempoAlimentacao;
-        double quantidade;
-        TipoComida tipocomida;
+        #region Attributes
+        Habitat habitat;
+        DateTime horalimpeza;
 
         #endregion
 
         #region Methods
 
-        #region Constructors
-        public Alimentacao(Animal animal, DateTime tempoAlimentacao, double quantidade, TipoComida tipocomida)
+        #region Constructors  
+        public LimpezaHabitat (Habitat habitat, DateTime horalimpeza)
         {
-            this.animal = animal;
-            this.tempoAlimentacao = tempoAlimentacao;
-            this.quantidade = quantidade;
-            this.tipocomida = tipocomida;
+            this.habitat = habitat;
+            this.horalimpeza = horalimpeza;
         }
         #endregion
 
@@ -49,23 +43,25 @@ namespace ObjetosZoo
         #endregion
 
         #region OtherMethods
-        public void RegistraAlimentacao()
+        public void HabitatLimpo()
         {
-            Console.WriteLine($"Animal: {animal} Tempo: {tempoAlimentacao}, Quantidade(kg): {quantidade}, Tipo:{tipocomida}");
-
+            Console.WriteLine($"{habitat} foi limpa: {horalimpeza}");
         }
+
         #endregion
 
         #region Destructor
         #endregion
 
         #endregion
-     
+        
 
+      
 
+        
+        
         
 
 
-       
     }
 }
