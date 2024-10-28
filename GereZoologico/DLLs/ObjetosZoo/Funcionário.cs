@@ -3,39 +3,28 @@
 *		Copyright (c) 2024 All Rights Reserved
 *	</copyright>
 * 	<author>gonca</author>
-*   <date>26/10/2024 16:24:23</date>
+*   <date>28/10/2024 15:24:43</date>
 *	<description></description>
 */
 
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 
 namespace ObjetosZoo
 {
     /// <summary>
     /// Purpose: 
     /// Created by: gonca
-    /// Created on: 26/10/2024 16:24:23
+    /// Created on: 28/10/2024 15:24:43
     /// </summary>
     /// <remarks></remarks>
     /// <example></example>
-    public enum TIPOESPETÁCULO
+    public class Funcionário : Utilizador
     {
-        Elefante,
-        Macaco,
-        Golfinho,
-        Orcas,
-        Leão
-    }
-    public class Espetáculo
-    {
-        #region Attributes 
-
-        private int id;
-        private TIPOESPETÁCULO tipoespetaculo;
+        #region Attributes
+        private string nome;
+        private string NIF;
 
         #endregion
 
@@ -60,8 +49,5 @@ namespace ObjetosZoo
         #endregion
 
         #endregion
-        
-
-
     }
 }

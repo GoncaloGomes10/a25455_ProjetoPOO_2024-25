@@ -31,9 +31,11 @@ namespace Main
 
             Habitat habitat1 = new Habitat(1,"Leões");
             habitat1.MostraHabitat();
-
+            
             LimpezaHabitat limpezahabitat1 =new LimpezaHabitat(habitat1,DateTime.Now);
-            limpezahabitat1.HabitatLimpo();
+            limpezahabitat1.RegistrarHabitatLimpo();
+
+            Animal.MostraAnimais();
 
             
 

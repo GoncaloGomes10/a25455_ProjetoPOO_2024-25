@@ -3,7 +3,7 @@
 *		Copyright (c) 2024 All Rights Reserved
 *	</copyright>
 * 	<author>gonca</author>
-*   <date>26/10/2024 16:24:23</date>
+*   <date>28/10/2024 15:25:57</date>
 *	<description></description>
 */
 
@@ -15,13 +15,17 @@ namespace ObjetosZoo
     /// <summary>
     /// Purpose: 
     /// Created by: gonca
-    /// Created on: 26/10/2024 16:24:23
+    /// Created on: 28/10/2024 15:25:57
     /// </summary>
     /// <remarks></remarks>
     /// <example></example>
-    public class Pessoa
+    public class Cliente : Utilizador
     {
         #region Attributes
+        private string nome;
+        private string NIF;
+        private double saldo;
+
         #endregion
 
         #region Methods

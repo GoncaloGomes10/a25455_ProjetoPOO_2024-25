@@ -7,11 +7,8 @@
 *	<description></description>
 */
 
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ObjetosZoo
 {
@@ -22,20 +19,15 @@ namespace ObjetosZoo
     /// </summary>
     /// <remarks></remarks>
     /// <example></example>
-    public enum TIPOESPETÁCULO
+    public abstract class Utilizador
     {
-        Elefante,
-        Macaco,
-        Golfinho,
-        Orcas,
-        Leão
-    }
-    public class Espetáculo
-    {
-        #region Attributes 
+        #region Attributes
 
         private int id;
-        private TIPOESPETÁCULO tipoespetaculo;
+        private static int idstatic;
+        private string username;
+        private string password;
+        private string email;
 
         #endregion
 
@@ -60,8 +52,6 @@ namespace ObjetosZoo
         #endregion
 
         #endregion
-        
-
-
     }
+
 }

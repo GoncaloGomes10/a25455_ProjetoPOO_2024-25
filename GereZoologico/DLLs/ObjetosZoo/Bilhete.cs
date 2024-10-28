@@ -32,15 +32,17 @@ namespace ObjetosZoo
     {
         Passeio,
         Espetáculo,
-        Completo
+        Completo             // passeio e espetaculo
     }
     public class Bilhete
     {
         #region Attributes 
 
-        ZONA zona;
-        TIPOBILHETE tipobilhete;
-        double preço;
+        private ZONA zona;
+        private TIPOBILHETE tipobilhete;
+        private double preço;
+        private int id;
+        private static int idstatic;
 
         #endregion
 
@@ -49,14 +51,40 @@ namespace ObjetosZoo
         #region Constructors 
         public Bilhete(ZONA zona, TIPOBILHETE tipobilhete, double preço)
         {
-            this.zona = zona;
-            this.preço = preço;
-            this.tipobilhete = tipobilhete;
+            idstatic++;
+            id = idstatic;
+            TipoBilhete = tipobilhete;
+            Zona = zona;
+            Preço = preço;
 
         }
         #endregion
 
         #region Properties
+        public double Preço
+        {
+            get { return preço; }
+            set { preço = value; }
+        }
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+        
+        public ZONA Zona
+        {
+            get { return zona; }
+            set { zona = value; }
+        }
+
+        public TIPOBILHETE TipoBilhete
+        {
+            get { return tipobilhete; }
+            set { tipobilhete = value; }
+        }
+
         #endregion
 
         #region Operators
@@ -68,7 +96,7 @@ namespace ObjetosZoo
         #region OtherMethods
         public void VerBilhete()
         {
-            Console.WriteLine($"O teu bilhete do tipo {tipobilhete} custou {preço} euros para a zona: {zona}");
+            Console.WriteLine($"O teu bilhete {Id} do tipo {TipoBilhete} custou {Preço} euros para a zona: {Zona}");
         }
         #endregion
 

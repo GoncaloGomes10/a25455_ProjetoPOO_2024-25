@@ -27,10 +27,11 @@ namespace ObjetosZoo
     {
         #region Attributes  
 
-        Animal animal;
-        DateTime tempoAlimentacao;
-        double quantidade;
-        TipoComida tipocomida;
+        private Animal animal;
+        private DateTime tempoAlimentacao;
+        private double quantidade;
+        private TipoComida tipocomida;
+        //uma lista para registar todas as alimentações
 
         #endregion
 
@@ -39,14 +40,41 @@ namespace ObjetosZoo
         #region Constructors
         public Alimentacao(Animal animal, DateTime tempoAlimentacao, double quantidade, TipoComida tipocomida)
         {
-            this.animal = animal;
-            this.tempoAlimentacao = tempoAlimentacao;
-            this.quantidade = quantidade;
-            this.tipocomida = tipocomida;
+            Animal = animal;
+            TempoAlimentacao = tempoAlimentacao;
+            Quantidade = quantidade;
+            TipoComida = tipocomida;
+
         }
+
         #endregion
 
         #region Properties
+        
+        public Animal Animal
+        {
+            get { return animal; }
+            set { animal = value; }
+        }
+
+        public DateTime TempoAlimentacao
+        {
+            get { return tempoAlimentacao; }
+            set { tempoAlimentacao = value; }
+        }
+
+        public double Quantidade
+        {
+            get { return quantidade; }
+            set { quantidade = value; }
+        }
+
+        public TipoComida TipoComida
+        {
+            get { return tipocomida; }
+            set { tipocomida = value; }
+        }
+
         #endregion
 
         #region Operators
@@ -58,9 +86,14 @@ namespace ObjetosZoo
         #region OtherMethods
         public void RegistraAlimentacao()
         {
-            Console.WriteLine($"{animal}\n DD/MM/AA HORAS: {tempoAlimentacao}, Comeu:{tipocomida}\n Quantidade(kg): {quantidade}");
-
+            Console.WriteLine($"{animal}\n DD/MM/AA HORAS: {TempoAlimentacao}, Comeu:{TipoComida}\n Quantidade(kg): {Quantidade}");
         }
+
+        public void MostraAlimentacao()
+        {
+            Console.WriteLine($"");
+        }
+
         #endregion
 
         #region Destructor

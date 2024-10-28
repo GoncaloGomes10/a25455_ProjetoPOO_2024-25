@@ -26,9 +26,10 @@ namespace ObjetosZoo
     {
         #region Attributes
 
-        int idhabitat;
-        string nomehabitat;
-        List<Animal> animaishabitat;
+        private int idhabitat;
+        private string nomehabitat;
+        public List<Animal> animaishabitat;
+        public static List<Habitat> habitats;
 
         #endregion
 
@@ -37,14 +38,25 @@ namespace ObjetosZoo
         #region Constructors   
         public Habitat(int idhabitat, string nomehabitat)
         {
-            this.idhabitat = idhabitat;
+            IdHabitat = idhabitat;
             animaishabitat = new List<Animal>();
-            this.nomehabitat = nomehabitat;
+            NomeHabitat = nomehabitat;
         }
 
         #endregion
 
         #region Properties
+        public int IdHabitat
+        {
+            get { return idhabitat; }
+            set { idhabitat = value; }
+        }
+        public string NomeHabitat
+        {
+            get { return nomehabitat; }
+            set { nomehabitat = value; }
+        }
+
         #endregion
 
         #region Operators 
@@ -53,17 +65,40 @@ namespace ObjetosZoo
         #region Overrides 
         public override string ToString()  
         {
-            string outStr = String.Format("IDHabitat: {0} Nome Habitat: {1}",idhabitat,nomehabitat);
+            string outStr = String.Format("IDHabitat: {0} Nome Habitat: {1}",IdHabitat,NomeHabitat);
             return outStr;
         }
         #endregion
 
         #region OtherMethods
+
+        public static bool CriarHabitat(int idhabitat,string nomehabitat)
+        {
+            Habitat habitat = new Habitat(idhabitat, nomehabitat);
+            habitats.Add(habitat);
+            return true;
+
+        }
         public void MostraHabitat()
         {
-            Console.WriteLine($"Habitat dos/as {nomehabitat} com ID:{idhabitat}");
+            Console.WriteLine($"Habitat dos/as {NomeHabitat} com ID:{IdHabitat}");
         }
 
+        public bool AdicionaAnimalHabitat(Animal animal)
+        {
+            if (animaishabitat.Contains(animal))
+            {
+                Console.WriteLine("O animal já está no habitat");
+            }
+            else
+            {
+                animaishabitat.Add(animal);
+            }
+
+            return true;
+
+        }
+        
         #endregion
 
         #region Destructor

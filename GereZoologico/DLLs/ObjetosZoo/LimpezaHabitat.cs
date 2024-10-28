@@ -26,8 +26,8 @@ namespace ObjetosZoo
     {
         #region Attributes
 
-        Habitat habitat;
-        DateTime horalimpeza;
+        private Habitat habitat;
+        private DateTime horalimpeza;
 
         #endregion
 
@@ -36,12 +36,25 @@ namespace ObjetosZoo
         #region Constructors  
         public LimpezaHabitat (Habitat habitat, DateTime horalimpeza)
         {
-            this.habitat = habitat;
-            this.horalimpeza = horalimpeza;
+            Habitat = habitat;
+            HoraLimpeza = horalimpeza;
         }
         #endregion
 
         #region Properties
+
+        public Habitat Habitat
+        {
+            get { return habitat; }
+            set { habitat = value; }
+        }
+
+        public DateTime HoraLimpeza
+        {
+            get { return horalimpeza; }
+            set { horalimpeza = value; }
+        }
+
         #endregion
 
         #region Operators
@@ -51,9 +64,9 @@ namespace ObjetosZoo
         #endregion
 
         #region OtherMethods
-        public void HabitatLimpo()
+        public void RegistrarHabitatLimpo()
         {
-            Console.WriteLine($"{habitat} foi limpa: {horalimpeza}");
+            Console.WriteLine($"{Habitat} foi limpa: {HoraLimpeza}");
         }
 
         #endregion

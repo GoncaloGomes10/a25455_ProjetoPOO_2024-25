@@ -28,23 +28,35 @@ namespace ObjetosZoo
     {
         #region Attributes
 
-        public string nome;
-        public double calorias;
+        private string nomecomida;
+        private double calorias;
 
         #endregion
 
         #region Methods
 
         #region Constructors
-        public TipoComida(string nome, double calorias)
+        public TipoComida(string nomecomida, double calorias)
         {
-            this.nome = nome;
-            this.calorias = calorias;
+            NomeComida = nomecomida;
+            Calorias = calorias;
         }
-        
+
         #endregion
 
         #region Properties
+        public string NomeComida
+        {
+            get { return nomecomida; }
+            set { nomecomida = value; }
+        }
+
+        public double Calorias
+        {
+            get { return calorias; }
+            set { calorias = value; }
+        }
+
         #endregion
 
         #region Operators
@@ -53,7 +65,7 @@ namespace ObjetosZoo
         #region Overrides 
         public override string ToString()  
         {
-            string outStr = String.Format(" {0} ,Calorias: {1}",nome,calorias);
+            string outStr = String.Format(" {0} ,Calorias: {1}",NomeComida,Calorias);
             return outStr;
         }
         #endregion
@@ -61,7 +73,7 @@ namespace ObjetosZoo
         #region OtherMethods
         public bool MostraDetalhesTipodeComida()
         {
-            Console.WriteLine($"Comida: {nome}, Calorias: {calorias}");
+            Console.WriteLine($"Comida: {NomeComida}, Calorias: {Calorias}");
             return true;
         }
 
