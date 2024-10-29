@@ -36,7 +36,7 @@ namespace ObjetosZoo
         DIETA dieta;
         private int id;
         private static int idstatic;
-        private string nomeanimal;
+        private string nome;
         private string especie;
         private int idade;
         private double peso;
@@ -47,11 +47,11 @@ namespace ObjetosZoo
         #region Methods
 
         #region Constructors  
-        public Animal(string nomeanimal,string especie, int idade, double peso, DIETA dieta)
+        public Animal(string nome,string especie, int idade, double peso, DIETA dieta)
         {
             idstatic++;
             id = idstatic;
-            NomeAnimal = nomeanimal;
+            Nome = nome;
             Especie = especie;
             Idade = idade;
             Peso = peso;
@@ -67,10 +67,10 @@ namespace ObjetosZoo
             get { return id; }
             set { id = value; }
         }
-        public string NomeAnimal
+        public string Nome
         {
-            get { return nomeanimal; }
-            set { nomeanimal = value; }
+            get { return nome; }
+            set { nome = value; }
         }
         public string Especie
         {
@@ -104,16 +104,16 @@ namespace ObjetosZoo
         #region Overrides 
         public override string ToString()
         {
-            string outStr = String.Format("Nome: {0} Especie: {1} Idade: {2} Peso: {3} kg Tipo: {4} Id: {5}", NomeAnimal, Especie, Idade, Peso, Dieta,Id);
+            string outStr = String.Format("Nome: {0} Especie: {1} Idade: {2} Peso: {3} kg Tipo: {4} Id: {5}", Nome, Especie, Idade, Peso, Dieta,Id);
             return outStr;
         }
        
         #endregion
 
         #region OtherMethods  
-        public static bool CriarAnimal(string nomeanimal,string especie,int idade,double peso,DIETA dieta)
+        public static bool CriarAnimal(string nome,string especie,int idade,double peso,DIETA dieta)
         {
-            Animal animal = new Animal(nomeanimal,especie,idade,peso,dieta);
+            Animal animal = new Animal(nome,especie,idade,peso,dieta);
             animais.Add(animal);
 
             return true;
