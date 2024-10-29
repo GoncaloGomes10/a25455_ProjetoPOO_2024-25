@@ -29,10 +29,15 @@ namespace Main
             Bilhete bilhete1 = new Bilhete(ZONA.Savana, TIPOBILHETE.Passeio, 12.5);
             bilhete1.VerBilhete();
 
-            Habitat habitat1 = new Habitat(1,"Leões");
-            habitat1.MostraHabitat();
             
-            LimpezaHabitat limpezahabitat1 =new LimpezaHabitat(habitat1,DateTime.Now);
+            Habitat.CriarHabitat(1, "Macaco");
+            Habitat.CriarHabitat(2, "Cegonhas");
+            Habitat.habitats[0].AdicionaAnimalHabitat(Animal.animais[0]);
+            Habitat.habitats[0].AdicionaAnimalHabitat(Animal.animais[0]);
+            Habitat.MostraTodosHabitats();
+
+
+            LimpezaHabitat limpezahabitat1 =new LimpezaHabitat(Habitat.habitats[0], DateTime.Now);
             limpezahabitat1.RegistrarHabitatLimpo();
 
             Animal.MostraAnimais();

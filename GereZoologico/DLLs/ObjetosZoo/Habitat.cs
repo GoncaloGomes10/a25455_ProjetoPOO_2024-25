@@ -29,7 +29,7 @@ namespace ObjetosZoo
         private int idhabitat;
         private string nomehabitat;
         public List<Animal> animaishabitat;
-        public static List<Habitat> habitats;
+        public static List<Habitat> habitats = new List<Habitat>();
 
         #endregion
 
@@ -84,6 +84,14 @@ namespace ObjetosZoo
             Console.WriteLine($"Habitat dos/as {NomeHabitat} com ID:{IdHabitat}");
         }
 
+        public static void MostraTodosHabitats()
+        {
+            foreach(var habitat in habitats)
+            {
+                habitat.MostraHabitat();
+            }
+        }
+
         public bool AdicionaAnimalHabitat(Animal animal)
         {
             if (animaishabitat.Contains(animal))
@@ -92,6 +100,7 @@ namespace ObjetosZoo
             }
             else
             {
+                Console.WriteLine("Animal adicionado no habitat");
                 animaishabitat.Add(animal);
             }
 
