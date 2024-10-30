@@ -43,6 +43,7 @@ namespace ObjetosZoo
         private double preço;
         private int id;
         private static int idstatic;
+        public static List<Bilhete> bilhetes = new List<Bilhete>();
 
         #endregion
 
@@ -97,6 +98,24 @@ namespace ObjetosZoo
         public void VerBilhete()
         {
             Console.WriteLine($"O teu bilhete {Id} do tipo {TipoBilhete} custou {Preço} euros para a zona: {Zona}");
+        }
+
+        public static bool ComprarBilhete(ZONA zona, TIPOBILHETE tipobilhete, double preço)
+        {
+            Bilhete bilhete = new Bilhete(zona,tipobilhete,preço);
+            bilhetes.Add(bilhete);
+            Console.WriteLine("Bilhete comprado com sucesso");
+            return true;
+        }
+
+        public static bool VerTodosBilhetes()
+        {
+            foreach(var  bilhete in bilhetes)
+            {
+                bilhete.VerBilhete();
+            }
+            return true;
+
         }
         #endregion
 

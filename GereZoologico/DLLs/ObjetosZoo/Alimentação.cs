@@ -31,7 +31,8 @@ namespace ObjetosZoo
         private DateTime tempoAlimentacao;
         private double quantidade;
         private TipoComida tipocomida;
-        //uma lista para registar todas as alimentações
+        public static List<Alimentacao>alimentacoes = new List<Alimentacao>();
+       
 
         #endregion
 
@@ -84,14 +85,24 @@ namespace ObjetosZoo
         #endregion
 
         #region OtherMethods
-        public void RegistraAlimentacao()
+        public static bool RegistraAlimentacao(Animal animal, DateTime tempoAlimentacao, double quantidade, TipoComida tipocomida)
         {
-            Console.WriteLine($"{animal}\n DD/MM/AA HORAS: {TempoAlimentacao}, Comeu:{TipoComida}\n Quantidade(kg): {Quantidade}");
+            Alimentacao alimentacao = new Alimentacao(animal,tempoAlimentacao,quantidade,tipocomida);
+            alimentacoes.Add(alimentacao);
+            return true;
         }
 
         public void MostraAlimentacao()
         {
-            Console.WriteLine($"");
+            Console.WriteLine($"{animal}\n DD/MM/AA HORAS: {TempoAlimentacao}, Comeu:{TipoComida}\n Quantidade(kg): {Quantidade}");
+        }
+
+        public static void MostraTodasAlimentacoes()
+        {
+            foreach( var alimentacao in alimentacoes)
+            {
+                alimentacao.MostraAlimentacao();
+            }
         }
 
         #endregion

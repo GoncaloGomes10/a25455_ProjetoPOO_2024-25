@@ -23,11 +23,14 @@ namespace Main
             TipoComida tipo1 = new TipoComida("Pernas Coelho", 350.4);
             tipo1.MostraDetalhesTipodeComida();
 
-            Alimentacao alimentacao1 =new Alimentacao(Animal.animais[0],new DateTime(2025,10,23,20,35,45),5.4,tipo1);
-            alimentacao1.RegistraAlimentacao();
+            Alimentacao.RegistraAlimentacao(Animal.animais[0], DateTime.Now, 20, tipo1);
+            Alimentacao.RegistraAlimentacao(Animal.animais[1], DateTime.Now, 20, tipo1);
+            Alimentacao.MostraTodasAlimentacoes();
 
-            Bilhete bilhete1 = new Bilhete(ZONA.Savana, TIPOBILHETE.Passeio, 12.5);
-            bilhete1.VerBilhete();
+
+            Bilhete.ComprarBilhete(ZONA.Savana, TIPOBILHETE.Passeio, 12.5);
+            Bilhete.ComprarBilhete(ZONA.Deserto, TIPOBILHETE.Completo, 20);
+            Bilhete.VerTodosBilhetes();
 
             
             Habitat.CriarHabitat(1, "Macaco");

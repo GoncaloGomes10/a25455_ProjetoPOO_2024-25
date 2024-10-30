@@ -27,6 +27,8 @@ namespace ObjetosZoo
         //quando foi tratado
         #region Attributes
 
+        DateTime datadotratamento;
+
         #endregion
 
         #region Methods

@@ -25,9 +25,8 @@ namespace ObjetosZoo
     public enum TIPOESPETÁCULO
     {
         Elefante,
-        Macaco,
         Golfinho,
-        Orcas,
+        Tubarão,
         Leão
     }
     public class Espetáculo
@@ -42,9 +41,29 @@ namespace ObjetosZoo
         #region Methods
 
         #region Constructors
+
+        public Espetáculo(int id, TIPOESPETÁCULO tipoespetaculo)
+        {
+            Id = id;
+            TipoEspetaculo = tipoespetaculo;
+        }
+
         #endregion
 
         #region Properties
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
+        public TIPOESPETÁCULO TipoEspetaculo
+        {
+            get { return tipoespetaculo; }
+            set { tipoespetaculo = value; }
+        }
+
         #endregion
 
         #region Operators
