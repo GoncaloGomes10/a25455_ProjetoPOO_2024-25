@@ -17,14 +17,21 @@ namespace Main
     {
         static void Main(string[] args)
         {
-            Animal.CriarAnimal("Manel","Leao",12,250.3,DIETA.Carnivoro);
-            Animal.CriarAnimal("Josefina","Elefante",20,700.4,DIETA.Herbivoro);
 
-            TipoComida tipo1 = new TipoComida("Pernas Coelho", 350.4);
-            tipo1.MostraDetalhesTipodeComida();
+            string caminhoDoFicheiro = @"C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\Animais.txt";
+            GereFicheiros.CarregaAnimais(caminhoDoFicheiro);
+            Animal.MostraAnimais();
+            
+            Animal? animal = Animal.EncontraAnimal(1);
+            Console.WriteLine(animal);
 
-            Alimentacao.RegistraAlimentacao(Animal.animais[0], DateTime.Now, 20, tipo1);
-            Alimentacao.RegistraAlimentacao(Animal.animais[1], DateTime.Now, 20, tipo1);
+
+            TipoComida.CriarTipoComida("Pernas galinha", 27.3,DIETA.Carnivoro);
+            TipoComida.CriarTipoComida("Mato", 15.2, DIETA.Herbivoro);
+            TipoComida.MostraTodosTipodeComida();
+
+            Alimentacao.RegistraAlimentacao(Animal.animais[0], DateTime.Now, 20, TipoComida.tipocomidas[0]);
+            Alimentacao.RegistraAlimentacao(Animal.animais[1], DateTime.Now, 20, TipoComida.tipocomidas[1]);
             Alimentacao.MostraTodasAlimentacoes();
 
 
@@ -33,17 +40,29 @@ namespace Main
             Bilhete.VerTodosBilhetes();
 
             
-            Habitat.CriarHabitat(1, "Macaco");
-            Habitat.CriarHabitat(2, "Cegonhas");
+            Habitat.CriarHabitat(1, "Leao",ZONA.Savana);
+            Habitat.CriarHabitat(2, "Elefante", ZONA.Savana);
             Habitat.habitats[0].AdicionaAnimalHabitat(Animal.animais[0]);
             Habitat.habitats[0].AdicionaAnimalHabitat(Animal.animais[0]);
+            Habitat.habitats[1].AdicionaAnimalHabitat(Animal.animais[1]);
+            Habitat.habitats[1].AdicionaAnimalHabitat(Animal.animais[1]);
+
+            Habitat.habitats[0].RemoverAnimalHabitat(Animal.animais[0]);
+            Habitat.habitats[0].RemoverAnimalHabitat(Animal.animais[1]);
             Habitat.MostraTodosHabitats();
+            Habitat.habitats[0].MostraHabitat();
 
 
-            LimpezaHabitat limpezahabitat1 =new LimpezaHabitat(Habitat.habitats[0], DateTime.Now);
-            limpezahabitat1.RegistrarHabitatLimpo();
+            LimpezaHabitat.RegistarHabitatLimpo(Habitat.habitats[0],DateTime.Now);
+            LimpezaHabitat.RegistarHabitatLimpo(Habitat.habitats[0], DateTime.Now);
+            LimpezaHabitat.RegistarHabitatLimpo(Habitat.habitats[0], DateTime.Now);
+            LimpezaHabitat.RegistarHabitatLimpo(Habitat.habitats[1], DateTime.Now);
+            LimpezaHabitat.MostraTodosHabitatsLimpos();
+            LimpezaHabitat.ApagarTodoRegistoLimpezaHabitat(Habitat.habitats[0]);
+            
+            
 
-            Animal.MostraAnimais();
+            
 
             
 

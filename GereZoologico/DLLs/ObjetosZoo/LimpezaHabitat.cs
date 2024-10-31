@@ -28,6 +28,7 @@ namespace ObjetosZoo
 
         private Habitat habitat;
         private DateTime horalimpeza;
+        public static List<LimpezaHabitat> limpezahabitats = new List<LimpezaHabitat>();
 
         #endregion
 
@@ -64,10 +65,44 @@ namespace ObjetosZoo
         #endregion
 
         #region OtherMethods
-        public void RegistrarHabitatLimpo()
+        public static bool RegistarHabitatLimpo(Habitat habitat, DateTime horalimpeza)
         {
-            Console.WriteLine($"{Habitat} foi limpa: {HoraLimpeza}");
+            LimpezaHabitat limpeza = new LimpezaHabitat(habitat, horalimpeza);
+            limpezahabitats.Add(limpeza);
+            return true;
         }
+
+        public void MostrarHabitatLimpo()
+        {
+            Console.WriteLine($"O habitat {Habitat} foi limpo às {HoraLimpeza}");
+
+        }
+
+        public static bool MostraTodosHabitatsLimpos()
+        {
+            foreach (var limpeza in limpezahabitats)
+            {
+                limpeza.MostrarHabitatLimpo();
+            }
+            return true;
+        }
+
+        public static bool ApagarTodoRegistoLimpezaHabitat(Habitat habitat)
+        {
+            int removidos = limpezahabitats.RemoveAll(limpeza => limpeza.Habitat == habitat);
+
+            if (removidos > 0)
+            {
+                Console.WriteLine($"{removidos} registos de limpeza removidos para o habitat com ID {habitat.IdHabitat}.");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Nenhum registo de limpeza encontrado para o habitat.");
+                return false;
+            }
+        }
+
 
 
 

@@ -25,7 +25,7 @@ namespace ObjetosZoo
     public class Habitat
     {
         #region Attributes
-
+        ZONA zona;
         private int idhabitat;
         private string nomehabitat;
         public List<Animal> animaishabitat;
@@ -36,11 +36,12 @@ namespace ObjetosZoo
         #region Methods
 
         #region Constructors   
-        public Habitat(int idhabitat, string nomehabitat)
+        public Habitat(int idhabitat, string nomehabitat, ZONA zona)
         {
             IdHabitat = idhabitat;
             animaishabitat = new List<Animal>();
             NomeHabitat = nomehabitat;
+            Zona = zona;   
         }
 
         #endregion
@@ -56,7 +57,11 @@ namespace ObjetosZoo
             get { return nomehabitat; }
             set { nomehabitat = value; }
         }
-
+        public ZONA Zona
+        {
+            get { return zona; }
+            set { zona = value; }
+        }
         #endregion
 
         #region Operators 
@@ -65,23 +70,23 @@ namespace ObjetosZoo
         #region Overrides 
         public override string ToString()  
         {
-            string outStr = String.Format("IDHabitat: {0} Nome Habitat: {1}",IdHabitat,NomeHabitat);
+            string outStr = String.Format("IDHabitat: {0} Nome Habitat: {1} Zona: {2}",IdHabitat,NomeHabitat,Zona);
             return outStr;
         }
         #endregion
 
         #region OtherMethods
 
-        public static bool CriarHabitat(int idhabitat,string nomehabitat)
+        public static bool CriarHabitat(int idhabitat,string nomehabitat,ZONA zona)
         {
-            Habitat habitat = new Habitat(idhabitat, nomehabitat);
+            Habitat habitat = new Habitat(idhabitat, nomehabitat, zona);
             habitats.Add(habitat);
             return true;
 
         }
         public void MostraHabitat()
         {
-            Console.WriteLine($"Habitat dos/as {NomeHabitat} com ID:{IdHabitat}");
+            Console.WriteLine(this.ToString());
         }
 
         public static void MostraTodosHabitats()
@@ -105,7 +110,22 @@ namespace ObjetosZoo
             }
 
             return true;
+        }
 
+        public bool RemoverAnimalHabitat(Animal animalrecebido)
+        {
+            Animal? animal = this.animaishabitat.Find(animal => animal.Id == animalrecebido.Id);
+            if (animal != null)
+            {
+                animaishabitat.Remove(animal);
+                Console.WriteLine("Animal retirado do habitat");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Animal não está no habitat");
+                return false;
+            }
         }
         
         #endregion

@@ -27,24 +27,36 @@ namespace ObjetosZoo
     public class TipoComida
     {
         #region Attributes
-
+        private int id;
+        private static int idstatic;
+        DIETA dieta;
         private string nomecomida;
         private double calorias;
+        public static List<TipoComida> tipocomidas = new List<TipoComida>();
 
         #endregion
 
         #region Methods
 
         #region Constructors
-        public TipoComida(string nomecomida, double calorias)
+        public TipoComida(string nomecomida, double calorias, DIETA dieta)
         {
+            idstatic++;
+            Id = idstatic;
             NomeComida = nomecomida;
             Calorias = calorias;
+            Dieta = dieta;
         }
 
         #endregion
 
         #region Properties
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
         public string NomeComida
         {
             get { return nomecomida; }
@@ -55,6 +67,12 @@ namespace ObjetosZoo
         {
             get { return calorias; }
             set { calorias = value; }
+        }
+
+        public DIETA Dieta
+        {
+            get { return dieta; }
+            set { dieta = value; }
         }
 
         #endregion
@@ -75,6 +93,38 @@ namespace ObjetosZoo
         {
             Console.WriteLine($"Comida: {NomeComida}, Calorias: {Calorias}");
             return true;
+        }
+
+        public static bool CriarTipoComida(string nomecomida,double calorias,DIETA dieta)
+        {
+            TipoComida tipo = new TipoComida(nomecomida,calorias,dieta);
+            tipocomidas.Add(tipo);
+            return true;
+        }
+
+        public static bool MostraTodosTipodeComida()
+        {
+            foreach(var tipo in tipocomidas)
+            {
+                tipo.MostraDetalhesTipodeComida();
+            }
+            return true;
+        }
+
+        public static bool ApagarTipoComida(string nomecomida)
+        {
+            TipoComida? tipo = tipocomidas.Find(tipo=> tipo.nomecomida==nomecomida);
+            if (tipo != null)
+            {
+                tipocomidas.Remove(tipo);
+                Console.WriteLine("Tipo de comida apagada");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Tipo de comida não existe");
+                return false;
+            }
         }
 
         #endregion

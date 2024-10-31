@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 
 
@@ -126,6 +127,39 @@ namespace ObjetosZoo
                 Console.WriteLine(animal.ToString());
             }
             return true;
+        }
+
+        public static Animal? EncontraAnimal(int id)
+        {
+            Animal? animal = animais.Find(animais => animais.Id == id);
+            if (animal != null)
+            {
+                //Console.WriteLine(animal);
+                return animal;
+            }
+            else
+            {
+                Console.WriteLine($"Animal com ID {id} não existe.");
+                return null;
+            }
+        }
+
+        public static bool ApagarAnimal(int id)
+        {
+            Animal? animal = animais.Find(animal => animal.Id == id);  //
+
+            if (animal != null)
+            {
+                animais.Remove(animal);
+                Console.WriteLine($"Animal com ID {id} foi removido.");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine($"Animal com ID {id} não encontrado.");
+                return false;
+            }
+
         }
 
         #endregion

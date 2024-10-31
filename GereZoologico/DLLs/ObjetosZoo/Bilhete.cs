@@ -26,7 +26,8 @@ namespace ObjetosZoo
     {
         Savana,
         Deserto,
-        Aquática
+        Aquática,
+        Floresta
     }
     public enum TIPOBILHETE
     {

@@ -23,30 +23,60 @@ namespace ObjetosZoo
     /// <remarks></remarks>
     /// <example></example>
     public static class GereFicheiros
-    { 
-       
-        #region Attributes
-        #endregion
-
+    {
         #region Methods
 
-        #region Constructors
-        #endregion
+        public static bool CarregaAnimais(string filePath)
+        {
+            // Verifica se o ficheiro existe
+            if (File.Exists(filePath))
+            {
+                // Lê todas as linhas do ficheiro
+                string[] linhas = File.ReadAllLines(filePath);
 
-        #region Properties
-        #endregion
+                // Para cada linha no ficheiro, processa o conteúdo
+                foreach (string linha in linhas)
+                {
+                    // Divide a linha em partes
+                    string[] partes = linha.Split(';');
 
-        #region Operators
-        #endregion
+                    if (partes.Length == 6) // Verifica se há exatamente 6 partes
+                    {
+                        string nome = partes[0];
+                        string especie = partes[1];
+                        int idade = int.Parse(partes[2]);
+                        double peso = double.Parse(partes[3]);
+                        DIETA dieta = (DIETA)Enum.Parse(typeof(DIETA), partes[4]);
+                        int id = int.Parse((partes[5]));
 
-        #region Overrides
-        #endregion
+                        // Cria o objeto Animal e coloca-o na lista
+                        Animal x = new Animal(nome, especie, idade, peso, dieta);
+                        Animal.animais.Add(x);
 
-        #region OtherMethods
-        #endregion
+                        Habitat? h = Habitat.habitats.Find(habitat => habitat.IdHabitat == id);
+                        if(h != null)
+                        {
+                            h.AdicionaAnimalHabitat(x);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Não foi encontrado o habitat");
+                        }
+                    }
+                    else
+                    {
+                        throw new Exception("Formato da linha inválido.");
+                    }
+                }
+            }
+            else
+            {
+                throw new FileNotFoundException("Ficheiro não encontrado.");
+            }
 
-        #region Destructor
-        #endregion
+            return true;
+        }
+
 
         #endregion
 

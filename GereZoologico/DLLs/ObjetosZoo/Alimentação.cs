@@ -27,6 +27,8 @@ namespace ObjetosZoo
     {
         #region Attributes  
 
+        private int id;
+        private static int idstatic;
         private Animal animal;
         private DateTime tempoAlimentacao;
         private double quantidade;
@@ -41,6 +43,8 @@ namespace ObjetosZoo
         #region Constructors
         public Alimentacao(Animal animal, DateTime tempoAlimentacao, double quantidade, TipoComida tipocomida)
         {
+            idstatic++;
+            Id = idstatic;
             Animal = animal;
             TempoAlimentacao = tempoAlimentacao;
             Quantidade = quantidade;
@@ -52,6 +56,11 @@ namespace ObjetosZoo
 
         #region Properties
         
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
         public Animal Animal
         {
             get { return animal; }
@@ -102,6 +111,22 @@ namespace ObjetosZoo
             foreach( var alimentacao in alimentacoes)
             {
                 alimentacao.MostraAlimentacao();
+            }
+        }
+
+        public static bool ApagarAlimentacao(int id)
+        {
+            Alimentacao? alimentacao = alimentacoes.Find(alimentacao => alimentacao.Id == id);
+            if( alimentacao != null)
+            {
+                alimentacoes.Remove(alimentacao);
+                Console.WriteLine("Alimentação apagada");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Alimentação não existe");
+                return false;
             }
         }
 
