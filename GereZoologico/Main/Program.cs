@@ -17,11 +17,22 @@ namespace Main
     {
         static void Main(string[] args)
         {
+            // Criar habitats
+            Habitat.CriarHabitat(1, "Leões", ZONA.Savana);
+            Habitat.CriarHabitat(2, "Elefante da Savana", ZONA.Savana);
+            Habitat.CriarHabitat(3, "Camelos",ZONA.Deserto);
+            Habitat.CriarHabitat(4, "Dromedários", ZONA.Deserto);
+            Habitat.CriarHabitat(5, "Golfinhos", ZONA.Aquática);
+            Habitat.CriarHabitat(6, "Tubarões-Tigres", ZONA.Aquática);
+            Habitat.CriarHabitat(7, "Gorilas", ZONA.Floresta);
+            Habitat.CriarHabitat(8, "Pandas-Vermelhos", ZONA.Floresta);
+
 
             string caminhoDoFicheiro = @"C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\Animais.txt";
             GereFicheiros.CarregaAnimais(caminhoDoFicheiro);
             Animal.MostraAnimais();
-            
+
+            Console.WriteLine("Encontrar um animal:");
             Animal? animal = Animal.EncontraAnimal(1);
             Console.WriteLine(animal);
 
@@ -40,15 +51,12 @@ namespace Main
             Bilhete.VerTodosBilhetes();
 
             
-            Habitat.CriarHabitat(1, "Leao",ZONA.Savana);
-            Habitat.CriarHabitat(2, "Elefante", ZONA.Savana);
-
 
             //Habitat.habitats[0].RemoverAnimalHabitat(Animal.animais[0]);
             //Habitat.habitats[0].RemoverAnimalHabitat(Animal.animais[1]);
-            Habitat.MostraTudo();
+            Habitat.MostraHabitatsAnimais();
             Habitat.MostraTodosHabitats();
-            Habitat.habitats[0].MostraHabitat();
+           
 
 
             LimpezaHabitat.RegistarHabitatLimpo(Habitat.habitats[0],DateTime.Now);

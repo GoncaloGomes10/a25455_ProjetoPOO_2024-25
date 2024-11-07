@@ -53,7 +53,7 @@ namespace ObjetosZoo
                         Animal x = new Animal(nome, especie, idade, peso, dieta);
                         Animal.animais.Add(x);
 
-                        Habitat? h = Habitat.habitats.Find(habitat => habitat.IdHabitat == id);/// erro aqui
+                        Habitat? h = Habitat.habitats.Find(habitat => habitat.IdHabitat == id);
                         if(h != null)
                         {
                             h.AdicionaAnimalHabitat(x);

@@ -97,7 +97,7 @@ namespace ObjetosZoo
             }
         }
 
-        public static void MostraTudo()// alteraçao
+        public static void MostraHabitatsAnimais()
         {
             foreach (Habitat habitat in habitats)
             {

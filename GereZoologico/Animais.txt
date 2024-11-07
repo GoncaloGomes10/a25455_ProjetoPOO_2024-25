@@ -1,3 +1,9 @@
-Manel;leao;8;200;Carnivoro;1
-Hugo;leao;5;300;Carnivoro;1
-Josefina;elefante da savana;30;5530;Herbivoro;2
+Manel;Leao;8;200;Carnivoro;1
+Hugo;Leao;5;300;Carnivoro;1
+Josefina;Elefante da savana;30;5530;Herbivoro;2
+Tiago;Camelo;12;300;Herbivoro;3
+Oscar;Dromedário;10;200;Herbivoro;4
+Wili;Golfinho;5;200;Carnivoro;5
+Rodrigo;Tubarão-Tigre;8;500;Carnivoro;6
+Rafa;Gorila;9;300;Omnivoro;7
+Diogo;Panda-Vermelho;4;240;Omnivoro;8
