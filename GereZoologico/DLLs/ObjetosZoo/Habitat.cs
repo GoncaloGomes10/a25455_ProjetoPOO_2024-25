@@ -97,6 +97,28 @@ namespace ObjetosZoo
             }
         }
 
+        public static void MostraTudo()// alteraçao
+        {
+            foreach (Habitat habitat in habitats)
+            {
+                Console.WriteLine(habitat);  // Imprime o habitat
+
+                // Verifica o número de animais no habitat
+                Console.WriteLine($"Número de animais no habitat {habitat.NomeHabitat}: {habitat.animaishabitat.Count}");
+
+                if (habitat.animaishabitat.Count > 0)
+                {
+                    foreach (Animal animal in habitat.animaishabitat)
+                    {
+                        Console.WriteLine("  - " + animal);  // Imprime cada animal do habitat
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("  Nenhum animal neste habitat.");
+                }
+            }
+        }
         public bool AdicionaAnimalHabitat(Animal animal)
         {
             if (animaishabitat.Contains(animal))
@@ -111,7 +133,8 @@ namespace ObjetosZoo
 
             return true;
         }
-
+            
+            
         public bool RemoverAnimalHabitat(Animal animalrecebido)
         {
             Animal? animal = this.animaishabitat.Find(animal => animal.Id == animalrecebido.Id);

@@ -42,13 +42,11 @@ namespace Main
             
             Habitat.CriarHabitat(1, "Leao",ZONA.Savana);
             Habitat.CriarHabitat(2, "Elefante", ZONA.Savana);
-            Habitat.habitats[0].AdicionaAnimalHabitat(Animal.animais[0]);
-            Habitat.habitats[0].AdicionaAnimalHabitat(Animal.animais[0]);
-            Habitat.habitats[1].AdicionaAnimalHabitat(Animal.animais[1]);
-            Habitat.habitats[1].AdicionaAnimalHabitat(Animal.animais[1]);
 
-            Habitat.habitats[0].RemoverAnimalHabitat(Animal.animais[0]);
-            Habitat.habitats[0].RemoverAnimalHabitat(Animal.animais[1]);
+
+            //Habitat.habitats[0].RemoverAnimalHabitat(Animal.animais[0]);
+            //Habitat.habitats[0].RemoverAnimalHabitat(Animal.animais[1]);
+            Habitat.MostraTudo();
             Habitat.MostraTodosHabitats();
             Habitat.habitats[0].MostraHabitat();
 

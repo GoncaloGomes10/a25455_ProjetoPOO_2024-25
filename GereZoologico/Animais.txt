@@ -1,2 +1,3 @@
 Manel;leao;8;200;Carnivoro;1
+Hugo;leao;5;300;Carnivoro;1
 Josefina;elefante da savana;30;5530;Herbivoro;2
