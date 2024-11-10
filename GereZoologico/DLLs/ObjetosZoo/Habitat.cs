@@ -150,20 +150,25 @@ namespace ObjetosZoo
                 return false;
             }
         }
-        
+
+        public bool ContemAnimal(Animal animal)
+        {
+            return animaishabitat.Contains(animal);
+        }
+
         #endregion
 
         #region Destructor
         #endregion
 
         #endregion
-        
 
 
 
-     
 
-       
+
+
+
 
 
     }

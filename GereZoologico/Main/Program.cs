@@ -50,7 +50,13 @@ namespace Main
             Bilhete.ComprarBilhete(ZONA.Deserto, TIPOBILHETE.Completo, 20);
             Bilhete.VerTodosBilhetes();
 
-            
+            AssistênciaVeterinária.RegistaAssistênciaVeterinária(Habitat.habitats[0],Animal.animais[0]);
+            AssistênciaVeterinária.RegistaAssistênciaVeterinária(Habitat.habitats[1],Animal.animais[1]);
+            AssistênciaVeterinária.MostraTodosRegistosAssistênciaVeterinária();
+            AssistênciaVeterinária.ApagaRegistos(Habitat.habitats[1], Animal.animais[1]);
+            AssistênciaVeterinária.ApagaRegistos(Habitat.habitats[0], Animal.animais[0]);
+            AssistênciaVeterinária.ApagarTodosRegistos();
+
 
             //Habitat.habitats[0].RemoverAnimalHabitat(Animal.animais[0]);
             //Habitat.habitats[0].RemoverAnimalHabitat(Animal.animais[1]);
@@ -65,6 +71,7 @@ namespace Main
             LimpezaHabitat.RegistarHabitatLimpo(Habitat.habitats[1], DateTime.Now);
             LimpezaHabitat.MostraTodosHabitatsLimpos();
             LimpezaHabitat.ApagarTodoRegistoLimpezaHabitat(Habitat.habitats[0]);
+            LimpezaHabitat.ApagarTodosRegistosdeLimpeza();
             
             
 

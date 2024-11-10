@@ -103,6 +103,23 @@ namespace ObjetosZoo
             }
         }
 
+        public static bool ApagarTodosRegistosdeLimpeza()
+        {
+            int removidos = limpezahabitats.Count;
+            limpezahabitats.Clear();
+
+            if (removidos > 0)
+            {
+                Console.WriteLine($"{removidos} registo(s) de limpeza foram apagados.");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Nenhum registo de limpeza para apagar.");
+                return false;
+            }
+        }
+
 
 
 
@@ -112,13 +129,13 @@ namespace ObjetosZoo
         #endregion
 
         #endregion
-        
 
-      
 
-        
-        
-        
+
+
+
+
+
 
 
     }
