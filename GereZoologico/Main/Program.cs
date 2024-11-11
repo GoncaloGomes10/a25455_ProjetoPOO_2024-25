@@ -50,6 +50,9 @@ namespace Main
             Bilhete.ComprarBilhete(ZONA.Deserto, TIPOBILHETE.Completo, 20);
             Bilhete.VerTodosBilhetes();
 
+            Espetáculo.CriarEspetaculo(1,TIPOESPETÁCULO.Leão,"Espetáculo do Leão",DateTime.Now,Habitat.habitats[0],"leao");
+            
+
             AssistênciaVeterinária.RegistaAssistênciaVeterinária(Habitat.habitats[0],Animal.animais[0]);
             AssistênciaVeterinária.RegistaAssistênciaVeterinária(Habitat.habitats[1],Animal.animais[1]);
             AssistênciaVeterinária.MostraTodosRegistosAssistênciaVeterinária();
