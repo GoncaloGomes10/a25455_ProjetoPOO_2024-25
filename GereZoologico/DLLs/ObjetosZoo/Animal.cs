@@ -78,19 +78,16 @@ namespace ObjetosZoo
             get { return especie; }
             set { especie = value; }
         }
-
         public int Idade
         {
             get { return idade; }
             set { idade = value; }
         }
-
         public double Peso
         {
             get { return peso; }
             set { peso = value; }
         }
-
         public DIETA Dieta
         {
             get { return dieta; }
@@ -146,7 +143,7 @@ namespace ObjetosZoo
 
         public static bool ApagarAnimal(int id)
         {
-            Animal? animal = animais.Find(animal => animal.Id == id);  //
+            Animal? animal = animais.Find(animal => animal.Id == id);  
 
             if (animal != null)
             {
@@ -162,22 +159,40 @@ namespace ObjetosZoo
 
         }
 
+        public static Animal EscolherAnimalAleatorio(string especie)
+        {
+            // Filtra os animais pela espécie desejada
+            var animaisDaEspecie = animais.Where(a => a.Especie == especie).ToList();
+
+            // Verifica se há animais disponíveis para a espécie especificada
+            if (animaisDaEspecie.Count == 0)
+            {
+                Console.WriteLine($"Nenhum animal disponível para a espécie {especie}.");
+                return null; // Retorna null se não houver animais da espécie
+            }
+
+            // Seleciona aleatoriamente um animal da lista filtrada
+            Random random = new Random();
+            int index = random.Next(animaisDaEspecie.Count);
+            return animaisDaEspecie[index];
+        }
+
         #endregion
 
         #region Destructor
         #endregion
 
         #endregion
-      
-            
-
-      
 
 
-       
-       
 
-      
+
+
+
+
+
+
+
 
     }
 

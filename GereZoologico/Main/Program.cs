@@ -50,7 +50,12 @@ namespace Main
             Bilhete.ComprarBilhete(ZONA.Deserto, TIPOBILHETE.Completo, 20);
             Bilhete.VerTodosBilhetes();
 
-            Espetáculo.CriarEspetaculo(1,TIPOESPETÁCULO.Leão,"Espetáculo do Leão",DateTime.Now,Habitat.habitats[0],"leao");
+            Espetáculo.CriarEspetaculo(1,TIPOESPETÁCULO.Leão,"Espetáculo do Leão",DateTime.Now);
+            Espetáculo.CriarEspetaculo(2, TIPOESPETÁCULO.Leão, "Espetáculo do Leão", DateTime.Now);
+            Espetáculo.CriarEspetaculo(3, TIPOESPETÁCULO.Leão, "Espetáculo do Leão", DateTime.Now);
+            Espetáculo.CriarEspetaculo(4, TIPOESPETÁCULO.Tubarão, "Espetáculo do Tubarão", DateTime.Now);
+            Espetáculo.MostrarTodosEspetaculos();
+
             
 
             AssistênciaVeterinária.RegistaAssistênciaVeterinária(Habitat.habitats[0],Animal.animais[0]);

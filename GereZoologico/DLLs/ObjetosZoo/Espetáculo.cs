@@ -9,6 +9,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,7 +38,8 @@ namespace ObjetosZoo
         private TIPOESPETÁCULO tipoespetaculo;
         private string nome;
         private DateTime horario;
-        public List<Animal> animaisparticipantes; // Lista de animais para o espetáculo
+        private Animal animalespetaculo;
+        public static List<Espetáculo> espetaculos = new List<Espetáculo>();
 
 
         #endregion
@@ -46,13 +48,13 @@ namespace ObjetosZoo
 
         #region Constructors
 
-        public Espetáculo(int id, TIPOESPETÁCULO tipoespetaculo, string nome, DateTime horario)
+        public Espetáculo(int id, TIPOESPETÁCULO tipoespetaculo, string nome, DateTime horario, Animal animalespetaculo)
         {
             Id = id;
             TipoEspetaculo = tipoespetaculo;
             Nome = nome;
             Horario = horario;
-            animaisparticipantes = new List<Animal>(); // Inicializa a lista de animais
+            AnimalEspetaculo = animalespetaculo;
         }
 
         #endregion
@@ -83,6 +85,12 @@ namespace ObjetosZoo
             set { horario = value; }
         }
 
+        public Animal AnimalEspetaculo
+        {
+            get { return animalespetaculo; }
+            set { animalespetaculo = value; }
+        }
+
         #endregion
 
         #region Operators
@@ -91,57 +99,50 @@ namespace ObjetosZoo
         #region Overrides
         public override string ToString()
         {
-            return $"Espetáculo Id: {Id}, Tipo Espetáculo: {TipoEspetaculo}, Hora: {Horario}, Nome Espetáculo: {Nome}";
+            return $"Espetáculo Id: {Id}, Tipo: {TipoEspetaculo}, Nome: {Nome}, Horário: {Horario}, " +
+                   $"Animal: {AnimalEspetaculo?.Nome ?? "Nenhum"} ({AnimalEspetaculo?.Especie ?? "N/A"})";
         }
+
         #endregion
 
         #region OtherMethods
 
-        public static Espetáculo CriarEspetaculo(int id, TIPOESPETÁCULO tipoespetaculo, string nome, DateTime horario, Habitat habitat, string especiedesejada)
+        public static bool CriarEspetaculo(int id, TIPOESPETÁCULO tipoespetaculo, string nome, DateTime horario)
         {
-            // Cria um novo espetáculo
-            Espetáculo espetaculo = new Espetáculo(id, tipoespetaculo, nome, horario);
+            // Converte o tipo de espetáculo para o nome da espécie correspondente
+            string especie = tipoespetaculo.ToString();
 
-            // Filtra os animais da espécie desejada no habitat
-            var animaisespecie = habitat.animaishabitat.Where(a => a.Especie == especiedesejada).ToList();
+            // Seleciona aleatoriamente um animal da espécie especificada
+            Animal animalEscolhido = Animal.EscolherAnimalAleatorio(especie);
 
-            if (animaisespecie.Count == 0)
+            // Verifica se foi encontrado um animal para a espécie
+            if (animalEscolhido == null)
             {
-                Console.WriteLine($"Nenhum animal da espécie '{especiedesejada}' encontrado no habitat {habitat.NomeHabitat}.");
-                return espetaculo; // Retorna o espetáculo vazio se não há animais da espécie desejada
+                Console.WriteLine($"Espetáculo não pode ser criado. Nenhum animal disponível para a espécie {especie}.");
+                return false;
             }
 
-            // Seleciona um animal aleatório da espécie desejada
-            Random random = new Random();
-            Animal animalselecionado = animaisespecie[random.Next(animaisespecie.Count)];
+            // Cria uma nova instância de Espetáculo com o animal selecionado
+            Espetáculo espetáculo = new Espetáculo(id, tipoespetaculo, nome, horario, animalEscolhido);
 
-            // Adiciona o animal selecionado ao espetáculo
-            espetaculo.AdicionarAnimalAoEspetaculo(animalselecionado);
-            Console.WriteLine($"Espetáculo '{nome}' criado com o animal '{animalselecionado.Nome}'.");
+            // Adiciona o novo espetáculo à lista estática de espetáculos
+            espetaculos.Add(espetáculo);
 
-            return espetaculo;
+            return true;
         }
 
-        
-        public void AdicionarAnimalAoEspetaculo(Animal animal)
+        public static void MostrarTodosEspetaculos()
         {
-            if (!animaisparticipantes.Contains(animal))
+            if (espetaculos.Count == 0)
             {
-                animaisparticipantes.Add(animal);
-                Console.WriteLine($"Animal {animal.Nome} foi adicionado ao espetáculo.");
+                Console.WriteLine("Nenhum espetáculo disponível.");
+                return;
             }
-            else
-            {
-                Console.WriteLine($"Animal {animal.Nome} já está no espetáculo.");
-            }
-        }
 
-        
-        public static void ExibirDetalhesEspetaculo()
-        {
-            foreach (var espetaculo in animaisparticipantes)
+            Console.WriteLine("Lista de Espetáculos:");
+            foreach (var espetáculo in espetaculos)
             {
-                Console.WriteLine();
+                Console.WriteLine(espetáculo.ToString());
             }
         }
         #endregion
