@@ -27,37 +27,40 @@ namespace Main
             Habitat.CriarHabitat(7, "Gorilas", ZONA.Floresta);
             Habitat.CriarHabitat(8, "Pandas-Vermelhos", ZONA.Floresta);
 
-
-            string caminhoDoFicheiro = @"C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\Animais.txt";
-            GereFicheiros.CarregaAnimais(caminhoDoFicheiro);
+            string caminhodoficheiro2 = @"C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\TiposComida.txt";
+            GereFicheiros.CarregaTiposdeComida(caminhodoficheiro2); 
+            TipoComida.MostraTodosTipodeComida();
+            Console.WriteLine("---------------------------------------------------------------------------------------------");
+            string caminhodoficheiro1 = @"C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\Animais.txt";
+            GereFicheiros.CarregaAnimais(caminhodoficheiro1);
             Animal.MostraAnimais();
 
+            Console.WriteLine("---------------------------------------------------------------------------------------------");
             Console.WriteLine("Encontrar um animal:");
             Animal? animal = Animal.EncontraAnimal(1);
             Console.WriteLine(animal);
 
 
-            TipoComida.CriarTipoComida("Pernas galinha", 27.3,DIETA.Carnivoro);
-            TipoComida.CriarTipoComida("Mato", 15.2, DIETA.Herbivoro);
-            TipoComida.MostraTodosTipodeComida();
 
+            Console.WriteLine("---------------------------------------------------------------------------------------------");
             Alimentacao.RegistraAlimentacao(Animal.animais[0], DateTime.Now, 20, TipoComida.tipocomidas[0]);
             Alimentacao.RegistraAlimentacao(Animal.animais[1], DateTime.Now, 20, TipoComida.tipocomidas[1]);
             Alimentacao.MostraTodasAlimentacoes();
 
-
+            Console.WriteLine("---------------------------------------------------------------------------------------------");
             Bilhete.ComprarBilhete(ZONA.Savana, TIPOBILHETE.Passeio, 12.5);
             Bilhete.ComprarBilhete(ZONA.Deserto, TIPOBILHETE.Completo, 20);
             Bilhete.VerTodosBilhetes();
 
+            Console.WriteLine("---------------------------------------------------------------------------------------------");
             Espetáculo.CriarEspetaculo(1,TIPOESPETÁCULO.Leão,"Espetáculo do Leão",DateTime.Now);
             Espetáculo.CriarEspetaculo(2, TIPOESPETÁCULO.Leão, "Espetáculo do Leão", DateTime.Now);
             Espetáculo.CriarEspetaculo(3, TIPOESPETÁCULO.Leão, "Espetáculo do Leão", DateTime.Now);
             Espetáculo.CriarEspetaculo(4, TIPOESPETÁCULO.Tubarão, "Espetáculo do Tubarão", DateTime.Now);
             Espetáculo.MostrarTodosEspetaculos();
 
-            
 
+            Console.WriteLine("---------------------------------------------------------------------------------------------");
             AssistênciaVeterinária.RegistaAssistênciaVeterinária(Habitat.habitats[0],Animal.animais[0]);
             AssistênciaVeterinária.RegistaAssistênciaVeterinária(Habitat.habitats[1],Animal.animais[1]);
             AssistênciaVeterinária.MostraTodosRegistosAssistênciaVeterinária();
@@ -65,14 +68,14 @@ namespace Main
             AssistênciaVeterinária.ApagaRegistos(Habitat.habitats[0], Animal.animais[0]);
             AssistênciaVeterinária.ApagarTodosRegistos();
 
-
+            Console.WriteLine("---------------------------------------------------------------------------------------------");
             //Habitat.habitats[0].RemoverAnimalHabitat(Animal.animais[0]);
             //Habitat.habitats[0].RemoverAnimalHabitat(Animal.animais[1]);
             Habitat.MostraHabitatsAnimais();
             Habitat.MostraTodosHabitats();
-           
 
 
+            Console.WriteLine("---------------------------------------------------------------------------------------------");
             LimpezaHabitat.RegistarHabitatLimpo(Habitat.habitats[0],DateTime.Now);
             LimpezaHabitat.RegistarHabitatLimpo(Habitat.habitats[0], DateTime.Now);
             LimpezaHabitat.RegistarHabitatLimpo(Habitat.habitats[0], DateTime.Now);

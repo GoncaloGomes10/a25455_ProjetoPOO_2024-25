@@ -77,8 +77,48 @@ namespace ObjetosZoo
             return true;
         }
 
+        public static bool CarregaTiposdeComida(string filePath)
+        {
+            // Verifica se o ficheiro existe
+            if (File.Exists(filePath))
+            {
+                // Lê todas as linhas do ficheiro
+                string[] linhas = File.ReadAllLines(filePath);
+
+                // Para cada linha no ficheiro, processa o conteúdo
+                foreach (string linha in linhas)
+                {
+                    // Divide a linha em partes
+                    string[] partes = linha.Split(';');
+
+                    if (partes.Length == 3) // Verifica se há exatamente 3 partes
+                    {
+                        string nomecomida = partes[0];
+                        double calorias = double.Parse(partes[1]);
+                        DIETA dieta = (DIETA)Enum.Parse(typeof(DIETA), partes[2]);
+                       
+
+                        // Cria o objeto TipoComida e coloca-o na lista
+                        TipoComida x = new TipoComida(nomecomida,calorias, dieta);
+                        TipoComida.tipocomidas.Add(x);
+                    }
+                    else
+                    {
+                        throw new Exception("Formato da linha inválido.");
+                    }
+                }
+            }
+            else
+            {
+                throw new FileNotFoundException("Ficheiro não encontrado.");
+            }
+
+            return true;
+        }
 
         #endregion
+
+
 
 
     }

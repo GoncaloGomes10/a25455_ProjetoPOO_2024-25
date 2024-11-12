@@ -1,0 +1,12 @@
+Carne de Vaca;200,3;Carnivoro
+Carne de Frango;170,3;Carnivoro
+Salmão;210,4;Carnivoro
+Robalo;230,3;Carnivoro
+Alface;120;Herbivoro
+Espinafre;140;Herbivoro
+Cenoura;125;Herbivoro
+Feno;110;Herbivoro
+Uvas;80;Omnivoro
+Banana;100;Omnivoro
+Batata;120;Omnivoro
+Nozes;56;Omnivoro
