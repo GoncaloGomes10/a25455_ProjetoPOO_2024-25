@@ -18,37 +18,48 @@ using System.Threading.Tasks;
 namespace ObjetosZoo
 {
     /// <summary>
-    /// Purpose: 
-    /// Created by: gonca
-    /// Created on: 26/10/2024 16:24:23
+    /// Enumerado de tipos de dieta que um animal pode ter.
     /// </summary>
-    /// <remarks></remarks>
-    /// <example></example>
     public enum DIETA
     {
         Carnivoro,
         Herbivoro,
         Omnivoro
     }
+
+    /// <summary>
+    /// Class que representa um animal no zoológico.
+    /// Criado por: gonca
+    /// Criado em: 26/10/2024 16:24:23
+    /// </summary>
+    
     public class Animal
     {
-        #region Atributes
-        
-        DIETA dieta;
-        private int id;
-        private static int idstatic;
-        private string nome;
-        private string especie;
-        private int idade;
-        private double peso;
-        public static List<Animal> animais = new List<Animal>();
+        #region Attributes
+
+        private DIETA dieta; 
+        private int id; 
+        private static int idstatic; 
+        private string nome; 
+        private string especie; 
+        private int idade; 
+        private double peso; 
+        public static List<Animal> animais = new List<Animal>(); 
 
         #endregion
 
         #region Methods
 
-        #region Constructors  
-        public Animal(string nome,string especie, int idade, double peso, DIETA dieta)
+        #region Constructors
+        /// <summary>
+        /// Constructor para criar um animal com os atributos principais.
+        /// </summary>
+        /// <param name="nome">Nome do animal.</param>
+        /// <param name="especie">Espécie do animal.</param>
+        /// <param name="idade">Idade do animal em anos.</param>
+        /// <param name="peso">Peso do animal em quilogramas.</param>
+        /// <param name="dieta">Tipo de dieta do animal.</param>
+        public Animal(string nome, string especie, int idade, double peso, DIETA dieta)
         {
             idstatic++;
             id = idstatic;
@@ -68,26 +79,31 @@ namespace ObjetosZoo
             get { return id; }
             set { id = value; }
         }
+
         public string Nome
         {
             get { return nome; }
             set { nome = value; }
         }
+
         public string Especie
         {
             get { return especie; }
             set { especie = value; }
         }
+
         public int Idade
         {
             get { return idade; }
             set { idade = value; }
         }
+
         public double Peso
         {
             get { return peso; }
             set { peso = value; }
         }
+
         public DIETA Dieta
         {
             get { return dieta; }
@@ -96,27 +112,43 @@ namespace ObjetosZoo
 
         #endregion
 
-        #region Operators
+        #region Operators 
+
         #endregion
 
-        #region Overrides 
+        #region Overrides
+        /// <summary>
+        /// Retorna uma string formatada com as principais informações do animal.
+        /// </summary>
+        /// <returns>String com nome, espécie, idade, peso, dieta e ID do animal.</returns>
         public override string ToString()
         {
-            string outStr = String.Format("Nome: {0} Especie: {1} Idade: {2} Peso: {3} kg Tipo: {4} Id: {5}", Nome, Especie, Idade, Peso, Dieta,Id);
-            return outStr;
+            return String.Format("Nome: {0} Especie: {1} Idade: {2} Peso: {3} kg Tipo: {4} Id: {5}", Nome, Especie, Idade, Peso, Dieta, Id);
         }
-       
+
         #endregion
 
-        #region OtherMethods  
-        public static bool CriarAnimal(string nome,string especie,int idade,double peso,DIETA dieta)
+        #region OtherMethods 
+        /// <summary>
+        /// Cria um novo animal e adiciona-o à lista de animais.
+        /// </summary>
+        /// <param name="nome">Nome do animal.</param>
+        /// <param name="especie">Espécie do animal.</param>
+        /// <param name="idade">Idade do animal em anos.</param>
+        /// <param name="peso">Peso do animal em quilogramas.</param>
+        /// <param name="dieta">Tipo de dieta do animal.</param>
+        /// <returns>Retorna true se o animal for criado e adicionado com sucesso.</returns>
+        public static bool CriarAnimal(string nome, string especie, int idade, double peso, DIETA dieta)
         {
-            Animal animal = new Animal(nome,especie,idade,peso,dieta);
+            Animal animal = new Animal(nome, especie, idade, peso, dieta);
             animais.Add(animal);
-
             return true;
         }
 
+        /// <summary>
+        /// Exibe todos os animais da lista na consola.
+        /// </summary>
+        /// <returns>Retorna true após exibir a lista.</returns>
         public static bool MostraAnimais()
         {
             foreach (var animal in animais)
@@ -126,12 +158,16 @@ namespace ObjetosZoo
             return true;
         }
 
+        /// <summary>
+        /// Procura um animal específico pelo ID.
+        /// </summary>
+        /// <param name="id">ID do animal a ser encontrado.</param>
+        /// <returns>Retorna o animal se encontrado; caso contrário, retorna null.</returns>
         public static Animal? EncontraAnimal(int id)
         {
             Animal? animal = animais.Find(animais => animais.Id == id);
             if (animal != null)
             {
-                //Console.WriteLine(animal);
                 return animal;
             }
             else
@@ -141,10 +177,14 @@ namespace ObjetosZoo
             }
         }
 
+        /// <summary>
+        /// Remove um animal da lista com base no ID.
+        /// </summary>
+        /// <param name="id">ID do animal a ser removido.</param>
+        /// <returns>Retorna true se o animal for removido com sucesso; caso contrário, false.</returns>
         public static bool ApagarAnimal(int id)
         {
-            Animal? animal = animais.Find(animal => animal.Id == id);  
-
+            Animal? animal = animais.Find(animal => animal.Id == id);
             if (animal != null)
             {
                 animais.Remove(animal);
@@ -156,10 +196,14 @@ namespace ObjetosZoo
                 Console.WriteLine($"Animal com ID {id} não encontrado.");
                 return false;
             }
-
         }
 
-        public static Animal EscolherAnimalAleatorio(string especie)
+        /// <summary>
+        /// Seleciona aleatoriamente um animal de uma espécie específica.
+        /// </summary>
+        /// <param name="especie">Espécie desejada do animal.</param>
+        /// <returns>Retorna um animal aleatório da espécie; null se não houver animais da espécie.</returns>
+        public static Animal? EscolherAnimalAleatorio(string especie)
         {
             // Filtra os animais pela espécie desejada
             var animaisDaEspecie = animais.Where(a => a.Especie == especie).ToList();
@@ -168,7 +212,7 @@ namespace ObjetosZoo
             if (animaisDaEspecie.Count == 0)
             {
                 Console.WriteLine($"Nenhum animal disponível para a espécie {especie}.");
-                return null; // Retorna null se não houver animais da espécie
+                return null;
             }
 
             // Seleciona aleatoriamente um animal da lista filtrada
@@ -181,18 +225,6 @@ namespace ObjetosZoo
 
         #region Destructor
         #endregion
-
-        #endregion
-
-
-
-
-
-
-
-
-
-
 
     }
 

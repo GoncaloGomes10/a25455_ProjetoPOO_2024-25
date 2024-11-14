@@ -17,8 +17,6 @@ namespace ObjetosZoo
     /// Created by: gonca
     /// Created on: 28/10/2024 15:25:57
     /// </summary>
-    /// <remarks></remarks>
-    /// <example></example>
     public class Cliente : Utilizador
     {
         #region Attributes

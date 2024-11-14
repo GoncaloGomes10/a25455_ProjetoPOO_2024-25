@@ -17,12 +17,8 @@ using System.Threading.Tasks;
 namespace ObjetosZoo
 {
     /// <summary>
-    /// Purpose: 
-    /// Created by: gonca
-    /// Created on: 26/10/2024 16:24:23
+    /// Enumerado dos tipos de espetáculo disponíveis.
     /// </summary>
-    /// <remarks></remarks>
-    /// <example></example>
     public enum TIPOESPETÁCULO
     {
         Elefante,
@@ -30,6 +26,12 @@ namespace ObjetosZoo
         Tubarão,
         Leão
     }
+
+    /// <summary>
+    /// Classe que representa um Espetáculo no zoológico.
+    /// Criado por: gonca
+    /// Criado em: 26/10/2024 16:24:23
+    /// </summary>
     public class Espetáculo
     {
         #region Attributes 
@@ -41,13 +43,19 @@ namespace ObjetosZoo
         private Animal animalespetaculo;
         public static List<Espetáculo> espetaculos = new List<Espetáculo>();
 
-
         #endregion
 
         #region Methods
 
         #region Constructors
-
+        /// <summary>
+        /// Construtor para inicializar um novo espetáculo com os detalhes especificados.
+        /// </summary>
+        /// <param name="id">ID único do espetáculo.</param>
+        /// <param name="tipoespetaculo">Tipo de espetáculo (Elefante, Golfinho, etc.).</param>
+        /// <param name="nome">Nome do espetáculo.</param>
+        /// <param name="horario">Horário do espetáculo.</param>
+        /// <param name="animalespetaculo">Animal que participa no espetáculo.</param>
         public Espetáculo(int id, TIPOESPETÁCULO tipoespetaculo, string nome, DateTime horario, Animal animalespetaculo)
         {
             Id = id;
@@ -93,10 +101,15 @@ namespace ObjetosZoo
 
         #endregion
 
-        #region Operators
+        #region Operators 
+
         #endregion
 
         #region Overrides
+        /// <summary>
+        /// Representação em string do espetáculo, com informações detalhadas.
+        /// </summary>
+        /// <returns>Uma string contendo detalhes do espetáculo.</returns>
         public override string ToString()
         {
             return $"Espetáculo Id: {Id}, Tipo: {TipoEspetaculo}, Nome: {Nome}, Horário: {Horario}, " +
@@ -106,7 +119,14 @@ namespace ObjetosZoo
         #endregion
 
         #region OtherMethods
-
+        /// <summary>
+        /// Cria um novo espetáculo e adiciona-o à lista de espetáculos.
+        /// </summary>
+        /// <param name="id">ID do espetáculo.</param>
+        /// <param name="tipoespetaculo">Tipo de espetáculo (Elefante, Golfinho, Tubarão, Leão).</param>
+        /// <param name="nome">Nome do espetáculo.</param>
+        /// <param name="horario">Horário do espetáculo.</param>
+        /// <returns>Retorna true se o espetáculo for criado com sucesso.</returns>
         public static bool CriarEspetaculo(int id, TIPOESPETÁCULO tipoespetaculo, string nome, DateTime horario)
         {
             // Converte o tipo de espetáculo para o nome da espécie correspondente
@@ -131,6 +151,9 @@ namespace ObjetosZoo
             return true;
         }
 
+        /// <summary>
+        /// Exibe a lista de todos os espetáculos cadastrados.
+        /// </summary>
         public static void MostrarTodosEspetaculos()
         {
             if (espetaculos.Count == 0)
@@ -146,15 +169,15 @@ namespace ObjetosZoo
             }
         }
 
-
         #endregion
-
-        #region Destructor
-        #endregion
-
-        #endregion
-
-
-
     }
+
+    #region Destructor
+    #endregion
+
+    #endregion
+
+
+
 }
+

@@ -16,16 +16,21 @@ using System.Threading.Tasks;
 namespace ObjetosZoo
 {
     /// <summary>
-    /// Purpose: 
-    /// Created by: gonca
-    /// Created on: 26/10/2024 16:24:23
+    /// Classe para gerenciamento de ficheiros relacionados ao zoológico.
+    /// Criado por: gonca
+    /// Criado em: 26/10/2024 16:24:23
     /// </summary>
-    /// <remarks></remarks>
-    /// <example></example>
     public static class GereFicheiros
     {
         #region Methods
 
+        /// <summary>
+        /// Carrega informações dos animais de um ficheiro para a lista de animais.
+        /// </summary>
+        /// <param name="filePath">Caminho do ficheiro com informações dos animais.</param>
+        /// <returns>Retorna true se o carregamento for bem-sucedido.</returns>
+        /// <exception cref="FileNotFoundException">Lançada se o ficheiro não for encontrado.</exception>
+        /// <exception cref="Exception">Lançada se o formato de uma linha do ficheiro estiver incorreto.</exception>
         public static bool CarregaAnimais(string filePath)
         {
             // Verifica se o ficheiro existe
@@ -40,27 +45,29 @@ namespace ObjetosZoo
                     // Divide a linha em partes
                     string[] partes = linha.Split(';');
 
-                    if (partes.Length == 6) // Verifica se há exatamente 6 partes
+                    // Verifica se há exatamente 6 partes
+                    if (partes.Length == 6)
                     {
                         string nome = partes[0];
                         string especie = partes[1];
                         int idade = int.Parse(partes[2]);
                         double peso = double.Parse(partes[3]);
                         DIETA dieta = (DIETA)Enum.Parse(typeof(DIETA), partes[4]);
-                        int id = int.Parse((partes[5]));
+                        int idHabitat = int.Parse(partes[5]);
 
-                        // Cria o objeto Animal e coloca-o na lista
-                        Animal x = new Animal(nome, especie, idade, peso, dieta);
-                        Animal.animais.Add(x);
+                        // Cria o objeto Animal e adiciona-o à lista de animais
+                        Animal animal = new Animal(nome, especie, idade, peso, dieta);
+                        Animal.animais.Add(animal);
 
-                        Habitat? h = Habitat.habitats.Find(habitat => habitat.IdHabitat == id);
-                        if(h != null)
+                        // Procura o habitat correspondente ao ID e adiciona o animal ao habitat
+                        Habitat? habitat = Habitat.habitats.Find(h => h.IdHabitat == idHabitat);
+                        if (habitat != null)
                         {
-                            h.AdicionaAnimalHabitat(x);
+                            habitat.AdicionaAnimalHabitat(animal);
                         }
                         else
                         {
-                            Console.WriteLine("Não foi encontrado o habitat");
+                            Console.WriteLine($"Não foi encontrado o habitat com ID {idHabitat}.");
                         }
                     }
                     else
@@ -71,12 +78,19 @@ namespace ObjetosZoo
             }
             else
             {
-                throw new FileNotFoundException("Ficheiro não encontrado.");
+                throw new FileNotFoundException("Ficheiro de animais não encontrado.");
             }
 
             return true;
         }
 
+        /// <summary>
+        /// Carrega informações dos tipos de comida de um ficheiro para a lista de tipos de comida.
+        /// </summary>
+        /// <param name="filePath">Caminho do ficheiro com informações dos tipos de comida.</param>
+        /// <returns>Retorna true se o carregamento for bem-sucedido.</returns>
+        /// <exception cref="FileNotFoundException">Lançada se o ficheiro não for encontrado.</exception>
+        /// <exception cref="Exception">Lançada se o formato de uma linha do ficheiro estiver incorreto.</exception>
         public static bool CarregaTiposdeComida(string filePath)
         {
             // Verifica se o ficheiro existe
@@ -91,16 +105,16 @@ namespace ObjetosZoo
                     // Divide a linha em partes
                     string[] partes = linha.Split(';');
 
-                    if (partes.Length == 3) // Verifica se há exatamente 3 partes
+                    // Verifica se há exatamente 3 partes
+                    if (partes.Length == 3)
                     {
-                        string nomecomida = partes[0];
+                        string nomeComida = partes[0];
                         double calorias = double.Parse(partes[1]);
                         DIETA dieta = (DIETA)Enum.Parse(typeof(DIETA), partes[2]);
-                       
 
-                        // Cria o objeto TipoComida e coloca-o na lista
-                        TipoComida x = new TipoComida(nomecomida,calorias, dieta);
-                        TipoComida.tipocomidas.Add(x);
+                        // Cria o objeto TipoComida e adiciona-o à lista de tipos de comida
+                        TipoComida tipoComida = new TipoComida(nomeComida, calorias, dieta);
+                        TipoComida.tipocomidas.Add(tipoComida);
                     }
                     else
                     {
@@ -110,16 +124,15 @@ namespace ObjetosZoo
             }
             else
             {
-                throw new FileNotFoundException("Ficheiro não encontrado.");
+                throw new FileNotFoundException("Ficheiro de tipos de comida não encontrado.");
             }
 
             return true;
         }
 
         #endregion
-
-
-
-
     }
+
+
+
 }

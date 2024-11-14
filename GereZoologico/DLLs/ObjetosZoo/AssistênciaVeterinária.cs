@@ -13,15 +13,12 @@ using System;
 namespace ObjetosZoo
 {
     /// <summary>
-    /// Purpose: 
-    /// Created by: gonca
-    /// Created on: 26/10/2024 17:05:05
+    /// Classe que representa um registo de assistência veterinária a um animal.
+    /// Criado por: gonca
+    /// Criado em: 26/10/2024 17:05:05
     /// </summary>
-    /// <remarks></remarks>
-    /// <example></example>
     public class AssistênciaVeterinária
     {
-
         #region Attributes
 
         private Habitat habitat;
@@ -34,8 +31,12 @@ namespace ObjetosZoo
         #region Methods
 
         #region Constructors
-        
-        public AssistênciaVeterinária(Habitat habitat,Animal animal)
+        /// <summary>
+        /// Construtor para criar um registo de assistência veterinária.
+        /// </summary>
+        /// <param name="habitat">O habitat onde o animal se encontra.</param>
+        /// <param name="animal">O animal que recebeu assistência veterinária.</param>
+        public AssistênciaVeterinária(Habitat habitat, Animal animal)
         {
             Habitat = habitat;
             Animal = animal;
@@ -65,10 +66,15 @@ namespace ObjetosZoo
 
         #endregion
 
-        #region Operators
+        #region Operators 
+
         #endregion
 
         #region Overrides
+        /// <summary>
+        /// Retorna uma string com as principais informações sobre o tratamento realizado.
+        /// </summary>
+        /// <returns>String com o animal tratado, habitat e data do tratamento.</returns>
         public override string ToString()
         {
             return $"Animal tratado: {Animal}, Habitat: {Habitat}, Data: {Datadotratamento}";
@@ -78,7 +84,13 @@ namespace ObjetosZoo
 
         #region OtherMethods
 
-        public static bool RegistaAssistênciaVeterinária(Habitat habitat,Animal animal)
+        /// <summary>
+        /// Regista uma nova assistência veterinária para um animal específico no seu habitat.
+        /// </summary>
+        /// <param name="habitat">O habitat onde o animal se encontra.</param>
+        /// <param name="animal">O animal que receberá assistência veterinária.</param>
+        /// <returns>Retorna true se o registo for adicionado com sucesso, false caso contrário.</returns>
+        public static bool RegistaAssistênciaVeterinária(Habitat habitat, Animal animal)
         {
             // Verifica se o animal está no habitat
             if (habitat.ContemAnimal(animal))
@@ -95,6 +107,9 @@ namespace ObjetosZoo
             }
         }
 
+        /// <summary>
+        /// Exibe todos os registos de assistência veterinária no console.
+        /// </summary>
         public static void MostraTodosRegistosAssistênciaVeterinária()
         {
             foreach (var tratamento in assistênciaveterinária)
@@ -103,7 +118,13 @@ namespace ObjetosZoo
             }
         }
 
-        public static bool ApagaRegistos(Habitat habitat,Animal animal)
+        /// <summary>
+        /// Apaga os registos de assistência veterinária para um animal específico no habitat dado.
+        /// </summary>
+        /// <param name="habitat">O habitat onde o animal se encontra.</param>
+        /// <param name="animal">O animal cujos registos serão apagados.</param>
+        /// <returns>Retorna true se houver registos apagados, false caso contrário.</returns>
+        public static bool ApagaRegistos(Habitat habitat, Animal animal)
         {
             // Verifica se o animal está no habitat antes de tentar apagar o registo
             if (habitat.ContemAnimal(animal))
@@ -128,6 +149,10 @@ namespace ObjetosZoo
             }
         }
 
+        /// <summary>
+        /// Apaga todos os registos de assistência veterinária.
+        /// </summary>
+        /// <returns>Retorna true se algum registo for apagado, false caso contrário.</returns>
         public static bool ApagarTodosRegistos()
         {
             int removidos = assistênciaveterinária.Count;

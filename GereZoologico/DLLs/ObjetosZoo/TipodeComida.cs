@@ -18,12 +18,10 @@ using System.Threading.Tasks;
 namespace ObjetosZoo
 {
     /// <summary>
-    /// Purpose: 
+    /// Esta classe gerencia uma lista de tipos de comida e fornece métodos para criar, mostrar e apagar tipos de comida.
     /// Created by: gonca
     /// Created on: 26/10/2024 16:24:23
     /// </summary>
-    /// <remarks></remarks>
-    /// <example></example>
     public class TipoComida
     {
         #region Attributes
@@ -39,13 +37,19 @@ namespace ObjetosZoo
         #region Methods
 
         #region Constructors
+        /// <summary>
+        /// Construtor para criar um novo tipo de comida, atribuindo valores e gerando um ID único.
+        /// </summary>
+        /// <param name="nomecomida">Nome do tipo de comida.</param>
+        /// <param name="calorias">Quantidade de calorias do tipo de comida.</param>
+        /// <param name="dieta">Dieta associada ao tipo de comida.</param>
         public TipoComida(string nomecomida, double calorias, DIETA dieta)
         {
-            idstatic++;
-            Id = idstatic;
-            NomeComida = nomecomida;
+            idstatic++; 
+            Id = idstatic; 
+            NomeComida = nomecomida; 
             Calorias = calorias;
-            Dieta = dieta;
+            Dieta = dieta; 
         }
 
         #endregion
@@ -81,61 +85,89 @@ namespace ObjetosZoo
         #endregion
 
         #region Overrides 
-        public override string ToString()  
+        /// <summary>
+        /// Retorna uma representação em string do tipo de comida, mostrando seu nome e calorias.
+        /// </summary>
+        /// <returns>Representação em string do tipo de comida.</returns>
+        public override string ToString()
         {
-            string outStr = String.Format(" {0} ,Calorias: {1}",NomeComida,Calorias);
-            return outStr;
+            string outStr = String.Format(" {0} ,Calorias: {1}", NomeComida, Calorias); 
+            return outStr; 
         }
         #endregion
 
         #region OtherMethods
+        /// <summary>
+        /// Mostra os detalhes do tipo de comida, incluindo nome e calorias.
+        /// </summary>
+        /// <returns>Retorna true após exibir os detalhes.</returns>
         public bool MostraDetalhesTipodeComida()
         {
+          
             Console.WriteLine($"Comida: {NomeComida}, Calorias: {Calorias}");
-            return true;
+            return true; 
         }
 
-        public static bool CriarTipoComida(string nomecomida,double calorias,DIETA dieta)
+        /// <summary>
+        /// Cria um novo tipo de comida e o adiciona à lista de tipos de comida.
+        /// </summary>
+        /// <param name="nomecomida">Nome do tipo de comida.</param>
+        /// <param name="calorias">Quantidade de calorias.</param>
+        /// <param name="dieta">Dieta associada ao tipo de comida.</param>
+        /// <returns>Retorna true após criar o tipo de comida.</returns>
+        public static bool CriarTipoComida(string nomecomida, double calorias, DIETA dieta)
         {
-            TipoComida tipo = new TipoComida(nomecomida,calorias,dieta);
-            tipocomidas.Add(tipo);
-            return true;
+            TipoComida tipo = new TipoComida(nomecomida, calorias, dieta); 
+            tipocomidas.Add(tipo); 
+            return true; 
         }
 
+        /// <summary>
+        /// Mostra todos os tipos de comida registados.
+        /// </summary>
+        /// <returns>Retorna true após exibir todos os tipos de comida.</returns>
         public static bool MostraTodosTipodeComida()
         {
-            foreach(var tipo in tipocomidas)
+            
+            foreach (var tipo in tipocomidas)
             {
-                tipo.MostraDetalhesTipodeComida();
+                tipo.MostraDetalhesTipodeComida(); 
             }
-            return true;
+            return true; 
         }
-
+        /// <summary>
+        /// Apaga um tipo de comida da lista com base no nome.
+        /// </summary>
+        /// <param name="nomecomida">Nome do tipo de comida a ser apagado.</param>
+        /// <returns>Retorna true se o tipo de comida foi apagado, ou false se não encontrado.</returns>
         public static bool ApagarTipoComida(string nomecomida)
         {
-            TipoComida? tipo = tipocomidas.Find(tipo=> tipo.nomecomida==nomecomida);
+            // Procura o tipo de comida pelo nome
+            TipoComida? tipo = tipocomidas.Find(tipo => tipo.nomecomida == nomecomida);
             if (tipo != null)
             {
                 tipocomidas.Remove(tipo);
-                Console.WriteLine("Tipo de comida apagada");
-                return true;
+                Console.WriteLine("Tipo de comida apagada"); 
+                return true; 
             }
             else
             {
-                Console.WriteLine("Tipo de comida não existe");
-                return false;
+                Console.WriteLine("Tipo de comida não existe"); 
+                return false; 
             }
         }
 
         #endregion
-
-        #region Destructor
-        #endregion
-
-        #endregion
-        
-        
-       
-        
     }
+
+
+    #region Destructor
+    #endregion
+
+    #endregion
+
+
+
+
 }
+

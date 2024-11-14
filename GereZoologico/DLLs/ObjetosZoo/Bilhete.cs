@@ -16,12 +16,8 @@ using System.Threading.Tasks;
 namespace ObjetosZoo
 {
     /// <summary>
-    /// Purpose: 
-    /// Created by: gonca
-    /// Created on: 26/10/2024 16:24:23
+    /// Enumerado que representa as diferentes zonas do zoológico.
     /// </summary>
-    /// <remarks></remarks>
-    /// <example></example>
     public enum ZONA
     {
         Savana,
@@ -29,12 +25,21 @@ namespace ObjetosZoo
         Aquática,
         Floresta
     }
+    /// <summary>
+    /// Enumerado para os tipos de bilhetes disponíveis.
+    /// </summary>
     public enum TIPOBILHETE
     {
         Passeio,
         Espetáculo,
-        Completo             // passeio e espetaculo
+        Completo  // Inclui passeio e espetáculo
     }
+
+    /// <summary>
+    /// Classe que representa um bilhete do zoológico.
+    /// Criado por: gonca
+    /// Criado em: 26/10/2024 16:24:23
+    /// </summary>
     public class Bilhete
     {
         #region Attributes 
@@ -51,6 +56,12 @@ namespace ObjetosZoo
         #region Methods
 
         #region Constructors 
+        /// <summary>
+        /// Construtor para criar um novo bilhete com uma zona, tipo de bilhete e preço.
+        /// </summary>
+        /// <param name="zona">Zona do zoológico para a qual o bilhete é válido.</param>
+        /// <param name="tipobilhete">Tipo do bilhete (Passeio, Espetáculo, Completo).</param>
+        /// <param name="preço">Preço do bilhete.</param>
         public Bilhete(ZONA zona, TIPOBILHETE tipobilhete, double preço)
         {
             idstatic++;
@@ -58,7 +69,6 @@ namespace ObjetosZoo
             TipoBilhete = tipobilhete;
             Zona = zona;
             Preço = preço;
-
         }
         #endregion
 
@@ -74,7 +84,7 @@ namespace ObjetosZoo
             get { return id; }
             set { id = value; }
         }
-        
+
         public ZONA Zona
         {
             get { return zona; }
@@ -89,46 +99,53 @@ namespace ObjetosZoo
 
         #endregion
 
-        #region Operators
-        #endregion
+        #region Operators 
 
-        #region Overrides
         #endregion
 
         #region OtherMethods
+        /// <summary>
+        /// Mostra as informações do bilhete na consola.
+        /// </summary>
         public void VerBilhete()
         {
             Console.WriteLine($"O teu bilhete {Id} do tipo {TipoBilhete} custou {Preço} euros para a zona: {Zona}");
         }
 
+        /// <summary>
+        /// Permite comprar um bilhete e adicioná-lo à lista de bilhetes comprados.
+        /// </summary>
+        /// <param name="zona">Zona do zoológico para a qual o bilhete é válido.</param>
+        /// <param name="tipobilhete">Tipo do bilhete (Passeio, Espetáculo, Completo).</param>
+        /// <param name="preço">Preço do bilhete.</param>
+        /// <returns>Retorna true se o bilhete for comprado com sucesso.</returns>
         public static bool ComprarBilhete(ZONA zona, TIPOBILHETE tipobilhete, double preço)
         {
-            Bilhete bilhete = new Bilhete(zona,tipobilhete,preço);
+            Bilhete bilhete = new Bilhete(zona, tipobilhete, preço);
             bilhetes.Add(bilhete);
             Console.WriteLine("Bilhete comprado com sucesso");
             return true;
         }
 
+        /// <summary>
+        /// Mostra todos os bilhetes comprados na consola.
+        /// </summary>
+        /// <returns>Retorna true após mostrar todos os bilhetes.</returns>
         public static bool VerTodosBilhetes()
         {
-            foreach(var  bilhete in bilhetes)
+            foreach (var bilhete in bilhetes)
             {
                 bilhete.VerBilhete();
             }
             return true;
-
         }
-        #endregion
-
-        #region Destructor
-        #endregion
 
         #endregion
-       
-
-        
-
-        
-
     }
+
+    #region Destructor
+    #endregion
+
+    #endregion
+
 }
