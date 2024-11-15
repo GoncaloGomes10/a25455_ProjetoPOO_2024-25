@@ -20,8 +20,6 @@ namespace ObjetosZoo
     public class Cliente : Utilizador
     {
         #region Attributes
-        private string nome;
-        private string NIF;
         private double saldo;
 
         #endregion
@@ -29,9 +27,22 @@ namespace ObjetosZoo
         #region Methods
 
         #region Constructors
+        public Cliente(string username, string password, string email, string nome, string nif, double saldo)
+            : base(username, password, email, nome, nif)
+        {
+         Saldo = saldo;
+        }
+
         #endregion
 
         #region Properties
+
+        public double Saldo
+        {
+            get { return saldo; }
+            set { saldo = value; }
+        }
+
         #endregion
 
         #region Operators
@@ -41,6 +52,7 @@ namespace ObjetosZoo
         #endregion
 
         #region OtherMethods
+
         #endregion
 
         #region Destructor

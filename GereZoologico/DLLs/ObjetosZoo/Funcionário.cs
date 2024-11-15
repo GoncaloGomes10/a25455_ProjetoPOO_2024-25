@@ -23,14 +23,19 @@ namespace ObjetosZoo
     public class Funcionário : Utilizador
     {
         #region Attributes
-        private string nome;
-        private string NIF;
+        public static List<Funcionário>funcionários = new List<Funcionário> ();
 
         #endregion
 
         #region Methods
 
         #region Constructors
+        public Funcionário(string username, string password, string email ,string nome, string nif)
+            :base(username,password,email,nome,nif)
+        {
+
+        }
+ 
         #endregion
 
         #region Properties

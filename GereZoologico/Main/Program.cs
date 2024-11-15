@@ -46,6 +46,7 @@ namespace Main
             Alimentacao.RegistraAlimentacao(Animal.animais[0], DateTime.Now, 20, TipoComida.tipocomidas[0]);
             Alimentacao.RegistraAlimentacao(Animal.animais[1], DateTime.Now, 20, TipoComida.tipocomidas[1]);
             Alimentacao.MostraTodasAlimentacoes();
+            
 
             Console.WriteLine("---------------------------------------------------------------------------------------------");
             Bilhete.ComprarBilhete(ZONA.Savana, TIPOBILHETE.Passeio, 12.5);

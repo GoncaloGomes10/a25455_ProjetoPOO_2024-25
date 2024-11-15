@@ -27,15 +27,64 @@ namespace ObjetosZoo
         private string username;
         private string password;
         private string email;
+        private string nome;
+        private string nif;
+        //Atributo de permissão?
+        public static List<Utilizador> utilizadores = new List<Utilizador>();
+
 
         #endregion
 
         #region Methods
 
         #region Constructors
+        public Utilizador(string username, string password, string email, string nome, string nif)
+        {
+            Username = username;
+            Password = password;
+            Email = email;
+            NIF = nif;
+            Nome = nome;
+            Id = idstatic++;
+            idstatic++;
+        }
         #endregion
 
         #region Properties
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
+        public string Username
+        {
+            get { return username; }
+            set { username = value; }
+        }
+        public string Password
+        {
+            get { return password; }
+            set { password = value; }
+        }
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
+        public string Nome
+        {
+            get { return nome; }
+            set { nome = value; }
+        }
+
+        public string NIF
+        {
+            get { return nif; }
+            set { nif = value; }
+        }
+
+
         #endregion
 
         #region Operators
@@ -45,6 +94,12 @@ namespace ObjetosZoo
         #endregion
 
         #region OtherMethods
+        public static bool CriarConta()
+        {
+            
+            return true;
+        }
+
         #endregion
 
         #region Destructor
