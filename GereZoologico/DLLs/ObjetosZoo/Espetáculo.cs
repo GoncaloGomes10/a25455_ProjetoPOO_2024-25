@@ -133,17 +133,17 @@ namespace ObjetosZoo
             string especie = tipoespetaculo.ToString();
 
             // Seleciona aleatoriamente um animal da espécie especificada
-            Animal animalEscolhido = Animal.EscolherAnimalAleatorio(especie);
+            Animal animalescolhido = Animal.EscolherAnimalAleatorio(especie);
 
             // Verifica se foi encontrado um animal para a espécie
-            if (animalEscolhido == null)
+            if (animalescolhido == null)
             {
                 Console.WriteLine($"Espetáculo não pode ser criado. Nenhum animal disponível para a espécie {especie}.");
                 return false;
             }
 
             // Cria uma nova instância de Espetáculo com o animal selecionado
-            Espetáculo espetáculo = new Espetáculo(id, tipoespetaculo, nome, horario, animalEscolhido);
+            Espetáculo espetáculo = new Espetáculo(id, tipoespetaculo, nome, horario, animalescolhido);
 
             // Adiciona o novo espetáculo à lista estática de espetáculos
             espetaculos.Add(espetáculo);

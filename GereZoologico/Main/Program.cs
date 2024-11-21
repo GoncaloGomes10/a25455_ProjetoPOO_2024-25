@@ -52,6 +52,8 @@ namespace Main
             Bilhete.ComprarBilhete(ZONA.Savana, TIPOBILHETE.Passeio, 12.5);
             Bilhete.ComprarBilhete(ZONA.Deserto, TIPOBILHETE.Completo, 20);
             Bilhete.VerTodosBilhetes();
+            Bilhete.ApagarBilhete(Bilhete.bilhetes[0]);
+            Bilhete.ApagarTodosBilhetes();
 
             Console.WriteLine("---------------------------------------------------------------------------------------------");
             Espetáculo.CriarEspetaculo(1,TIPOESPETÁCULO.Leão,"Espetáculo do Leão",DateTime.Now);

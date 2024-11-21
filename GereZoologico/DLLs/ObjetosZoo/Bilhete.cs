@@ -103,6 +103,9 @@ namespace ObjetosZoo
 
         #endregion
 
+        #region Overrides
+        #endregion
+
         #region OtherMethods
         /// <summary>
         /// Mostra as informações do bilhete na consola.
@@ -138,6 +141,39 @@ namespace ObjetosZoo
                 bilhete.VerBilhete();
             }
             return true;
+        }
+
+        public static bool ApagarTodosBilhetes()
+        {
+            int removidos = bilhetes.Count;
+            bilhetes.Clear();
+
+            if (removidos > 0)
+            {
+                Console.WriteLine($"{removidos} bilhetes foram apagados.");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Nenhum bilhete para apagar.");
+                return false;
+            }
+        }
+
+        public static bool ApagarBilhete(Bilhete bilheterecebido) 
+        {
+            Bilhete? bilhete = bilhetes.Find(a => a.Id == bilheterecebido.Id);
+            if (bilhete != null)
+            {
+                bilhetes.Remove(bilhete);
+                Console.WriteLine("Bilhete apagado");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine($"Bilhete não encontrado");
+                return false;
+            }
         }
 
         #endregion

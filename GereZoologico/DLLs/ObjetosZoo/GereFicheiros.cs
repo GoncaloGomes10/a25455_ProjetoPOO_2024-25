@@ -58,6 +58,7 @@ namespace ObjetosZoo
                         // Cria o objeto Animal e adiciona-o à lista de animais
                         Animal animal = new Animal(nome, especie, idade, peso, dieta);
                         Animal.animais.Add(animal);
+                       
 
                         // Procura o habitat correspondente ao ID e adiciona o animal ao habitat
                         Habitat? habitat = Habitat.habitats.Find(h => h.IdHabitat == idHabitat);
@@ -112,9 +113,8 @@ namespace ObjetosZoo
                         double calorias = double.Parse(partes[1]);
                         DIETA dieta = (DIETA)Enum.Parse(typeof(DIETA), partes[2]);
 
-                        // Cria o objeto TipoComida e adiciona-o à lista de tipos de comida
-                        TipoComida tipoComida = new TipoComida(nomeComida, calorias, dieta);
-                        TipoComida.tipocomidas.Add(tipoComida);
+                        // Cria o objeto TipoComida e adiciona-o à lista de tipos de comida pela função
+                        TipoComida.CriarTipoComida(nomeComida,calorias, dieta);
                     }
                     else
                     {
