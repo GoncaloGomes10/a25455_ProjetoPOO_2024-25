@@ -92,7 +92,7 @@ namespace ObjetosZoo
         /// </summary>
         public void MostrarHabitatLimpo()
         {
-            // Exibe a mensagem com o nome do habitat e a hora da limpeza
+            
             Console.WriteLine($"O habitat {Habitat.NomeHabitat} foi limpo às {HoraLimpeza}");
         }
 
@@ -102,12 +102,12 @@ namespace ObjetosZoo
         /// <returns>Retorna true após exibir todos os registos.</returns>
         public static bool MostraTodosHabitatsLimpos()
         {
-            // Para cada limpeza registrada, exibe a informação
+            
             foreach (var limpeza in limpezahabitats)
             {
-                limpeza.MostrarHabitatLimpo(); // Chama o método MostrarHabitatLimpo() para exibir as informações
+                limpeza.MostrarHabitatLimpo(); 
             }
-            return true; // Retorna true indicando que os registros foram exibidos
+            return true; 
         }
 
         /// <summary>
@@ -117,20 +117,20 @@ namespace ObjetosZoo
         /// <returns>Retorna true se a limpeza foi apagada, ou false caso contrário.</returns>
         public static bool ApagarTodoRegistoLimpezaHabitat(Habitat habitat)
         {
-            // Remove todos os registros de limpeza associados ao habitat passado como parâmetro
+            
             int removidos = limpezahabitats.RemoveAll(limpeza => limpeza.Habitat == habitat);
 
             if (removidos > 0)
             {
-                // Exibe o número de registros removidos
+                
                 Console.WriteLine($"{removidos} registos de limpeza removidos para o habitat com ID {habitat.IdHabitat}.");
-                return true; // Retorna true se algum registro foi apagado
+                return true; 
             }
             else
             {
-                // Exibe uma mensagem indicando que nenhum registro foi encontrado
+                
                 Console.WriteLine("Nenhum registo de limpeza encontrado para o habitat.");
-                return false; // Retorna false se nenhum registro foi apagado
+                return false; 
             }
         }
 
@@ -140,20 +140,20 @@ namespace ObjetosZoo
         /// <returns>Retorna true se algum registo foi apagado, ou false caso contrário.</returns>
         public static bool ApagarTodosRegistosdeLimpeza()
         {
-            int removidos = limpezahabitats.Count; // Armazena o número de registros de limpeza antes de apagar
-            limpezahabitats.Clear(); // Apaga todos os registros de limpeza na lista estática
+            int removidos = limpezahabitats.Count; 
+            limpezahabitats.Clear(); 
 
             if (removidos > 0)
             {
-                // Exibe o número de registros apagados
+               
                 Console.WriteLine($"{removidos} registo(s) de limpeza foram apagados.");
-                return true; // Retorna true indicando que os registros foram apagados
+                return true;
             }
             else
             {
-                // Exibe uma mensagem caso não haja registros para apagar
+                
                 Console.WriteLine("Nenhum registo de limpeza para apagar.");
-                return false; // Retorna false se não houver registros para apagar
+                return false; 
             }
         }
 

@@ -33,6 +33,7 @@ namespace Main
             Console.WriteLine("---------------------------------------------------------------------------------------------");
             string caminhodoficheiro1 = @"C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\Animais.txt";
             GereFicheiros.CarregaAnimais(caminhodoficheiro1);
+            Console.WriteLine("---------------------------------------------------------------------------------------------");
             Animal.MostraAnimais();
 
             Console.WriteLine("---------------------------------------------------------------------------------------------");
@@ -45,6 +46,8 @@ namespace Main
             Console.WriteLine("---------------------------------------------------------------------------------------------");
             Alimentacao.RegistraAlimentacao(Animal.animais[0], DateTime.Now, 20, TipoComida.tipocomidas[0]);
             Alimentacao.RegistraAlimentacao(Animal.animais[1], DateTime.Now, 20, TipoComida.tipocomidas[1]);
+            Alimentacao.MostraTodasAlimentacoes();
+            Alimentacao.ApagarAlimentacao(1);
             Alimentacao.MostraTodasAlimentacoes();
             
 
@@ -61,6 +64,8 @@ namespace Main
             Espetáculo.CriarEspetaculo(3, TIPOESPETÁCULO.Leão, "Espetáculo do Leão", DateTime.Now);
             Espetáculo.CriarEspetaculo(4, TIPOESPETÁCULO.Tubarão, "Espetáculo do Tubarão", DateTime.Now);
             Espetáculo.MostrarTodosEspetaculos();
+            Espetáculo.ApagarEspetaculo(Espetáculo.espetaculos[0]);
+            Espetáculo.ApagarTodosEspetaculos();
 
 
             Console.WriteLine("---------------------------------------------------------------------------------------------");

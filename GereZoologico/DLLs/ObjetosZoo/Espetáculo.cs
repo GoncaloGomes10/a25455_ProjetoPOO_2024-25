@@ -169,8 +169,43 @@ namespace ObjetosZoo
             }
         }
 
+        public static bool ApagarTodosEspetaculos()
+        {
+            int removidos = espetaculos.Count;
+            espetaculos.Clear();
+
+            if (removidos > 0)
+            {
+                Console.WriteLine($"{removidos} espetaculos foram removidos.");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Nenhum espetaculo para apagar.");
+                return false;
+            }
+        }
+
+        public static bool ApagarEspetaculo(Espetáculo espetaculorecebido)
+        {
+            Espetáculo? espetáculo = espetaculos.Find(a => a.Id == espetaculorecebido.Id);
+            if (espetáculo != null)
+            {
+                espetaculos.Remove(espetáculo);
+                Console.WriteLine($"{espetaculorecebido} apagado");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine($"Espetaculo não encontrado");
+                return false;
+            }
+        }
+
         #endregion
     }
+
+    
 
     #region Destructor
     #endregion
