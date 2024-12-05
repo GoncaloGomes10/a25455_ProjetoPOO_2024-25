@@ -31,6 +31,8 @@ namespace Main
             Habitat.CriarHabitat(7, "Gorilas", ZONA.Floresta);
             Habitat.CriarHabitat(8, "Pandas-Vermelhos", ZONA.Floresta);
 
+            string caminhodoficheiro3 = @"C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\Espetaculos-do-mes.txt";
+            GereFicheiros.CarregarEspetaculos(caminhodoficheiro3);
             string caminhodoficheiro2 = @"C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\TiposComida.txt";
             GereFicheiros.CarregaTiposdeComida(caminhodoficheiro2); 
             TipoComida.MostraTodosTipodeComida();
@@ -63,12 +65,12 @@ namespace Main
             Bilhete.ApagarTodosBilhetes();
 
             Console.WriteLine("---------------------------------------------------------------------------------------------");
-            Espetáculo.CriarEspetaculo(1,TIPOESPETÁCULO.Leão,"Espetáculo do Leão",DateTime.Now);
+           /* Espetáculo.CriarEspetaculo(1,TIPOESPETÁCULO.Leão,"Espetáculo do Leão",DateTime.Now);
             Espetáculo.CriarEspetaculo(2, TIPOESPETÁCULO.Leão, "Espetáculo do Leão", DateTime.Now);
             Espetáculo.CriarEspetaculo(3, TIPOESPETÁCULO.Leão, "Espetáculo do Leão", DateTime.Now);
-            Espetáculo.CriarEspetaculo(4, TIPOESPETÁCULO.Tubarão, "Espetáculo do Tubarão", DateTime.Now);
+            Espetáculo.CriarEspetaculo(4, TIPOESPETÁCULO.Tubarão, "Espetáculo do Tubarão", DateTime.Now);*/
             Espetáculo.MostrarTodosEspetaculos();
-            Espetáculo.ApagarEspetaculo(Espetáculo.espetaculos[0]);
+            //Espetáculo.ApagarEspetaculo(Espetáculo.espetaculos[0]);
             Espetáculo.ApagarTodosEspetaculos();
 
 
