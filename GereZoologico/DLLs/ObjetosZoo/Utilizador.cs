@@ -29,7 +29,12 @@ namespace ObjetosZoo
         private string email;
         private string nome;
         private string nif;
-        //Atributo de permissão?
+        public abstract int Tipo { get; }
+
+        //UTILIZADOR LOGADO
+        static Utilizador? userlogado = null;
+        static int? tipologado = null;
+
         public static List<Utilizador> utilizadores = new List<Utilizador>();
 
 
@@ -38,6 +43,17 @@ namespace ObjetosZoo
         #region Methods
 
         #region Constructors
+
+        public Utilizador()
+        {
+            Username = "";
+            Password = "12345";
+            Email = "";
+            NIF = "";
+            Nome = "";
+            Id = idstatic++;
+            idstatic++;
+        }
         public Utilizador(string username, string password, string email, string nome, string nif)
         {
             Username = username;
@@ -94,9 +110,125 @@ namespace ObjetosZoo
         #endregion
 
         #region OtherMethods
-        public static bool CriarConta()
+        public static bool Registo(string username, string password, string email, string nome, string nif, int tipouser)
         {
-            
+            // Verifica se o utilizador já existe
+            if (utilizadores.Exists(u => u.Username == username))
+            {
+                Console.WriteLine("Utilizador já registrado.");
+
+                return false;
+            }
+
+            Utilizador novoUtilizador = tipouser switch
+            {
+                1 => new Funcionário(username, password, email, nome, nif), // Cria um Funcionário
+                2 => new Cliente(username, password, email, nome, nif),    // Cria um Cliente
+                _ => throw new Exception("Tipo de utilizador inválido.")
+            };
+
+            utilizadores.Add(novoUtilizador);
+
+            return true;
+        }
+
+        public static bool Login(string username, string password)
+        {
+            if (username == null || password == null)
+            {
+                return false;
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
+                {
+
+                    Utilizador? utilizador = utilizadores.Find(u => u.Username == username);
+                    if (utilizador == null) 
+                    {
+                        Console.WriteLine("Utilizador não existe!");
+                        return false;
+                    }
+                    
+                    if (utilizador.Password != password)
+                    {
+                        Console.WriteLine("Password Incorreta!");
+                        return false;
+                    }
+
+                    if (utilizador.username == username && utilizador.password == password)
+                    {
+                        userlogado = utilizador;
+                        tipologado = utilizador.Tipo;
+
+                        Console.WriteLine("Login Efetuado com sucesso!");
+
+                        return true;
+                    }
+
+                }
+                return false;
+            }
+        }
+
+        public static bool AlterarPassword(string passwordantiga, string passwordnova)
+        {
+            if (userlogado == null)
+            {
+                Console.WriteLine("Nenhum Utilizador logado!");
+                return false;
+            }
+
+            if(!string.IsNullOrEmpty(passwordantiga) && !string.IsNullOrEmpty(passwordnova))
+            {
+                if (userlogado.password == passwordantiga) 
+                {
+                    userlogado.password = passwordnova;
+
+                    Console.WriteLine("Password Alterada com sucesso!");
+                    return true;
+                }
+
+                Console.WriteLine("Passwords Incorretas!");
+                return false;
+            }
+
+            Console.WriteLine("Passwords Inválidas!");
+            return false;
+        }
+
+        public static Utilizador? VerificaAutenticação()
+        {
+
+            if (userlogado == null)
+            {
+                Console.WriteLine("Nenhum Utilizador Logado!");
+
+                return null;
+            }
+
+            Utilizador? user = userlogado;
+
+            Console.WriteLine("Utilizador logado: " + user.username);
+
+
+            return user;
+        }
+
+        public static bool Logout()
+        {
+            if (userlogado == null)
+            {
+                Console.WriteLine("Nenhum Utilizador Logado!");
+
+                return false;
+            }
+
+            userlogado = null;
+            tipologado = null;
+
+            Console.WriteLine("Logout Efetuado com Sucesso!");
+
             return true;
         }
 

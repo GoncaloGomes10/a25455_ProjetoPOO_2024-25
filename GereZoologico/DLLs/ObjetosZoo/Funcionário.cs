@@ -23,7 +23,10 @@ namespace ObjetosZoo
     public class Funcionário : Utilizador
     {
         #region Attributes
-        public static List<Funcionário>funcionários = new List<Funcionário> ();
+
+        public override int Tipo => 1;
+
+        //public static List<Funcionário>funcionários = new List<Funcionário> ();
 
         #endregion
 
@@ -33,7 +36,7 @@ namespace ObjetosZoo
         public Funcionário(string username, string password, string email ,string nome, string nif)
             :base(username,password,email,nome,nif)
         {
-
+           
         }
  
         #endregion

@@ -17,6 +17,10 @@ namespace Main
     {
         static void Main(string[] args)
         {
+            ////UTILIZADOR LOGADO
+            //Utilizador? userlogado = null ;
+            //int? tipologado = null;
+
             // Criar habitats
             Habitat.CriarHabitat(1, "Leões", ZONA.Savana);
             Habitat.CriarHabitat(2, "Elefante da Savana", ZONA.Savana);
@@ -91,12 +95,17 @@ namespace Main
             LimpezaHabitat.MostraTodosHabitatsLimpos();
             LimpezaHabitat.ApagarTodoRegistoLimpezaHabitat(Habitat.habitats[0]);
             LimpezaHabitat.ApagarTodosRegistosdeLimpeza();
-            
-            
 
-            
 
-            
+          
+            Utilizador.Registo("DiegoMilos", "password", "milos@mail.com", "Milos", "99292929", 2);
+            Utilizador.Registo("MilosFunc", "password", "milosfunc@mail.com", "MilosFunc", "09090909", 1);
+
+            Utilizador.VerificaAutenticação();
+
+            Utilizador.Login("DiegoMilos", "password");
+
+            Utilizador.VerificaAutenticação();
 
 
         }
