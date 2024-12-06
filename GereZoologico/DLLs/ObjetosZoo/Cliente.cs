@@ -24,17 +24,17 @@ namespace ObjetosZoo
         public override int Tipo => 2;
 
         private double saldo = 0;
-        
+
 
         #endregion
 
         #region Methods
 
         #region Constructors
-        public Cliente(string username, string password, string email, string nome, string nif)
+        public Cliente(string username, string password, string email, string nome, string nif, double saldo)
             : base(username, password, email, nome, nif)
         {
-            Saldo = saldo;
+
         }
 
         #endregion

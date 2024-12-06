@@ -24,7 +24,8 @@ namespace ObjetosZoo
         Elefante,
         Golfinho,
         Tubarão,
-        Leão
+        Leão,
+        Gorila
     }
 
     /// <summary>

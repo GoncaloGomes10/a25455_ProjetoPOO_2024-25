@@ -23,7 +23,7 @@ namespace Main
 
             // Criar habitats
             Habitat.CriarHabitat(1, "Leões", ZONA.Savana);
-            Habitat.CriarHabitat(2, "Elefante da Savana", ZONA.Savana);
+            Habitat.CriarHabitat(2, "Elefantes", ZONA.Savana);
             Habitat.CriarHabitat(3, "Camelos",ZONA.Deserto);
             Habitat.CriarHabitat(4, "Dromedários", ZONA.Deserto);
             Habitat.CriarHabitat(5, "Golfinhos", ZONA.Aquática);
@@ -31,8 +31,6 @@ namespace Main
             Habitat.CriarHabitat(7, "Gorilas", ZONA.Floresta);
             Habitat.CriarHabitat(8, "Pandas-Vermelhos", ZONA.Floresta);
 
-            string caminhodoficheiro3 = @"C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\Espetaculos-do-mes.txt";
-            GereFicheiros.CarregarEspetaculos(caminhodoficheiro3);
             string caminhodoficheiro2 = @"C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\TiposComida.txt";
             GereFicheiros.CarregaTiposdeComida(caminhodoficheiro2); 
             TipoComida.MostraTodosTipodeComida();
@@ -41,6 +39,10 @@ namespace Main
             GereFicheiros.CarregaAnimais(caminhodoficheiro1);
             Console.WriteLine("---------------------------------------------------------------------------------------------");
             Animal.MostraAnimais();
+            Console.WriteLine("---------------------------------------------------------------------------------------------");
+            string caminhodoficheiro3 = @"C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\Espetaculos-do-mes.txt";
+            GereFicheiros.CarregarEspetaculos(caminhodoficheiro3);
+            Espetáculo.MostrarTodosEspetaculos();
 
             Console.WriteLine("---------------------------------------------------------------------------------------------");
             Console.WriteLine("Encontrar um animal:");

@@ -29,7 +29,7 @@ namespace ObjetosZoo
         private string email;
         private string nome;
         private string nif;
-        public abstract int Tipo { get; }
+       
 
         //UTILIZADOR LOGADO
         static Utilizador? userlogado = null;
@@ -100,6 +100,7 @@ namespace ObjetosZoo
             set { nif = value; }
         }
 
+        public abstract int Tipo { get; }
 
         #endregion
 
@@ -123,7 +124,7 @@ namespace ObjetosZoo
             Utilizador novoUtilizador = tipouser switch
             {
                 1 => new Funcionário(username, password, email, nome, nif), // Cria um Funcionário
-                2 => new Cliente(username, password, email, nome, nif),    // Cria um Cliente
+                2 => new Cliente(username, password, email, nome, nif,0),    // Cria um Cliente
                 _ => throw new Exception("Tipo de utilizador inválido.")
             };
 
