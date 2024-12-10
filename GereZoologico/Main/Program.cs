@@ -32,16 +32,16 @@ namespace Main
             Habitat.CriarHabitat(8, "Pandas-Vermelhos", ZONA.Floresta);
 
             string caminhodoficheiro2 = @"C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\TiposComida.txt";
-            GereFicheiros.CarregaTiposdeComida(caminhodoficheiro2); 
+            TipoComida.CarregaTiposdeComida(caminhodoficheiro2); 
             TipoComida.MostraTodosTipodeComida();
             Console.WriteLine("---------------------------------------------------------------------------------------------");
             string caminhodoficheiro1 = @"C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\Animais.txt";
-            GereFicheiros.CarregaAnimais(caminhodoficheiro1);
+            Animal.CarregaAnimais(caminhodoficheiro1);
             Console.WriteLine("---------------------------------------------------------------------------------------------");
             Animal.MostraAnimais();
             Console.WriteLine("---------------------------------------------------------------------------------------------");
             string caminhodoficheiro3 = @"C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\Espetaculos-do-mes.txt";
-            GereFicheiros.CarregarEspetaculos(caminhodoficheiro3);
+            Espetáculo.CarregarEspetaculos(caminhodoficheiro3);
             Espetáculo.MostrarTodosEspetaculos();
 
             Console.WriteLine("---------------------------------------------------------------------------------------------");

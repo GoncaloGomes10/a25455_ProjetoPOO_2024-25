@@ -153,6 +153,24 @@ namespace ObjetosZoo
             }
         }
 
+        public static bool ApagarTodasAlimentações(int id)
+        {
+            int removidos = alimentacoes.Count;
+            alimentacoes.Clear();
+
+            if (removidos > 0)
+            {
+
+                Console.WriteLine($"{removidos} registo(s) de alimentação foram apagados.");
+                return true;
+            }
+            else
+            {
+
+                Console.WriteLine("Nenhum registo de alimentação para apagar.");
+                return false;
+            }
+        }
         #endregion
 
         #region Destructor

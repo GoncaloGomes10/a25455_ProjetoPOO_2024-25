@@ -203,15 +203,64 @@ namespace ObjetosZoo
             }
         }
 
+        /// <summary>
+        /// Carrega informações dos espetáculos de um ficheiro para a lista de espetáculos.
+        /// </summary>
+        /// <param name="filePath">Caminho do ficheiro com informações dos espetáculos.</param>
+        /// <returns>Retorna true se o carregamento for bem-sucedido.</returns>
+        /// <exception cref="FileNotFoundException">Lançada se o ficheiro não for encontrado.</exception>
+        /// <exception cref="Exception">Lançada se o formato de uma linha do ficheiro estiver incorreto.</exception>
+        public static bool CarregarEspetaculos(string filePath)
+        {
+            // Verifica se o ficheiro existe
+            if (File.Exists(filePath))
+            {
+                // Lê todas as linhas do ficheiro
+                string[] linhas = File.ReadAllLines(filePath);
+
+                // Para cada linha no ficheiro, processa o conteúdo
+                foreach (string linha in linhas)
+                {
+                    // Divide a linha em partes
+                    string[] partes = linha.Split(';');
+
+                    // Verifica se há exatamente 5 partes
+                    if (partes.Length == 4)
+                    {
+                        int id = int.Parse(partes[0]);
+                        TIPOESPETÁCULO tipoespetaculo = (TIPOESPETÁCULO)Enum.Parse(typeof(TIPOESPETÁCULO), partes[1]);
+                        string nome = partes[2];
+                        DateTime horario = DateTime.Parse(partes[3]);
+
+
+                        //CriarEspetaculo
+                        Espetáculo.CriarEspetaculo(id, tipoespetaculo, nome, horario);
+
+                    }
+                    else
+                    {
+                        throw new Exception("Formato da linha inválido.");
+                    }
+                }
+            }
+            else
+            {
+                throw new FileNotFoundException("Ficheiro de espetáculos não encontrado.");
+            }
+
+            return true;
+        }
+
+        #endregion   
+        #region Destructor
+        #endregion
+
         #endregion
     }
 
     
 
-    #region Destructor
-    #endregion
-
-    #endregion
+ 
 
 
 
