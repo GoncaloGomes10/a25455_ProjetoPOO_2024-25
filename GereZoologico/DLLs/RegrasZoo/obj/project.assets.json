@@ -1,11 +1,48 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "Dados/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "ObjetosZoo": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Dados.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dados.dll": {}
+        }
+      },
+      "ObjetosZoo/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/ObjetosZoo.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ObjetosZoo.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Dados/1.0.0": {
+      "type": "project",
+      "path": "../Dados/Dados.csproj",
+      "msbuildProject": "../Dados/Dados.csproj"
+    },
+    "ObjetosZoo/1.0.0": {
+      "type": "project",
+      "path": "../ObjetosZoo/ObjetosZoo.csproj",
+      "msbuildProject": "../ObjetosZoo/ObjetosZoo.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "Dados >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\gonca\\.nuget\\packages\\": {}
@@ -33,7 +70,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Dados\\Dados.csproj": {
+              "projectPath": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Dados\\Dados.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

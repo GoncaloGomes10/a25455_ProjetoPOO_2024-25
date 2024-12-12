@@ -41,8 +41,8 @@ namespace Main
             Animal.MostraAnimais();
             Console.WriteLine("---------------------------------------------------------------------------------------------");
             string caminhodoficheiro3 = @"C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\Espetaculos-do-mes.txt";
-            Espetáculo.CarregarEspetaculos(caminhodoficheiro3);
-            Espetáculo.MostrarTodosEspetaculos();
+            Espetaculo.CarregarEspetaculos(caminhodoficheiro3);
+            Espetaculo.MostrarTodosEspetaculos();
 
             Console.WriteLine("---------------------------------------------------------------------------------------------");
             Console.WriteLine("Encontrar um animal:");
@@ -67,13 +67,13 @@ namespace Main
             Bilhete.ApagarTodosBilhetes();
 
             Console.WriteLine("---------------------------------------------------------------------------------------------");
-           /* Espetáculo.CriarEspetaculo(1,TIPOESPETÁCULO.Leão,"Espetáculo do Leão",DateTime.Now);
-            Espetáculo.CriarEspetaculo(2, TIPOESPETÁCULO.Leão, "Espetáculo do Leão", DateTime.Now);
-            Espetáculo.CriarEspetaculo(3, TIPOESPETÁCULO.Leão, "Espetáculo do Leão", DateTime.Now);
-            Espetáculo.CriarEspetaculo(4, TIPOESPETÁCULO.Tubarão, "Espetáculo do Tubarão", DateTime.Now);*/
-            Espetáculo.MostrarTodosEspetaculos();
+           /* Espetáculo.CriarEspetaculo(1,TIPOESPETACULO.Leão,"Espetáculo do Leão",DateTime.Now);
+            Espetáculo.CriarEspetaculo(2, TIPOESPETACULO.Leão, "Espetáculo do Leão", DateTime.Now);
+            Espetáculo.CriarEspetaculo(3, TIPOESPETACULO.Leão, "Espetáculo do Leão", DateTime.Now);
+            Espetáculo.CriarEspetaculo(4, TIPOESPETACULO.Tubarão, "Espetáculo do Tubarão", DateTime.Now);*/
+            Espetaculo.MostrarTodosEspetaculos();
             //Espetáculo.ApagarEspetaculo(Espetáculo.espetaculos[0]);
-            Espetáculo.ApagarTodosEspetaculos();
+            Espetaculo.ApagarTodosEspetaculos();
 
 
             Console.WriteLine("---------------------------------------------------------------------------------------------");

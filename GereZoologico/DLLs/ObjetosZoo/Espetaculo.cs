@@ -19,7 +19,7 @@ namespace ObjetosZoo
     /// <summary>
     /// Enumerado dos tipos de espetáculo disponíveis.
     /// </summary>
-    public enum TIPOESPETÁCULO
+    public enum TIPOESPETACULO
     {
         Elefante,
         Golfinho,
@@ -33,16 +33,16 @@ namespace ObjetosZoo
     /// Criado por: gonca
     /// Criado em: 26/10/2024 16:24:23
     /// </summary>
-    public class Espetáculo
+    public class Espetaculo
     {
         #region Attributes 
 
         private int id;
-        private TIPOESPETÁCULO tipoespetaculo;
+        private TIPOESPETACULO tipoespetaculo;
         private string nome;
         private DateTime horario;
         private Animal animalespetaculo;
-        public static List<Espetáculo> espetaculos = new List<Espetáculo>();
+        public static List<Espetaculo> espetaculos = new List<Espetaculo>();
 
         #endregion
 
@@ -57,7 +57,7 @@ namespace ObjetosZoo
         /// <param name="nome">Nome do espetáculo.</param>
         /// <param name="horario">Horário do espetáculo.</param>
         /// <param name="animalespetaculo">Animal que participa no espetáculo.</param>
-        public Espetáculo(int id, TIPOESPETÁCULO tipoespetaculo, string nome, DateTime horario, Animal animalespetaculo)
+        public Espetaculo(int id, TIPOESPETACULO tipoespetaculo, string nome, DateTime horario, Animal animalespetaculo)
         {
             Id = id;
             TipoEspetaculo = tipoespetaculo;
@@ -76,7 +76,7 @@ namespace ObjetosZoo
             set { id = value; }
         }
 
-        public TIPOESPETÁCULO TipoEspetaculo
+        public TIPOESPETACULO TipoEspetaculo
         {
             get { return tipoespetaculo; }
             set { tipoespetaculo = value; }
@@ -128,7 +128,7 @@ namespace ObjetosZoo
         /// <param name="nome">Nome do espetáculo.</param>
         /// <param name="horario">Horário do espetáculo.</param>
         /// <returns>Retorna true se o espetáculo for criado com sucesso.</returns>
-        public static bool CriarEspetaculo(int id, TIPOESPETÁCULO tipoespetaculo, string nome, DateTime horario)
+        public static bool CriarEspetaculo(int id, TIPOESPETACULO tipoespetaculo, string nome, DateTime horario)
         {
             // Converte o tipo de espetáculo para o nome da espécie correspondente
             string especie = tipoespetaculo.ToString();
@@ -144,7 +144,7 @@ namespace ObjetosZoo
             }
 
             // Cria uma nova instância de Espetáculo com o animal selecionado
-            Espetáculo espetáculo = new Espetáculo(id, tipoespetaculo, nome, horario, animalescolhido);
+            Espetaculo espetáculo = new Espetaculo(id, tipoespetaculo, nome, horario, animalescolhido);
 
             // Adiciona o novo espetáculo à lista estática de espetáculos
             espetaculos.Add(espetáculo);
@@ -187,9 +187,9 @@ namespace ObjetosZoo
             }
         }
 
-        public static bool ApagarEspetaculo(Espetáculo espetaculorecebido)
+        public static bool ApagarEspetaculo(Espetaculo espetaculorecebido)
         {
-            Espetáculo? espetáculo = espetaculos.Find(a => a.Id == espetaculorecebido.Id);
+            Espetaculo? espetáculo = espetaculos.Find(a => a.Id == espetaculorecebido.Id);
             if (espetáculo != null)
             {
                 espetaculos.Remove(espetáculo);
@@ -228,13 +228,13 @@ namespace ObjetosZoo
                     if (partes.Length == 4)
                     {
                         int id = int.Parse(partes[0]);
-                        TIPOESPETÁCULO tipoespetaculo = (TIPOESPETÁCULO)Enum.Parse(typeof(TIPOESPETÁCULO), partes[1]);
+                        TIPOESPETACULO tipoespetaculo = (TIPOESPETACULO)Enum.Parse(typeof(TIPOESPETACULO), partes[1]);
                         string nome = partes[2];
                         DateTime horario = DateTime.Parse(partes[3]);
 
 
                         //CriarEspetaculo
-                        Espetáculo.CriarEspetaculo(id, tipoespetaculo, nome, horario);
+                        Espetaculo.CriarEspetaculo(id, tipoespetaculo, nome, horario);
 
                     }
                     else
@@ -252,6 +252,7 @@ namespace ObjetosZoo
         }
 
         #endregion   
+
         #region Destructor
         #endregion
 

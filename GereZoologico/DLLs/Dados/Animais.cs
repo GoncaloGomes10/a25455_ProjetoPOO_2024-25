@@ -9,6 +9,7 @@
 
 
 using System;
+using ObjetosZoo;
 
 namespace Dados
 {
@@ -22,6 +23,7 @@ namespace Dados
     public class Animais
     {
         #region Attributes
+        private static List<Animal> listaanimais = new List<Animal>();
 
         #endregion
 
@@ -31,6 +33,11 @@ namespace Dados
         #endregion
 
         #region Properties
+        public static List<Animal> Listaanimais
+        {
+            get { return listaanimais; }
+        }
+
         #endregion
 
         #region Operators
@@ -40,6 +47,131 @@ namespace Dados
         #endregion
 
         #region OtherMethods
+
+        /// <summary>
+        /// Carrega informações dos animais de um ficheiro para a lista de animais.
+        /// </summary>
+        /// <param name="filePath">Caminho do ficheiro com informações dos animais.</param>
+        /// <returns>Retorna true se o carregamento for bem-sucedido.</returns>
+        /// <exception cref="FileNotFoundException">Lançada se o ficheiro não for encontrado.</exception>
+        /// <exception cref="Exception">Lançada se o formato de uma linha do ficheiro estiver incorreto.</exception>
+        public static bool CarregaAnimais(string filePath)
+        {
+                // Lê todas as linhas do ficheiro
+                string[] linhas = File.ReadAllLines(filePath);
+
+                // Para cada linha no ficheiro, processa o conteúdo
+                foreach (string linha in linhas)
+                {
+                    // Divide a linha em partes
+                    string[] partes = linha.Split(';');
+
+                    // Verifica se há exatamente 6 partes
+                    if (partes.Length == 6)
+                    {
+                        string nome = partes[0];
+                        string especie = partes[1];
+                        int idade = int.Parse(partes[2]);
+                        double peso = double.Parse(partes[3]);
+                        DIETA dieta = (DIETA)Enum.Parse(typeof(DIETA), partes[4]);
+                        int idHabitat = int.Parse(partes[5]);
+
+                        // Cria o objeto Animal e adiciona-o à lista de animais
+                        Animal animal = new Animal(nome, especie, idade, peso, dieta);
+                        Animais.listaanimais.Add(animal);
+                        
+
+                        // Procura o habitat correspondente ao ID e adiciona o animal ao habitat
+                        Habitat? habitat = Habitat.habitats.Find(h => h.IdHabitat == idHabitat);
+                        if (habitat != null)
+                        {
+                            habitat.AdicionaAnimalHabitat(animal);
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Não foi encontrado o habitat com ID {idHabitat}.");
+                        }
+                    }
+                    else
+                    {
+                        throw new Exception("Formato da linha inválido.");
+                    }
+                }
+
+            return true;
+        }
+
+        /// <summary>
+        /// Cria um novo animal e adiciona-o à lista de animais.
+        /// </summary>
+        /// <param name="nome">Nome do animal.</param>
+        /// <param name="especie">Espécie do animal.</param>
+        /// <param name="idade">Idade do animal em anos.</param>
+        /// <param name="peso">Peso do animal em quilogramas.</param>
+        /// <param name="dieta">Tipo de dieta do animal.</param>
+        /// <returns>Retorna true se o animal for criado e adicionado com sucesso.</returns>
+        public static bool CriarAnimal(string nome, string especie, int idade, double peso, DIETA dieta)
+        {
+            Animal animal = new Animal(nome, especie, idade, peso, dieta);
+            listaanimais.Add(animal);
+            return true;
+        }
+
+
+        /// <summary>
+        /// Procura um animal específico pelo ID.
+        /// </summary>
+        /// <param name="id">ID do animal a ser encontrado.</param>
+        /// <returns>Retorna o animal se encontrado; caso contrário, retorna null.</returns>
+        public static Animal? EncontraAnimal(int id)
+        {
+            Animal? animal = listaanimais.Find(animais => animais.Id == id);
+            if (animal != null)
+            {
+                return animal;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Remove um animal da lista com base no ID.
+        /// </summary>
+        /// <param name="id">ID do animal a ser removido.</param>
+        /// <returns>Retorna true se o animal for removido com sucesso; caso contrário, false.</returns>
+        public static bool ApagarAnimal(int id)
+        {
+            Animal? animal = listaanimais.Find(animal => animal.Id == id);
+            if (animal != null)
+            {
+                listaanimais.Remove(animal);
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Seleciona aleatoriamente um animal de uma espécie específica.
+        /// </summary>
+        /// <param name="especie">Espécie desejada do animal.</param>
+        /// <returns>Retorna um animal aleatório da espécie; null se não houver animais da espécie.</returns>
+        public static Animal? EscolherAnimalAleatorio(string especie)
+        {
+            // Filtra os animais pela espécie desejada
+            var animaisDaEspecie = listaanimais.Where(a => a.Especie == especie).ToList();
+
+            // Verifica se há animais disponíveis para a espécie especificada
+            if (animaisDaEspecie.Count == 0) return null;
+
+            // Seleciona aleatoriamente um animal da lista filtrada
+            Random random = new Random();
+            int index = random.Next(animaisDaEspecie.Count);
+            return animaisDaEspecie[index];
+        }
+
+
         #endregion
 
         #region Destructor
