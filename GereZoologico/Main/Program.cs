@@ -77,12 +77,12 @@ namespace Main
 
 
             Console.WriteLine("---------------------------------------------------------------------------------------------");
-            AssistênciaVeterinária.RegistaAssistênciaVeterinária(Habitat.habitats[0],Animal.animais[0]);
-            AssistênciaVeterinária.RegistaAssistênciaVeterinária(Habitat.habitats[1],Animal.animais[1]);
-            AssistênciaVeterinária.MostraTodosRegistosAssistênciaVeterinária();
-            AssistênciaVeterinária.ApagaRegistos(Habitat.habitats[1], Animal.animais[1]);
-            AssistênciaVeterinária.ApagaRegistos(Habitat.habitats[0], Animal.animais[0]);
-            AssistênciaVeterinária.ApagarTodosRegistos();
+            AssistenciaVeterinaria.RegistaAssistênciaVeterinária(Habitat.habitats[0],Animal.animais[0]);
+            AssistenciaVeterinaria.RegistaAssistênciaVeterinária(Habitat.habitats[1],Animal.animais[1]);
+            AssistenciaVeterinaria.MostraTodosRegistosAssistênciaVeterinária();
+            AssistenciaVeterinaria.ApagaRegistos(Habitat.habitats[1], Animal.animais[1]);
+            AssistenciaVeterinaria.ApagaRegistos(Habitat.habitats[0], Animal.animais[0]);
+            AssistenciaVeterinaria.ApagarTodosRegistos();
 
             Console.WriteLine("---------------------------------------------------------------------------------------------");
             //Habitat.habitats[0].RemoverAnimalHabitat(Animal.animais[0]);
