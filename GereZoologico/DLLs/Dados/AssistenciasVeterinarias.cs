@@ -51,12 +51,12 @@ namespace Dados
         /// <param name="habitat">O habitat onde o animal se encontra.</param>
         /// <param name="animal">O animal que receberá assistência veterinária.</param>
         /// <returns>Retorna true se o registo for adicionado com sucesso, false caso contrário.</returns>
-        public static bool RegistaAssistenciaVeterinaria(Habitat habitat, Animal animal)
+        public static bool RegistaAssistenciaVeterinaria(Habitat habitat, Animal animal, DateTime datadotratamento)
         {
             // Verifica se o animal está no habitat
             if (habitat.ContemAnimal(animal))
             {
-                AssistenciaVeterinaria tratamento = new AssistenciaVeterinaria(habitat, animal);
+                AssistenciaVeterinaria tratamento = new AssistenciaVeterinaria(habitat, animal, datadotratamento);
                 listaassistenciaveterinaria.Add(tratamento);
                 return true;
             }

@@ -28,7 +28,7 @@ namespace ObjetosZoo
         private int idhabitat;
         private string nomehabitat;
         public List<Animal> animaishabitat;
-        public static List<Habitat> habitats = new List<Habitat>();
+        
 
         #endregion
 
@@ -97,82 +97,19 @@ namespace ObjetosZoo
         #region OtherMethods
 
         /// <summary>
-        /// Cria um novo habitat e adiciona à lista estática de habitats.
-        /// </summary>
-        /// <param name="idhabitat">ID único do habitat.</param>
-        /// <param name="nomehabitat">Nome do habitat.</param>
-        /// <param name="zona">Zona à qual o habitat pertence.</param>
-        /// <returns>Retorna true após criar e adicionar o habitat.</returns>
-        public static bool CriarHabitat(int idhabitat, string nomehabitat, ZONA zona)
-        {
-            Habitat habitat = new Habitat(idhabitat, nomehabitat, zona);
-            habitats.Add(habitat);
-            return true;
-        }
-
-        /// <summary>
-        /// Mostra as informações do habitat atual.
-        /// </summary>
-        public void MostraHabitat()
-        {
-            Console.WriteLine(this.ToString());
-        }
-
-        /// <summary>
-        /// Mostra todos os habitats existentes.
-        /// </summary>
-        public static void MostraTodosHabitats()
-        {
-            foreach (var habitat in habitats)
-            {
-                habitat.MostraHabitat();
-            }
-        }
-
-        /// <summary>
-        /// Mostra os habitats e seus respectivos animais.
-        /// </summary>
-        public static void MostraHabitatsAnimais()
-        {
-            foreach (Habitat habitat in habitats)
-            {
-                Console.WriteLine(habitat);  // Exibe as informações do habitat
-
-                // Exibe o número de animais no habitat
-                Console.WriteLine($"Número de animais no habitat {habitat.NomeHabitat}: {habitat.animaishabitat.Count}");
-
-                if (habitat.animaishabitat.Count > 0)
-                {
-                    foreach (Animal animal in habitat.animaishabitat)
-                    {
-                        Console.WriteLine("  - " + animal);  // Exibe cada animal presente no habitat
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("  Nenhum animal neste habitat.");
-                }
-            }
-        }
-
-        /// <summary>
         /// Adiciona um animal ao habitat.
         /// </summary>
         /// <param name="animal">O animal a ser adicionado.</param>
         /// <returns>Retorna true se o animal foi adicionado com sucesso.</returns>
         public bool AdicionaAnimalHabitat(Animal animal)
         {
-            if (animaishabitat.Contains(animal))
-            {
-                Console.WriteLine("O animal já está no habitat.");
-            }
+            if (animaishabitat.Contains(animal)) return false;
             else
             {
-                Console.WriteLine("Animal adicionado ao habitat.");
                 animaishabitat.Add(animal);
             }
-
             return true;
+
         }
 
         /// <summary>
@@ -186,14 +123,9 @@ namespace ObjetosZoo
             if (animal != null)
             {
                 animaishabitat.Remove(animal);
-                Console.WriteLine("Animal retirado do habitat.");
                 return true;
             }
-            else
-            {
-                Console.WriteLine("Animal não encontrado no habitat.");
-                return false;
-            }
+            return false;
         }
 
         /// <summary>

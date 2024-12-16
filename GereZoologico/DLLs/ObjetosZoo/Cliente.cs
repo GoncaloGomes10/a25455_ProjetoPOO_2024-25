@@ -22,7 +22,6 @@ namespace ObjetosZoo
         #region Attributes
 
         public override int Tipo => 2;
-
         private double saldo = 0;
 
 

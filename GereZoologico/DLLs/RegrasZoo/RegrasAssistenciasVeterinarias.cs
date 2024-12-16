@@ -41,9 +41,9 @@ namespace RegrasZoo
         #endregion
 
         #region OtherMethods
-        public static bool RegistaAssistenciaVeterinaria(Habitat habitat, Animal animal)
+        public static bool RegistaAssistenciaVeterinaria(Habitat habitat, Animal animal, DateTime datadotratamento)
         {
-           if(habitat != null && animal != null) return AssistenciasVeterinarias.RegistaAssistenciaVeterinaria(habitat,animal);
+           if(habitat != null && animal != null) return AssistenciasVeterinarias.RegistaAssistenciaVeterinaria(habitat,animal,datadotratamento);
            return false;
         }
 

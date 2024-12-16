@@ -3,18 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DAA13451-DF39-410D-B00F-9AE0DAF5199E}|DLLs\\ObjetosZoo\\ObjetosZoo.csproj|c:\\users\\gonca\\onedrive\\ambiente de trabalho\\a25455_projetopoo_2024-25\\gerezoologico\\dlls\\objetoszoo\\bilhete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAA13451-DF39-410D-B00F-9AE0DAF5199E}|DLLs\\ObjetosZoo\\ObjetosZoo.csproj|solutionrelative:dlls\\objetoszoo\\bilhete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F720CE8D-5093-4C8D-9C2A-AF5D1E303402}|DLLs\\Dados\\Dados.csproj|c:\\users\\gonca\\onedrive\\ambiente de trabalho\\a25455_projetopoo_2024-25\\gerezoologico\\dlls\\dados\\bilhetes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F720CE8D-5093-4C8D-9C2A-AF5D1E303402}|DLLs\\Dados\\Dados.csproj|solutionrelative:dlls\\dados\\bilhetes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A92C2B8D-DE20-4F8B-B75F-7D2A555F5A7C}|DLLs\\RegrasZoo\\RegrasZoo.csproj|c:\\users\\gonca\\onedrive\\ambiente de trabalho\\a25455_projetopoo_2024-25\\gerezoologico\\dlls\\regraszoo\\regrasbilhetes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92C2B8D-DE20-4F8B-B75F-7D2A555F5A7C}|DLLs\\RegrasZoo\\RegrasZoo.csproj|solutionrelative:dlls\\regraszoo\\regrasbilhetes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{61CAEFDD-91ED-4EE6-AFC5-FD0C84A716DF}|Main\\Main.csproj|c:\\users\\gonca\\onedrive\\ambiente de trabalho\\a25455_projetopoo_2024-25\\gerezoologico\\main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{61CAEFDD-91ED-4EE6-AFC5-FD0C84A716DF}|Main\\Main.csproj|solutionrelative:main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -26,11 +14,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\Main\\Program.cs",
               "RelativeDocumentMoniker": "Main\\Program.cs",
@@ -40,45 +28,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-26T15:45:27.25Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RegrasBilhetes.cs",
-              "DocumentMoniker": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\RegrasZoo\\RegrasBilhetes.cs",
-              "RelativeDocumentMoniker": "DLLs\\RegrasZoo\\RegrasBilhetes.cs",
-              "ToolTip": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\RegrasZoo\\RegrasBilhetes.cs",
-              "RelativeToolTip": "DLLs\\RegrasZoo\\RegrasBilhetes.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAmwEAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T18:56:05.008Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Bilhetes.cs",
-              "DocumentMoniker": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Dados\\Bilhetes.cs",
-              "RelativeDocumentMoniker": "DLLs\\Dados\\Bilhetes.cs",
-              "ToolTip": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Dados\\Bilhetes.cs",
-              "RelativeToolTip": "DLLs\\Dados\\Bilhetes.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAA8wFAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T18:55:36.552Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Bilhete.cs",
-              "DocumentMoniker": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\ObjetosZoo\\Bilhete.cs",
-              "RelativeDocumentMoniker": "DLLs\\ObjetosZoo\\Bilhete.cs",
-              "ToolTip": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\ObjetosZoo\\Bilhete.cs",
-              "RelativeToolTip": "DLLs\\ObjetosZoo\\Bilhete.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAqwHIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T18:55:10.809Z",
               "EditorCaption": ""
             }
           ]

@@ -3,25 +3,25 @@
 *		Copyright (c) 2024 All Rights Reserved
 *	</copyright>
 * 	<author>gonca</author>
-*   <date>14/12/2024 18:56:02</date>
+*   <date>16/12/2024 15:50:56</date>
 *	<description></description>
 */
 
 
-using System;
 using Dados;
 using ObjetosZoo;
+using System;
 
 namespace RegrasZoo
 {
     /// <summary>
     /// Purpose: 
     /// Created by: gonca
-    /// Created on: 14/12/2024 18:56:02
+    /// Created on: 16/12/2024 15:50:56
     /// </summary>
     /// <remarks></remarks>
     /// <example></example>
-    public class RegrasBilhetes
+    public class RegrasHabitats
     {
         #region Attributes
         #endregion
@@ -41,27 +41,18 @@ namespace RegrasZoo
         #endregion
 
         #region OtherMethods
-        public static bool ComprarBilhete(ZONA zona, TIPOBILHETE tipobilhete, double preço)
+        public static bool CriarHabitat(int idhabitat, string nomehabitat, ZONA zona)
         {
-            if(preço <= 0) return false;
-            return Bilhetes.ComprarBilhete(zona, tipobilhete,preço);
+            if(idhabitat <= 0 && !string.IsNullOrEmpty(nomehabitat)) return false;
+            return Habitats.CriarHabitat(idhabitat, nomehabitat, zona);
         }
 
-        public static List<Bilhete> VerTodosBilhetes()
+
+        public static List<Habitat> MostraTodosHabitats()
         {
-            return Bilhetes.Listabilhetes;
+            return Habitats.Listahabitats;
         }
 
-        public static bool ApagarTodosBilhetes()
-        {
-            return Bilhetes.ApagarTodosBilhetes();
-        }
-
-        public static bool ApagarBilhete(Bilhete bilheterecebido)
-        {
-            if(bilheterecebido == null) return false;
-            return Bilhetes.ApagarBilhete(bilheterecebido);
-        }
 
         #endregion
 
