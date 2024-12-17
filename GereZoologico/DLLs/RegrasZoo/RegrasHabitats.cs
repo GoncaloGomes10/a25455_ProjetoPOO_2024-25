@@ -47,12 +47,10 @@ namespace RegrasZoo
             return Habitats.CriarHabitat(idhabitat, nomehabitat, zona);
         }
 
-
-        public static List<Habitat> MostraTodosHabitats()
+        public static List<Habitat> MostraHabitats()
         {
             return Habitats.Listahabitats;
         }
-
 
         #endregion
 

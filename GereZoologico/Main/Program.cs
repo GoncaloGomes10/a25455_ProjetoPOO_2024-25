@@ -8,7 +8,10 @@
 */
 
 using System;
+using System.Drawing;
 using ObjetosZoo;
+using Dados;
+
 
 
 namespace Main 
@@ -32,8 +35,8 @@ namespace Main
             Habitat.CriarHabitat(8, "Pandas-Vermelhos", ZONA.Floresta);
 
             string caminhodoficheiro2 = @"C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\TiposComida.txt";
-            TipoComida.CarregaTiposdeComida(caminhodoficheiro2); 
-            TipoComida.MostraTodosTipodeComida();
+            TipodeComida.CarregaTiposdeComida(caminhodoficheiro2); 
+            TipodeComida.MostraTodosTipodeComida();
             Console.WriteLine("---------------------------------------------------------------------------------------------");
             string caminhodoficheiro1 = @"C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\Animais.txt";
             Animal.CarregaAnimais(caminhodoficheiro1);
@@ -52,8 +55,8 @@ namespace Main
 
 
             Console.WriteLine("---------------------------------------------------------------------------------------------");
-            Alimentacao.RegistraAlimentacao(Animal.animais[0], DateTime.Now, 20, TipoComida.tipocomidas[0]);
-            Alimentacao.RegistraAlimentacao(Animal.animais[1], DateTime.Now, 20, TipoComida.tipocomidas[1]);
+            Alimentacao.RegistraAlimentacao(Animal.animais[0], DateTime.Now, 20, TipodeComida.tipocomidas[0]);
+            Alimentacao.RegistraAlimentacao(Animal.animais[1], DateTime.Now, 20, TipodeComida.tipocomidas[1]);
             Alimentacao.MostraTodasAlimentacoes();
             Alimentacao.ApagarAlimentacao(1);
             Alimentacao.MostraTodasAlimentacoes();

@@ -52,6 +52,7 @@ namespace RegrasZoo
             return Bilhetes.Listabilhetes;
         }
 
+
         public static bool ApagarTodosBilhetes()
         {
             return Bilhetes.ApagarTodosBilhetes();

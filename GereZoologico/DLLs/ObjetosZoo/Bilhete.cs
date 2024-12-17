@@ -106,19 +106,12 @@ namespace ObjetosZoo
         #endregion
 
         #region OtherMethods
-        /// <summary>
-        /// Mostra as informações do bilhete na consola.
-        /// </summary>
-        public void VerBilhete()
-        {
-            Console.WriteLine($"O teu bilhete {Id} do tipo {TipoBilhete} custou {Preço} euros para a zona: {Zona}");
-        }
 
         #endregion
-    }
 
-    #region Destructor
-    #endregion
+        #region Destructor
+        #endregion
+    }
 
     #endregion
 

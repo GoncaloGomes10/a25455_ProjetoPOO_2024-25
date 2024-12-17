@@ -91,9 +91,7 @@ namespace ObjetosZoo
             get { return nif; }
             set { nif = value; }
         }
-
         public abstract int Tipo { get; }
-
         #endregion
 
         #region Operators
@@ -103,7 +101,7 @@ namespace ObjetosZoo
         #endregion
 
         #region OtherMethods
-  
+
         #endregion
 
         #region Destructor

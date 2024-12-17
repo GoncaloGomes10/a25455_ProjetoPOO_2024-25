@@ -4,7 +4,6 @@ C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoolo
 C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\bin\Debug\net8.0-windows\Frontend.dll
 C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\bin\Debug\net8.0-windows\Frontend.pdb
 C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\obj\Debug\net8.0-windows\Frontend.Menu.resources
-C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\obj\Debug\net8.0-windows\Frontend.MenuCriarConta.resources
 C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\obj\Debug\net8.0-windows\Frontend.csproj.GenerateResource.cache
 C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\obj\Debug\net8.0-windows\Frontend.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\obj\Debug\net8.0-windows\Frontend.AssemblyInfoInputs.cache
@@ -18,3 +17,12 @@ C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoolo
 C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\obj\Debug\net8.0-windows\ref\Frontend.dll
 C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\obj\Debug\net8.0-windows\Frontend.MenuCliente.resources
 C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\obj\Debug\net8.0-windows\Frontend.MenuFuncionário.resources
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\obj\Debug\net8.0-windows\Frontend.MenuCriarContaCliente.resources
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\obj\Debug\net8.0-windows\Frontend.csproj.AssemblyReference.cache
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\bin\Debug\net8.0-windows\Dados.dll
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\bin\Debug\net8.0-windows\ObjetosZoo.dll
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\bin\Debug\net8.0-windows\RegrasZoo.dll
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\bin\Debug\net8.0-windows\ObjetosZoo.pdb
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\bin\Debug\net8.0-windows\RegrasZoo.pdb
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\bin\Debug\net8.0-windows\Dados.pdb
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\obj\Debug\net8.0-windows\Frontend.csproj.Up2Date

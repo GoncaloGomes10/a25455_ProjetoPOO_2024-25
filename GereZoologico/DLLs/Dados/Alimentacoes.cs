@@ -54,7 +54,7 @@ namespace Dados
         /// <param name="quantidade">Quantidade de comida consumida.</param>
         /// <param name="tipocomida">Tipo de comida fornecida ao animal.</param>
         /// <returns>Retorna true se o registo for adicionado com sucesso.</returns>
-        public static bool RegistraAlimentacao(Animal animal, DateTime tempoAlimentacao, double quantidade, TipoComida tipocomida)
+        public static bool RegistraAlimentacao(Animal animal, DateTime tempoAlimentacao, double quantidade, TipodeComida tipocomida)
         {
             Alimentacao alimentacao = new Alimentacao(animal, tempoAlimentacao, quantidade, tipocomida);
             listaalimentacoes.Add(alimentacao);

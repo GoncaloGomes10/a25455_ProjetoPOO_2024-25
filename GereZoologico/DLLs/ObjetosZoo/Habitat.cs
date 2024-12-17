@@ -27,8 +27,7 @@ namespace ObjetosZoo
         private ZONA zona;
         private int idhabitat;
         private string nomehabitat;
-        public List<Animal> animaishabitat;
-        
+        private List<Animal> listaanimaishabitat;
 
         #endregion
 
@@ -45,16 +44,20 @@ namespace ObjetosZoo
         public Habitat(int idhabitat, string nomehabitat, ZONA zona)
         {
             IdHabitat = idhabitat;
-            animaishabitat = new List<Animal>();
             NomeHabitat = nomehabitat;
             Zona = zona;
+            listaanimaishabitat = new List<Animal>(); // Inicializa a lista de animais para o habitat
         }
 
         #endregion
 
         #region Properties
 
-       
+        public List<Animal> ListaAnimaisHabitat
+        {
+            get { return listaanimaishabitat; }
+        }
+
         public int IdHabitat
         {
             get { return idhabitat; }
@@ -95,47 +98,10 @@ namespace ObjetosZoo
         #endregion
 
         #region OtherMethods
-
-        /// <summary>
-        /// Adiciona um animal ao habitat.
-        /// </summary>
-        /// <param name="animal">O animal a ser adicionado.</param>
-        /// <returns>Retorna true se o animal foi adicionado com sucesso.</returns>
-        public bool AdicionaAnimalHabitat(Animal animal)
-        {
-            if (animaishabitat.Contains(animal)) return false;
-            else
-            {
-                animaishabitat.Add(animal);
-            }
-            return true;
-
-        }
-
-        /// <summary>
-        /// Remove um animal do habitat.
-        /// </summary>
-        /// <param name="animalrecebido">O animal a ser removido.</param>
-        /// <returns>Retorna true se o animal foi removido com sucesso; false caso contrário.</returns>
-        public bool RemoverAnimalHabitat(Animal animalrecebido)
-        {
-            Animal? animal = this.animaishabitat.Find(a => a.Id == animalrecebido.Id);
-            if (animal != null)
-            {
-                animaishabitat.Remove(animal);
-                return true;
-            }
-            return false;
-        }
-
-        /// <summary>
-        /// Verifica se um animal está presente no habitat.
-        /// </summary>
-        /// <param name="animal">O animal a ser verificado.</param>
-        /// <returns>Retorna true se o animal estiver no habitat; false caso contrário.</returns>
         public bool ContemAnimal(Animal animal)
         {
-            return animaishabitat.Contains(animal);
+            // Verifica se o animal está na lista de animais do habitat
+            return listaanimaishabitat.Contains(animal);
         }
 
         #endregion

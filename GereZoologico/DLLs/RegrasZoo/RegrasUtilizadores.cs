@@ -41,9 +41,9 @@ namespace RegrasZoo
         #endregion
 
         #region OtherMethods
-        public static bool Registo(string username, string password, string email, string nome, string nif, int tipouser)
+        public static int Registo(string username, string password, string email, string nome, string nif, int tipouser)
         {
-            if(string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(nome) || string.IsNullOrEmpty(nif) || tipouser <= 0 && tipouser > 2) return false;
+            if(string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(nome) || string.IsNullOrEmpty(nif) || tipouser <= 0 && tipouser > 2) return -2;
             return Utilizadores.Registo(username,password, email, nome, nif, tipouser);
         }
 

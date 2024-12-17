@@ -1,0 +1,16 @@
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Dados\obj\Debug\net8.0\Dados.csproj.AssemblyReference.cache
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Dados\obj\Debug\net8.0\Dados.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Dados\obj\Debug\net8.0\Dados.AssemblyInfoInputs.cache
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Dados\obj\Debug\net8.0\Dados.AssemblyInfo.cs
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Dados\obj\Debug\net8.0\Dados.csproj.CoreCompileInputs.cache
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Dados\obj\Debug\net8.0\Dados.sourcelink.json
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Dados\bin\Debug\net8.0\Dados.deps.json
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Dados\bin\Debug\net8.0\Dados.dll
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Dados\bin\Debug\net8.0\Dados.pdb
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Dados\bin\Debug\net8.0\ObjetosZoo.dll
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Dados\bin\Debug\net8.0\ObjetosZoo.pdb
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Dados\obj\Debug\net8.0\Dados.csproj.Up2Date
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Dados\obj\Debug\net8.0\Dados.dll
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Dados\obj\Debug\net8.0\refint\Dados.dll
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Dados\obj\Debug\net8.0\Dados.pdb
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Dados\obj\Debug\net8.0\ref\Dados.dll

@@ -31,7 +31,7 @@ namespace ObjetosZoo
         private Animal animal; 
         private DateTime tempoAlimentacao; 
         private double quantidade; 
-        private TipoComida tipocomida; 
+        private TipodeComida tipocomida; 
         
 
         #endregion
@@ -46,7 +46,7 @@ namespace ObjetosZoo
         /// <param name="tempoAlimentacao">Data e hora em que o animal foi alimentado.</param>
         /// <param name="quantidade">Quantidade de comida consumida em kg.</param>
         /// <param name="tipocomida">Tipo de comida consumida pelo animal.</param>
-        public Alimentacao(Animal animal, DateTime tempoAlimentacao, double quantidade, TipoComida tipocomida)
+        public Alimentacao(Animal animal, DateTime tempoAlimentacao, double quantidade, TipodeComida tipocomida)
         {
             idstatic++;
             Id = idstatic;
@@ -83,7 +83,7 @@ namespace ObjetosZoo
             set { quantidade = value; }
         }
 
-        public TipoComida TipoComida
+        public TipodeComida TipoComida
         {
             get { return tipocomida; }
             set { tipocomida = value; }

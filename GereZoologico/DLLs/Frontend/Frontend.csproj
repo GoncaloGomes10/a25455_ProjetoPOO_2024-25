@@ -13,4 +13,9 @@
     <Compile Remove="Form1.Designer.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ObjetosZoo\ObjetosZoo.csproj" />
+    <ProjectReference Include="..\RegrasZoo\RegrasZoo.csproj" />
+  </ItemGroup>
+
 </Project>

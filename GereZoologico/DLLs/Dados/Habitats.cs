@@ -36,6 +36,7 @@ namespace Dados
         {
             get { return listahabitats; }
         }
+
         #endregion
 
         #region Operators
@@ -59,33 +60,44 @@ namespace Dados
             return true;
         }
 
-        /// <summary>
-        /// Mostra os habitats e seus respectivos animais.
-        /// </summary>
-        public static void MostraHabitatsAnimais()
+
+        // Método para adicionar um animal a um habitat
+        public static bool AdicionarAnimal(int idhabitat, Animal animal)
         {
-            foreach (Habitat habitat in listahabitats)
+            var habitat = listahabitats.Find(h => h.IdHabitat == idhabitat);
+            if (habitat != null)
             {
-                Console.WriteLine(habitat);  // Exibe as informações do habitat
-
-                // Exibe o número de animais no habitat
-                Console.WriteLine($"Número de animais no habitat {habitat.NomeHabitat}: {habitat.animaishabitat.Count}");
-
-                if (habitat.animaishabitat.Count > 0)
-                {
-                    foreach (Animal animal in habitat.animaishabitat)
-                    {
-                        Console.WriteLine("  - " + animal);  // Exibe cada animal presente no habitat
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("  Nenhum animal neste habitat.");
-                }
+                habitat.ListaAnimaisHabitat.Add(animal);
+                return true;
             }
+            return false;
         }
 
+        // Método para remover um animal de um habitat
+        public static int RemoverAnimal(int idhabitat, int idAnimal)
+        {
+            var habitat = listahabitats.Find(h => h.IdHabitat == idhabitat);
+            if (habitat != null)
+            {
+                var animal = habitat.ListaAnimaisHabitat.Find(a => a.Id == idAnimal);
+                if (animal != null)
+                {
+                    habitat.ListaAnimaisHabitat.Remove(animal);
+                    return 1;
+                }
+                return -1;
+            }
+            return -2;
+        }
 
+        // Método para listar os animais de um habitat
+        public static List<Animal>? MostrarAnimais(int idhabitat)
+        {
+            var habitat = listahabitats.Find(h => h.IdHabitat == idhabitat);
+            if (habitat != null) return habitat.ListaAnimaisHabitat;
+            return null;
+
+        }
 
         #endregion
 

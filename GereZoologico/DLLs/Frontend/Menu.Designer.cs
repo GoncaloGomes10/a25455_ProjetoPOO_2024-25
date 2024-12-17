@@ -54,6 +54,7 @@
             direcionarmenu.TabIndex = 1;
             direcionarmenu.Text = "Login";
             direcionarmenu.UseVisualStyleBackColor = true;
+            direcionarmenu.Click += direcionarmenu_Click;
             // 
             // textBox1
             // 
@@ -100,6 +101,7 @@
             Controls.Add(direcionarmenucriarconta);
             Name = "Menu";
             Text = "Menu";
+            Load += Menu_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -68,9 +68,9 @@ namespace RegrasZoo
         {
             return AssistenciasVeterinarias.ApagarTodosRegistos();
         }
-        public static bool EditaDataRegistoAssistencia(Habitat habitat, Animal animal, DateTime? novaData)
+        public static bool EditaDataRegistoAssistencia(Habitat habitat, Animal animal, DateTime novaData)
         {
-           if(habitat != null && animal != null && novaData != null) return AssistenciasVeterinarias.EditaDataRegistoAssistencia(habitat, animal, novaData);
+           if(habitat != null && animal != null) return AssistenciasVeterinarias.EditaDataRegistoAssistencia(habitat, animal, novaData);
            return false;
         }
 

@@ -24,8 +24,8 @@ namespace Dados
     public class Utilizadores
     {
         #region Attributes
-        static Utilizador? userlogado = null;
-        static int? tipologado = null;
+        private static Utilizador? userlogado = null;
+        private static int? tipologado = null;
         private static List<Utilizador> listautilizadores = new List<Utilizador>();
         #endregion
 
@@ -39,7 +39,6 @@ namespace Dados
         {
             get { return listautilizadores; }
         }
-
         #endregion
 
         #region Operators
@@ -60,10 +59,10 @@ namespace Dados
         /// <param name="tipouser"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        public static bool Registo(string username, string password, string email, string nome, string nif, int tipouser)
+        public static int Registo(string username, string password, string email, string nome, string nif, int tipouser)
         {
             // Verifica se o utilizador já existe
-            if (listautilizadores.Exists(u => u.Username == username)) return false;
+            if (listautilizadores.Exists(u => u.Username == username)) return -1;
 
             Utilizador? novoUtilizador = tipouser switch
             {
@@ -74,7 +73,7 @@ namespace Dados
 
             listautilizadores.Add(novoUtilizador);
 
-            return true;
+            return 1;
         }
 
         public static int Login(string username, string password)

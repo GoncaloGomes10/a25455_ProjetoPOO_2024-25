@@ -42,7 +42,7 @@ namespace RegrasZoo
 
         #region OtherMethods
 
-        public static bool RegistraAlimentacao(Animal animal, DateTime tempoAlimentacao, double quantidade, TipoComida tipocomida)
+        public static bool RegistraAlimentacao(Animal animal, DateTime tempoAlimentacao, double quantidade, TipodeComida tipocomida)
         {
             if (animal == null && tempoAlimentacao == null && quantidade <= 0 && tipocomida == null) return false;
             return Alimentacoes.RegistraAlimentacao(animal, tempoAlimentacao, quantidade, tipocomida);

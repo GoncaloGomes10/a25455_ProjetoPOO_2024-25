@@ -7,7 +7,7 @@
     <Compile Update="MenuCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="MenuCriarConta.cs">
+    <Compile Update="MenuCriarContaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MenuFuncionário.cs">

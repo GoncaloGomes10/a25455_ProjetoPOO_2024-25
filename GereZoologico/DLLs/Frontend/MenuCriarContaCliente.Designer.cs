@@ -1,6 +1,6 @@
 ﻿namespace Frontend
 {
-    partial class MenuCriarConta
+    partial class MenuCriarContaCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             criarconta = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            email = new TextBox();
+            nome = new TextBox();
+            username = new TextBox();
+            nif = new TextBox();
+            password = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -49,41 +49,42 @@
             criarconta.TabIndex = 0;
             criarconta.Text = "Criar Conta";
             criarconta.UseVisualStyleBackColor = true;
+            criarconta.Click += criarconta_Click;
             // 
-            // textBox1
+            // email
             // 
-            textBox1.Location = new Point(146, 294);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(201, 27);
-            textBox1.TabIndex = 1;
+            email.Location = new Point(146, 294);
+            email.Name = "email";
+            email.Size = new Size(201, 27);
+            email.TabIndex = 1;
             // 
-            // textBox2
+            // nome
             // 
-            textBox2.Location = new Point(146, 207);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(201, 27);
-            textBox2.TabIndex = 2;
+            nome.Location = new Point(146, 207);
+            nome.Name = "nome";
+            nome.Size = new Size(201, 27);
+            nome.TabIndex = 2;
             // 
-            // textBox3
+            // username
             // 
-            textBox3.Location = new Point(146, 117);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(201, 27);
-            textBox3.TabIndex = 3;
+            username.Location = new Point(146, 117);
+            username.Name = "username";
+            username.Size = new Size(201, 27);
+            username.TabIndex = 3;
             // 
-            // textBox4
+            // nif
             // 
-            textBox4.Location = new Point(465, 203);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(201, 27);
-            textBox4.TabIndex = 4;
+            nif.Location = new Point(465, 203);
+            nif.Name = "nif";
+            nif.Size = new Size(201, 27);
+            nif.TabIndex = 4;
             // 
-            // textBox5
+            // password
             // 
-            textBox5.Location = new Point(465, 117);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(201, 27);
-            textBox5.TabIndex = 5;
+            password.Location = new Point(465, 117);
+            password.Name = "password";
+            password.Size = new Size(201, 27);
+            password.TabIndex = 5;
             // 
             // label1
             // 
@@ -130,7 +131,7 @@
             label5.TabIndex = 10;
             label5.Text = "Email:";
             // 
-            // MenuCriarConta
+            // MenuCriarContaCliente
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -140,13 +141,13 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(password);
+            Controls.Add(nif);
+            Controls.Add(username);
+            Controls.Add(nome);
+            Controls.Add(email);
             Controls.Add(criarconta);
-            Name = "MenuCriarConta";
+            Name = "MenuCriarContaCliente";
             Text = "MenuCriarConta";
             ResumeLayout(false);
             PerformLayout();
@@ -155,11 +156,11 @@
         #endregion
 
         private Button criarconta;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private TextBox email;
+        private TextBox nome;
+        private TextBox username;
+        private TextBox nif;
+        private TextBox password;
         private Label label1;
         private Label label2;
         private Label label3;

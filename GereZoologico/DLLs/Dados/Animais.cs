@@ -79,22 +79,13 @@ namespace Dados
                         // Cria o objeto Animal e adiciona-o à lista de animais
                         Animal animal = new Animal(nome, especie, idade, peso, dieta);
                         Animais.listaanimais.Add(animal);
-                        
 
-                        // Procura o habitat correspondente ao ID e adiciona o animal ao habitat
-                        Habitat? habitat = Habitat.habitats.Find(h => h.IdHabitat == idHabitat);
-                        if (habitat != null)
-                        {
-                            habitat.AdicionaAnimalHabitat(animal);
-                        }
-                        else
-                        {
-                            Console.WriteLine($"Não foi encontrado o habitat com ID {idHabitat}.");
-                        }
+                        Habitats.AdicionarAnimal(idHabitat, animal);
+                       
                     }
                     else
                     {
-                        throw new Exception("Formato da linha inválido.");
+                        throw new Exception();
                     }
                 }
 
