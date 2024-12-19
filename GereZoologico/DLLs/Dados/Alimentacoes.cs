@@ -122,8 +122,8 @@ namespace Dados
                 // Divide a linha em partes
                 string[] partes = linha.Split(';');
 
-                // Verifica se há exatamente 6 partes
-                if (partes.Length == 6)
+                // Verifica se há exatamente 4 partes
+                if (partes.Length == 4)
                 {
                     // Identificadores do ficheiro
                     int idAnimal = int.Parse(partes[0]); // ID do animal
@@ -144,8 +144,8 @@ namespace Dados
                     }
 
                     // Outros campos do ficheiro
-                    double quantidade = double.Parse(partes[4]);
-                    DateTime tempoAlimentacao = DateTime.Parse(partes[5]);
+                    double quantidade = double.Parse(partes[2]);
+                    DateTime tempoAlimentacao = DateTime.Parse(partes[3]);
 
                     // Registra a alimentação
                     Alimentacoes.RegistraAlimentacao(animal, tempoAlimentacao, quantidade, tipoComida);

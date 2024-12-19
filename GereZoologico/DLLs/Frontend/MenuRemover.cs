@@ -1,4 +1,5 @@
-﻿using ObjetosZoo;
+﻿using Dados;
+using ObjetosZoo;
 using RegrasZoo;
 using System;
 using System.Collections.Generic;
@@ -54,10 +55,25 @@ namespace Frontend
                         RegrasBilhetes.ApagarBilhete((Bilhete)listBox1.SelectedItem);
                         break;
                     case "Limpezas":
-                        RegrasLimpezaHabitats.ApagarRegistoLimpeza((Habitat)listBox1.SelectedItem);
+                        if (listBox1.SelectedItem is LimpezaHabitat limpeza)
+                        {
+                            RegrasLimpezaHabitats.ApagarRegistoLimpeza(limpeza.Habitat.IdHabitat);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Erro ao identificar a limpeza selecionada.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         break;
+
                     case "Assistências Veterinárias":
-                        RegrasAssistenciasVeterinarias.ApagarRegistoAssistencia((Animal)listBox1.SelectedItem);
+                        if (listBox1.SelectedItem is AssistenciaVeterinaria assistencia)
+                        {
+                            RegrasAssistenciasVeterinarias.RemoveAssistenciaVeterinaria(assistencia.Habitat.IdHabitat);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Erro ao identificar a assistência veterinária selecionada.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         break;
                     case "Utilizadores":
                         RegrasUtilizadores.RemoverUtilizador(((Utilizador)listBox1.SelectedItem).Id);

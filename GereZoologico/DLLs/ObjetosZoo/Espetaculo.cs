@@ -107,15 +107,7 @@ namespace ObjetosZoo
         #endregion
 
         #region Overrides
-        /// <summary>
-        /// Representação em string do espetáculo, com informações detalhadas.
-        /// </summary>
-        /// <returns>Uma string contendo detalhes do espetáculo.</returns>
-        public override string ToString()
-        {
-            return $"Espetáculo Id: {Id}, Tipo: {TipoEspetaculo}, Nome: {Nome}, Horário: {Horario}, " +
-                   $"Animal: {AnimalEspetaculo?.Nome ?? "Nenhum"} ({AnimalEspetaculo?.Especie ?? "N/A"})";
-        }
+
 
         #endregion
 

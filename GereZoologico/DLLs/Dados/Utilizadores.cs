@@ -146,7 +146,7 @@ namespace Dados
         } 
         public static int RemoverUtilizador(int id)
         {
-            Utilizador removerutilizador = listautilizadores.Find(x => x.Id == id);
+            Utilizador? removerutilizador = listautilizadores.Find(x => x.Id == id);
             if(removerutilizador != null)
             {
                 listautilizadores.Remove(removerutilizador);

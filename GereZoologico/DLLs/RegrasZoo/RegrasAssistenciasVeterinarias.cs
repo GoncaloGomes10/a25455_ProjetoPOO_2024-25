@@ -65,10 +65,10 @@ namespace RegrasZoo
 
         }
 
-        public static int ApagarRegistoAssistencia(Animal animal)
+        public static bool RemoveAssistenciaVeterinaria(int idHabitat)
         {
-            if(animal !=null) return AssistenciasVeterinarias.ApagarRegistoAssistencia(animal);
-            return -2;
+            if(idHabitat <= 0) return false;
+            return AssistenciasVeterinarias.RemoveAssistenciaVeterinaria(idHabitat);
         }
 
         public static bool ApagarTodosRegistos()

@@ -84,9 +84,16 @@ namespace Dados
             return false;
         }
 
-        public static int ApagarRegistoLimpeza(Habitat habitat)
+        /// <summary>
+        /// Apaga um registro de limpeza com base no ID do habitat.
+        /// </summary>
+        /// <param name="idHabitat">O ID do habitat cujo registro de limpeza será removido.</param>
+        /// <returns>Retorna 1 se o registro for removido com sucesso, -1 caso contrário.</returns>
+        public static int ApagarRegistoLimpeza(int idHabitat)
         {
-            LimpezaHabitat? removerlimpeza = listalimpezahabitats.Find(x => x.Habitat == habitat);
+            // Encontra o registro de limpeza correspondente ao idHabitat
+            LimpezaHabitat? removerlimpeza = listalimpezahabitats.Find(x => x.Habitat.IdHabitat == idHabitat);
+
             if (removerlimpeza != null)
             {
                 listalimpezahabitats.Remove(removerlimpeza);
@@ -94,6 +101,7 @@ namespace Dados
             }
             return -1;
         }
+
 
         public static bool CarregarLimpezasHabitats(string filePath)
         {

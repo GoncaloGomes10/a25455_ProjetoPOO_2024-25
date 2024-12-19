@@ -37,9 +37,9 @@
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(386, 21);
+            listBox1.Location = new Point(386, 1);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(393, 404);
+            listBox1.Size = new Size(632, 444);
             listBox1.TabIndex = 0;
             // 
             // comboBoxSelecionar
@@ -74,7 +74,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1030, 454);
             Controls.Add(label1);
             Controls.Add(exit);
             Controls.Add(comboBoxSelecionar);

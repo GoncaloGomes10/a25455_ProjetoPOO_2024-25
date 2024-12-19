@@ -76,13 +76,7 @@ namespace ObjetosZoo
 
 
 
-        /// <summary>
-        /// Mostra informações sobre a limpeza de um habitat específico.
-        /// </summary>
-        public void MostrarHabitatLimpo()
-        {
-            Console.WriteLine($"O habitat {Habitat.NomeHabitat} foi limpo às {HoraLimpeza}");
-        }
+
 
         #endregion
     }

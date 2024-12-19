@@ -39,6 +39,12 @@ namespace Frontend
             comboBoxSelecionar.Items.Add("Animais");
             comboBoxSelecionar.Items.Add("Tipos de Comida");
             comboBoxSelecionar.Items.Add("Habitats");
+            comboBoxSelecionar.Items.Add("Bilhetes");
+            comboBoxSelecionar.Items.Add("Limpezas");
+            comboBoxSelecionar.Items.Add("Assistências Veterinárias");
+            comboBoxSelecionar.Items.Add("Alimentações");
+            comboBoxSelecionar.Items.Add("Utilizadores");
+            comboBoxSelecionar.Items.Add("Espetáculos");
 
             // Define a seleção padrão
             comboBoxSelecionar.SelectedIndex = 0;
@@ -61,6 +67,30 @@ namespace Frontend
                     break;
                 case "Habitats":
                     listBox1.DataSource = RegrasHabitats.MostraHabitats();
+                    listBox1.DisplayMember = "Display";
+                    break;
+                case "Bilhetes":
+                    listBox1.DataSource = RegrasBilhetes.VerTodosBilhetes();
+                    listBox1.DisplayMember = "Display";
+                    break;
+                case "Limpezas":
+                    listBox1.DataSource = RegrasLimpezaHabitats.MostraTodosHabitatsLimpos();
+                    listBox1.DisplayMember = "Display";
+                    break;
+                case "Assistências Veterinárias":
+                    listBox1.DataSource = RegrasAssistenciasVeterinarias.MostraTodosRegistosAssistenciaVeterinaria();
+                    listBox1.DisplayMember = "Display";
+                    break;
+                case "Utilizadores":
+                    listBox1.DataSource = RegrasUtilizadores.MostrarTodosUtilizadores();
+                    listBox1.DisplayMember = "Display";
+                    break;
+                case "Espetáculos": 
+                    listBox1.DataSource = RegrasEspetaculos.MostrarTodosEspetaculos();
+                    listBox1.DisplayMember = "Display";
+                    break;
+                case "Alimentações":
+                    listBox1.DataSource = RegrasAlimencoes.MostraTodasAlimentacoes();
                     listBox1.DisplayMember = "Display";
                     break;
             }

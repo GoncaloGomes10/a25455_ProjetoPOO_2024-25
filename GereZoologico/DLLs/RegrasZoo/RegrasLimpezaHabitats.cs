@@ -43,7 +43,7 @@ namespace RegrasZoo
         #region OtherMethods
         public static bool RegistarHabitatLimpo(Habitat habitat, DateTime horalimpeza)
         {
-            if (habitat == null && horalimpeza == null) return false;
+            if (habitat == null) return false;
             return LimpezaHabitats.RegistarHabitatLimpo(habitat, horalimpeza);
         }
 
@@ -67,11 +67,12 @@ namespace RegrasZoo
             return LimpezaHabitats.ApagarTodosRegistosdeLimpeza();
         }
 
-        public static int ApagarRegistoLimpeza(Habitat habitat)
+        public static int ApagarRegistoLimpeza(int idHabitat)
         {
-            if (habitat == null) return -2;
-            return LimpezaHabitats.ApagarRegistoLimpeza(habitat);
+           if(idHabitat < 0 ) return -2;
+           return LimpezaHabitats.ApagarRegistoLimpeza(idHabitat);
         }
+
 
         public static bool CarregarLimpezasHabitats(string filePath)
         {

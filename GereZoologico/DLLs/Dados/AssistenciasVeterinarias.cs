@@ -117,16 +117,24 @@ namespace Dados
             return false;
         }
 
-        public static int ApagarRegistoAssistencia(Animal animal)
+        /// <summary>
+        /// Remove uma assistência veterinária com base no id do habitat.
+        /// </summary>
+        /// <param name="idHabitat">O ID do habitat cuja assistência será removida.</param>
+        /// <returns>Retorna true se a assistência for removida com sucesso, false caso contrário.</returns>
+        public static bool RemoveAssistenciaVeterinaria(int idHabitat)
         {
+            // Encontra a assistência relacionada ao habitat pelo id
+            var assistenciaARemover = listaassistenciaveterinaria
+                .Find(a => a.Habitat.IdHabitat == idHabitat);
 
-            AssistenciaVeterinaria? removerassistencia = listaassistenciaveterinaria.Find(tratamento => tratamento.Animal.Id == animal.Id);
-            if (removerassistencia != null)
+            if (assistenciaARemover != null)
             {
-                listaassistenciaveterinaria.Remove(removerassistencia);
-                return 1;
+                listaassistenciaveterinaria.Remove(assistenciaARemover);
+                return true;
             }
-            return -1;
+
+            return false;
         }
 
         /// <summary>

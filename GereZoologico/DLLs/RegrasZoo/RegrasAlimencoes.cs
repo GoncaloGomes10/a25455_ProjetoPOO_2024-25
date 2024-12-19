@@ -75,7 +75,7 @@ namespace RegrasZoo
         {
             if (File.Exists(filePath))
             {
-                Animais.CarregaAnimais(filePath);
+                Alimentacoes.CarregaAlimentacoes(filePath);
             }
             else
             {

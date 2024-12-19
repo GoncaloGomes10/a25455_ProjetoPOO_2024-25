@@ -1,0 +1,8 @@
+Completo;Savana;18
+Completo;Deserto;18
+Espetáculo;Deserto;12
+Espetáculo;Savana;12
+Espetáculo;Aquática;12
+Passeio;Aquática;10
+Passeio;Floresta;10
+Passeio;Savana;10
