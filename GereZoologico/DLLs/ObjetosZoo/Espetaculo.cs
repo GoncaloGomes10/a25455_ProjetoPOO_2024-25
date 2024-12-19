@@ -42,8 +42,8 @@ namespace ObjetosZoo
         private string nome;
         private DateTime horario;
         private Animal animalespetaculo;
-        
 
+        public string Display => $"{Id} - {TipoEspetaculo} - {Nome} - {horario} - {animalespetaculo}";
         #endregion
 
         #region Methods

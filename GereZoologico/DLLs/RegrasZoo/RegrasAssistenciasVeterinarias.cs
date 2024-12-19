@@ -64,6 +64,13 @@ namespace RegrasZoo
             return false;
 
         }
+
+        public static int ApagarRegistoAssistencia(Animal animal)
+        {
+            if(animal !=null) return AssistenciasVeterinarias.ApagarRegistoAssistencia(animal);
+            return -2;
+        }
+
         public static bool ApagarTodosRegistos()
         {
             return AssistenciasVeterinarias.ApagarTodosRegistos();
@@ -74,6 +81,25 @@ namespace RegrasZoo
            return false;
         }
 
+        public static bool CarregarAssistenciasVeterinarias(string filePath)
+        {
+            if (File.Exists(filePath))
+            {
+               AssistenciasVeterinarias.CarregarAssistenciasVeterinarias(filePath);
+            }
+            else
+            {
+                throw new FileNotFoundException();
+            }
+
+            return true;
+        }
+
+        public static bool GuardarAssistenciasVeterinarias(string filePath)
+        {
+            if (File.Exists(filePath)) return AssistenciasVeterinarias.GuardarAssistenciasVeterinarias(filePath);
+            return false;
+        }
         #endregion
 
         #region Destructor

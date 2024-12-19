@@ -99,6 +99,18 @@ namespace Dados
 
         }
 
+        public static int ObterIdHabitat(Animal animal)
+        {
+            foreach (var habitat in Habitats.Listahabitats)
+            {
+                if (habitat.ContemAnimal(animal))
+                {
+                    return habitat.IdHabitat; 
+                }
+            }
+            throw new Exception("Habitat não encontrado para o animal especificado.");
+        }
+
         #endregion
 
         #region Destructor

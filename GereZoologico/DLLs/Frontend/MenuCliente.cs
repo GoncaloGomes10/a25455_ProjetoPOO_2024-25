@@ -16,5 +16,18 @@ namespace Frontend
         {
             InitializeComponent();
         }
+
+        private void comprarbilhete_Click(object sender, EventArgs e)
+        {
+            MenuBilhete menuBilhete = new MenuBilhete();
+            this.Hide();
+            menuBilhete.ShowDialog();
+            this.Show();
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

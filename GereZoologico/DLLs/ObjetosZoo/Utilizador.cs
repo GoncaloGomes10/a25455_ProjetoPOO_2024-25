@@ -30,6 +30,7 @@ namespace ObjetosZoo
         private string nome;
         private string nif;
 
+        public string Display => $"{Id} - {Nome} - {Username} - {Password} - {Email} - {NIF}";
         #endregion
 
         #region Methods
@@ -92,6 +93,8 @@ namespace ObjetosZoo
             set { nif = value; }
         }
         public abstract int Tipo { get; }
+
+
         #endregion
 
         #region Operators

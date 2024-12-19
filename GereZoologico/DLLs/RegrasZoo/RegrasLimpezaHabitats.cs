@@ -67,7 +67,31 @@ namespace RegrasZoo
             return LimpezaHabitats.ApagarTodosRegistosdeLimpeza();
         }
 
+        public static int ApagarRegistoLimpeza(Habitat habitat)
+        {
+            if (habitat == null) return -2;
+            return LimpezaHabitats.ApagarRegistoLimpeza(habitat);
+        }
 
+        public static bool CarregarLimpezasHabitats(string filePath)
+        {
+            if (File.Exists(filePath))
+            {
+                LimpezaHabitats.CarregarLimpezasHabitats(filePath);
+            }
+            else
+            {
+                throw new FileNotFoundException();
+            }
+
+            return true;
+        }
+
+        public static bool GuardarLimpezasHabitats(string filePath)
+        {
+            if (File.Exists(filePath)) LimpezaHabitats.GuardarLimpezasHabitats(filePath);
+            return false;
+        }
         #endregion
 
         #region Destructor

@@ -71,6 +71,26 @@ namespace RegrasZoo
             return Alimentacoes.EditarAlimentacao(id, novaQuantidade);
         }
 
+        public static bool CarregaAlimentacoes(string filePath)
+        {
+            if (File.Exists(filePath))
+            {
+                Animais.CarregaAnimais(filePath);
+            }
+            else
+            {
+                throw new FileNotFoundException();
+            }
+
+            return true;
+        }
+
+        public static bool GuardarAlimentacoes(string filePath)
+        {
+            if(File.Exists(filePath)) return Alimentacoes.GuardarAlimentacoes(filePath);
+            return false;
+        }
+
         #endregion
 
         #region Destructor

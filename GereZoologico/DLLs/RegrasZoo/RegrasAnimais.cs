@@ -56,6 +56,11 @@ namespace RegrasZoo
             return true;
         }
 
+        public static int GuardaAnimais(string filePath)
+        {
+            if (File.Exists(filePath)) Animais.GuardaAnimais(filePath);
+            return -2;
+        }
         public static bool CriarAnimal(string nome, string especie, int idade, double peso, DIETA dieta)
         {
             if (string.IsNullOrEmpty(nome)|| string.IsNullOrEmpty(especie)|| idade <= 0 || peso <= 0 ) return false;

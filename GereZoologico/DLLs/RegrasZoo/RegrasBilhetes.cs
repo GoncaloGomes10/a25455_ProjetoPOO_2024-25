@@ -64,6 +64,25 @@ namespace RegrasZoo
             return Bilhetes.ApagarBilhete(bilheterecebido);
         }
 
+        public static bool GuardarBilhetes(string filePath)
+        {
+            if (File.Exists(filePath)) Bilhetes.GuardarBilhetes(filePath);
+            return false;
+        }
+
+        public static bool CarregarBilhetes(string filePath)
+        {
+            if (File.Exists(filePath))
+            {
+                Bilhetes.CarregarBilhetes(filePath);
+            }
+            else
+            {
+                throw new FileNotFoundException();
+            }
+
+            return true;
+        }
         #endregion
 
         #region Destructor

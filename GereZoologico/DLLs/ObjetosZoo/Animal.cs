@@ -43,7 +43,8 @@ namespace ObjetosZoo
         private string nome; 
         private string especie; 
         private int idade; 
-        private double peso; 
+        private double peso;
+        public string Display => $"{Id} - {Nome} - {Especie} - {Idade} Anos - {Peso}Kg - {Dieta}";
 
         #endregion
 
@@ -116,14 +117,6 @@ namespace ObjetosZoo
         #endregion
 
         #region Overrides
-        /// <summary>
-        /// Retorna uma string formatada com as principais informações do animal.
-        /// </summary>
-        /// <returns>String com nome, espécie, idade, peso, dieta e ID do animal.</returns>
-        public override string ToString()
-        {
-            return String.Format("Nome: {0} Especie: {1} Idade: {2} Peso: {3} kg Tipo: {4} Id: {5}", Nome, Especie, Idade, Peso, Dieta, Id);
-        }
 
         #endregion
 

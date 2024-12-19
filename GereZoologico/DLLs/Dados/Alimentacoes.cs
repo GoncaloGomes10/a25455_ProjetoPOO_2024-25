@@ -111,6 +111,69 @@ namespace Dados
             return false;
         }
 
+        public static bool CarregaAlimentacoes(string filePath)
+        {
+            // Lê todas as linhas do ficheiro
+            string[] linhas = File.ReadAllLines(filePath);
+
+            // Para cada linha no ficheiro, processa o conteúdo
+            foreach (string linha in linhas)
+            {
+                // Divide a linha em partes
+                string[] partes = linha.Split(';');
+
+                // Verifica se há exatamente 6 partes
+                if (partes.Length == 6)
+                {
+                    // Identificadores do ficheiro
+                    int idAnimal = int.Parse(partes[0]); // ID do animal
+                    string nomeComida = partes[1]; // Nome do tipo de comida
+
+                    // Busca o objeto Animal correspondente
+                    Animal? animal = Animais.Listaanimais.Find(a => a.Id == idAnimal);
+                    if (animal == null)
+                    {
+                        throw new Exception($"Animal com ID {idAnimal} não encontrado.");
+                    }
+
+                    // Busca o objeto TipoComida correspondente
+                    TipodeComida? tipoComida = TiposdeComidas.Listatipodecomidas.Find(tc => tc.NomeComida == nomeComida);
+                    if (tipoComida == null)
+                    {
+                        throw new Exception($"Tipo de comida '{nomeComida}' não encontrado.");
+                    }
+
+                    // Outros campos do ficheiro
+                    double quantidade = double.Parse(partes[4]);
+                    DateTime tempoAlimentacao = DateTime.Parse(partes[5]);
+
+                    // Registra a alimentação
+                    Alimentacoes.RegistraAlimentacao(animal, tempoAlimentacao, quantidade, tipoComida);
+                }
+                else
+                {
+                    throw new Exception("Formato inválido na linha do ficheiro.");
+                }
+            }
+
+            return true;
+        }
+
+        public static bool GuardarAlimentacoes(string filePath)
+        {
+            using (StreamWriter writer = new StreamWriter(filePath)) 
+            {
+
+               // Itera sobre a lista de alimentações
+                foreach (Alimentacao alimentacao in listaalimentacoes)
+                {
+                    // Formata e escreve os dados de cada alimentação
+                    writer.WriteLine($"{alimentacao.Animal.Id};{alimentacao.TipoComida.NomeComida};{alimentacao.Quantidade};{alimentacao.TempoAlimentacao:yyyy-MM-dd HH:mm:ss}");
+                }
+            }
+            return true;
+        }
+
 
         #endregion
 

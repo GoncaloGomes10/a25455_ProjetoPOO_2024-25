@@ -84,7 +84,7 @@ namespace Dados
         }
 
         /// <summary>
-        /// Exibe os registos de assistência veterinária para um animal específico.
+        /// Mostra os registos de assistência veterinária para um animal específico.
         /// </summary>
         /// <param name="animal">O animal cujos registos serão exibidos.</param>
         public static bool MostraRegistosDeAnimal(Animal animal)
@@ -117,6 +117,18 @@ namespace Dados
             return false;
         }
 
+        public static int ApagarRegistoAssistencia(Animal animal)
+        {
+
+            AssistenciaVeterinaria? removerassistencia = listaassistenciaveterinaria.Find(tratamento => tratamento.Animal.Id == animal.Id);
+            if (removerassistencia != null)
+            {
+                listaassistenciaveterinaria.Remove(removerassistencia);
+                return 1;
+            }
+            return -1;
+        }
+
         /// <summary>
         /// Edita a data de um registo de assistência veterinária.
         /// </summary>
@@ -137,6 +149,86 @@ namespace Dados
             }
             return false;
         }
+
+        public static bool CarregarAssistenciasVeterinarias(string filePath)
+        {
+
+            // Lê todas as linhas do ficheiro
+            string[] linhas = File.ReadAllLines(filePath);
+
+            // Para cada linha no ficheiro, processa o conteúdo
+            foreach (string linha in linhas)
+            {
+                // Divide a linha em partes
+                string[] partes = linha.Split(';');
+
+                // Verifica se há exatamente 3 partes
+                if (partes.Length == 3)
+                {
+                    // Identificadores do ficheiro
+                    int idHabitat = int.Parse(partes[0]); // ID do habitat
+                    int idAnimal = int.Parse(partes[1]); // ID do animal
+                    DateTime dataDoTratamento = DateTime.Parse(partes[2]); // Data e hora do tratamento
+
+                    // Busca o objeto Habitat correspondente
+                    Habitat? habitat = Habitats.Listahabitats.Find(h => h.IdHabitat == idHabitat);
+                    if (habitat == null)
+                    {
+                        throw new Exception($"Habitat com ID {idHabitat} não encontrado.");
+                    }
+
+                    // Busca o objeto Animal correspondente
+                    Animal? animal = Animais.Listaanimais.Find(a => a.Id == idAnimal);
+                    if (animal == null)
+                    {
+                        throw new Exception($"Animal com ID {idAnimal} não encontrado.");
+                    }
+
+                    // Verifica se o animal pertence ao habitat
+                    if (!habitat.ContemAnimal(animal))
+                    {
+                        throw new Exception($"Animal com ID {idAnimal} não pertence ao habitat com ID {idHabitat}.");
+                    }
+
+                    // Registra a assistência usando a função existente
+                    AssistenciasVeterinarias.RegistaAssistenciaVeterinaria(habitat, animal, dataDoTratamento);
+                }
+                else
+                {
+                    throw new Exception("Formato inválido na linha do ficheiro.");
+                }
+            }
+
+            return true; // Indica sucesso
+        }
+
+        public static bool GuardarAssistenciasVeterinarias(string filePath)
+        {
+            // Lista para armazenar as linhas que serão gravadas no ficheiro
+            List<string> linhas = new List<string>();
+
+            // Itera pela lista de assistências veterinárias
+            foreach (AssistenciaVeterinaria assistencia in AssistenciasVeterinarias.listaassistenciaveterinaria)
+            {
+                // Formata os dados da assistência em uma linha
+                string linha = $"{assistencia.Habitat.IdHabitat};{assistencia.Animal.Id};{assistencia.Datadotratamento:yyyy-MM-ddTHH:mm:ss}";
+
+                // Adiciona a linha à lista de linhas
+                linhas.Add(linha);
+            }
+
+            // Sobrescreve o conteúdo do ficheiro com as novas linhas
+            File.WriteAllLines(filePath, linhas);
+           
+            return true;
+            
+            
+        }
+
+
+
+
+
         #endregion
 
         #region Destructor
@@ -145,3 +237,4 @@ namespace Dados
         #endregion
     }
 }
+            

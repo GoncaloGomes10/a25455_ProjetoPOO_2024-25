@@ -91,6 +91,42 @@ namespace Dados
 
             return true;
         }
+        public static int GuardaAnimais(string filePath)
+        {
+            try
+            {
+                // Lista para armazenar as linhas que serão gravadas no ficheiro
+                List<string> linhas = new List<string>();
+
+                // Itera pela lista de animais
+                foreach (Animal animal in Animais.listaanimais)
+                {
+                    // Formata os dados do animal em uma linha
+                    string linha = string.Join(";",
+                        animal.Nome,
+                        animal.Especie,
+                        animal.Idade.ToString(),
+                        animal.Peso.ToString("F2"),
+                        animal.Dieta.ToString(),
+                        Habitats.ObterIdHabitat(animal));
+
+                    // Adiciona a linha à lista de linhas
+                    linhas.Add(linha);
+                }
+
+                // Escreve todas as linhas no ficheiro
+                File.WriteAllLines(filePath, linhas);
+
+                return 1;
+            }
+            catch
+            {
+                return -1;
+            }
+        }
+
+
+
 
         /// <summary>
         /// Cria um novo animal e adiciona-o à lista de animais.

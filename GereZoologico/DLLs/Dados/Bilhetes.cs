@@ -79,7 +79,46 @@ namespace Dados
             return false;
         }
 
+        public static bool CarregarBilhetes(string filePath)
+        {
+            // Lê todas as linhas do ficheiro
+            string[] linhas = File.ReadAllLines(filePath);
 
+            // Para cada linha no ficheiro, processa o conteúdo
+            foreach (string linha in linhas)
+            {
+                // Divide a linha em partes
+                string[] partes = linha.Split(';');
+
+                // Verifica se há exatamente 3 partes
+                if (partes.Length == 3)
+                {
+                    TIPOBILHETE tipobilhete = (TIPOBILHETE)Enum.Parse(typeof(TIPOBILHETE), partes[0]);
+                    ZONA zona = (ZONA)Enum.Parse(typeof(ZONA), partes[1]);
+                    double preço = double.Parse(partes[2]);
+
+                    Bilhetes.ComprarBilhete(zona, tipobilhete, preço);
+                }
+                else
+                {
+                    throw new Exception();
+                }
+            }
+
+            return true;
+        }
+
+        public static bool GuardarBilhetes(string filePath)
+        {
+            using (StreamWriter writer = new StreamWriter(filePath)) //Open the file to write
+            {
+                foreach (Bilhete bilhete in listabilhetes)
+                {
+                    writer.WriteLine($"{bilhete.TipoBilhete};{bilhete.Zona};{bilhete.Preço}");
+                }
+            }
+            return true;
+        }
         #endregion
 
         #region Destructor

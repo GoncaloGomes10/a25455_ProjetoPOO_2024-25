@@ -69,6 +69,12 @@ namespace RegrasZoo
             if(idhabitat < 0) return null;
             return Habitats.MostrarAnimais(idhabitat);
         }
+
+        public static int ObterIdHabitat(Animal animal)
+        {
+            if (animal == null) return -1;
+            return Habitats.ObterIdHabitat(animal);
+        }
         #endregion
 
         #region Destructor

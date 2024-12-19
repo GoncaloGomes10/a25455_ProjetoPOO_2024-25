@@ -50,6 +50,8 @@ namespace ObjetosZoo
         private int id;
         private static int idstatic;
 
+        public string Display => $"{Id} - {Zona} - {TipoBilhete} - {Preço}";
+
         #endregion
 
         #region Methods

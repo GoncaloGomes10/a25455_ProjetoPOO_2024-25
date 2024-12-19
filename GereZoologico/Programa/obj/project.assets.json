@@ -1,0 +1,169 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {
+      "Dados/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "ObjetosZoo": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Dados.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dados.dll": {}
+        }
+      },
+      "Frontend/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "ObjetosZoo": "1.0.0",
+          "RegrasZoo": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Frontend.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Frontend.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "ObjetosZoo/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/ObjetosZoo.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ObjetosZoo.dll": {}
+        }
+      },
+      "RegrasZoo/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Dados": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RegrasZoo.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RegrasZoo.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Dados/1.0.0": {
+      "type": "project",
+      "path": "../DLLs/Dados/Dados.csproj",
+      "msbuildProject": "../DLLs/Dados/Dados.csproj"
+    },
+    "Frontend/1.0.0": {
+      "type": "project",
+      "path": "../DLLs/Frontend/Frontend.csproj",
+      "msbuildProject": "../DLLs/Frontend/Frontend.csproj"
+    },
+    "ObjetosZoo/1.0.0": {
+      "type": "project",
+      "path": "../DLLs/ObjetosZoo/ObjetosZoo.csproj",
+      "msbuildProject": "../DLLs/ObjetosZoo/ObjetosZoo.csproj"
+    },
+    "RegrasZoo/1.0.0": {
+      "type": "project",
+      "path": "../DLLs/RegrasZoo/RegrasZoo.csproj",
+      "msbuildProject": "../DLLs/RegrasZoo/RegrasZoo.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": [
+      "Dados >= 1.0.0",
+      "Frontend >= 1.0.0",
+      "ObjetosZoo >= 1.0.0",
+      "RegrasZoo >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\gonca\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\Programa\\Programa.csproj",
+      "projectName": "Programa",
+      "projectPath": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\Programa\\Programa.csproj",
+      "packagesPath": "C:\\Users\\gonca\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\Programa\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\gonca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "projectReferences": {
+            "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Dados\\Dados.csproj": {
+              "projectPath": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Dados\\Dados.csproj"
+            },
+            "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Frontend\\Frontend.csproj": {
+              "projectPath": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Frontend\\Frontend.csproj"
+            },
+            "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\ObjetosZoo\\ObjetosZoo.csproj": {
+              "projectPath": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\ObjetosZoo\\ObjetosZoo.csproj"
+            },
+            "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\RegrasZoo\\RegrasZoo.csproj": {
+              "projectPath": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\RegrasZoo\\RegrasZoo.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

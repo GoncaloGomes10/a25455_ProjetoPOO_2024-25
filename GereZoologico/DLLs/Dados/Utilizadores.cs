@@ -39,6 +39,16 @@ namespace Dados
         {
             get { return listautilizadores; }
         }
+        
+        public static int? TipoLogado
+        {
+            get { return tipologado; }
+        }
+
+        public static Utilizador? UserLogado
+        {
+            get { return userlogado; }
+        }
         #endregion
 
         #region Operators
@@ -48,6 +58,51 @@ namespace Dados
         #endregion
 
         #region OtherMethods
+        public static bool CarregaUtilizadores(string filePath)
+        {
+            // Lê todas as linhas do ficheiro
+            string[] linhas = File.ReadAllLines(filePath);
+
+            // Para cada linha no ficheiro, processa o conteúdo
+            foreach (string linha in linhas)
+            {
+                // Divide a linha em partes
+                string[] partes = linha.Split(';');
+
+                // Verifica se há exatamente 6 partes
+                if (partes.Length == 6)
+                {
+                    string username = partes[0];
+                    string password = partes[1];
+                    string email = partes[2];
+                    string nome = partes[3];
+                    string nif = partes[4];
+                    int tipouser = int.Parse(partes[5]);
+
+                    Utilizadores.Registo(username, password, email, nome, nif, tipouser);
+                }
+                else
+                {
+                    throw new Exception();
+                }
+            }
+
+            return true;
+        }
+
+        public static bool GuardarUtilizadores(string filePath)
+        {
+            using (StreamWriter writer = new StreamWriter(filePath)) //Open the file to write
+            {
+                foreach (Utilizador utilizador in listautilizadores)
+                {
+                    writer.WriteLine($"{utilizador.Username};{utilizador.Password};{utilizador.Email};{utilizador.Nome};{utilizador.NIF};{utilizador.Tipo}");
+                }
+            }
+            return true;
+        }
+
+
         /// <summary>
         /// 
         /// </summary>
@@ -85,9 +140,19 @@ namespace Dados
             {
                 userlogado = utilizador;
                 tipologado = utilizador.Tipo;
+               
+            }
+            return 1;
+        } 
+        public static int RemoverUtilizador(int id)
+        {
+            Utilizador removerutilizador = listautilizadores.Find(x => x.Id == id);
+            if(removerutilizador != null)
+            {
+                listautilizadores.Remove(removerutilizador);
                 return 1;
             }
-            return 0;
+            return -1;   
         }
 
         public static int AlterarPassword(string passwordantiga, string passwordnova)
@@ -110,6 +175,7 @@ namespace Dados
             Utilizador? user = userlogado;
             return user;
         }
+
 
         public static bool Logout()
         {

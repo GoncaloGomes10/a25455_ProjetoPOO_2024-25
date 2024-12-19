@@ -29,6 +29,18 @@ namespace ObjetosZoo
         private string nomehabitat;
         private List<Animal> listaanimaishabitat;
 
+        public string Display
+        {
+            get
+            {
+                string nomesAnimais = ListaAnimaisHabitat != null && ListaAnimaisHabitat.Any()
+                    ? string.Join(", ", ListaAnimaisHabitat.Select(a => a.Nome))
+                    : "Nenhum animal";
+
+                return $"{IdHabitat} - {NomeHabitat} - {Zona}: {nomesAnimais}";
+            }
+        }
+
         #endregion
 
         #region Methods
@@ -86,14 +98,7 @@ namespace ObjetosZoo
 
         #region Overrides 
 
-        /// <summary>
-        /// Retorna uma representação textual do habitat.
-        /// </summary>
-        /// <returns>Uma string com as informações do habitat.</returns>
-        public override string ToString()
-        {
-            return String.Format("IDHabitat: {0} Nome Habitat: {1} Zona: {2}", IdHabitat, NomeHabitat, Zona);
-        }
+
 
         #endregion
 

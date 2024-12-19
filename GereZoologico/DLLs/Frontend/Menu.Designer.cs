@@ -30,10 +30,11 @@
         {
             direcionarmenucriarconta = new Button();
             direcionarmenu = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            passwordmenu = new TextBox();
+            usernamemenu = new TextBox();
             label1 = new Label();
             label2 = new Label();
+            exit = new Button();
             SuspendLayout();
             // 
             // direcionarmenucriarconta
@@ -56,19 +57,19 @@
             direcionarmenu.UseVisualStyleBackColor = true;
             direcionarmenu.Click += direcionarmenu_Click;
             // 
-            // textBox1
+            // passwordmenu
             // 
-            textBox1.Location = new Point(261, 199);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(303, 27);
-            textBox1.TabIndex = 2;
+            passwordmenu.Location = new Point(261, 199);
+            passwordmenu.Name = "passwordmenu";
+            passwordmenu.Size = new Size(303, 27);
+            passwordmenu.TabIndex = 2;
             // 
-            // textBox2
+            // usernamemenu
             // 
-            textBox2.Location = new Point(261, 142);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(303, 27);
-            textBox2.TabIndex = 3;
+            usernamemenu.Location = new Point(261, 142);
+            usernamemenu.Name = "usernamemenu";
+            usernamemenu.Size = new Size(303, 27);
+            usernamemenu.TabIndex = 3;
             // 
             // label1
             // 
@@ -88,15 +89,26 @@
             label2.TabIndex = 5;
             label2.Text = "Password:";
             // 
+            // exit
+            // 
+            exit.Location = new Point(661, 394);
+            exit.Name = "exit";
+            exit.Size = new Size(94, 29);
+            exit.TabIndex = 6;
+            exit.Text = "Exit";
+            exit.UseVisualStyleBackColor = true;
+            exit.Click += exit_Click;
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(exit);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(usernamemenu);
+            Controls.Add(passwordmenu);
             Controls.Add(direcionarmenu);
             Controls.Add(direcionarmenucriarconta);
             Name = "Menu";
@@ -110,9 +122,10 @@
 
         private Button direcionarmenucriarconta;
         private Button direcionarmenu;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox passwordmenu;
+        private TextBox usernamemenu;
         private Label label1;
         private Label label2;
+        private Button exit;
     }
 }

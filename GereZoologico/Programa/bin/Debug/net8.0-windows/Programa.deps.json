@@ -1,0 +1,91 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Programa/1.0.0": {
+        "dependencies": {
+          "Dados": "1.0.0",
+          "Frontend": "1.0.0",
+          "ObjetosZoo": "1.0.0",
+          "RegrasZoo": "1.0.0"
+        },
+        "runtime": {
+          "Programa.dll": {}
+        }
+      },
+      "Dados/1.0.0": {
+        "dependencies": {
+          "ObjetosZoo": "1.0.0"
+        },
+        "runtime": {
+          "Dados.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Frontend/1.0.0": {
+        "dependencies": {
+          "ObjetosZoo": "1.0.0",
+          "RegrasZoo": "1.0.0"
+        },
+        "runtime": {
+          "Frontend.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "ObjetosZoo/1.0.0": {
+        "runtime": {
+          "ObjetosZoo.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "RegrasZoo/1.0.0": {
+        "dependencies": {
+          "Dados": "1.0.0"
+        },
+        "runtime": {
+          "RegrasZoo.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Programa/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Dados/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Frontend/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ObjetosZoo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RegrasZoo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

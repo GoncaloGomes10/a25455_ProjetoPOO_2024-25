@@ -27,6 +27,8 @@ namespace ObjetosZoo
         private Habitat habitat;
         private DateTime horalimpeza;
 
+        public string Display => $"{Habitat} - {HoraLimpeza}";
+
         #endregion
 
         #region Methods

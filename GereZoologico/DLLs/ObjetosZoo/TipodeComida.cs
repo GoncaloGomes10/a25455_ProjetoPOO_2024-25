@@ -30,7 +30,8 @@ namespace ObjetosZoo
         DIETA dieta;
         private string nomecomida;
         private double calorias;
-  
+
+        public string Display => $"{Id} - {NomeComida} - {Calorias} - {Dieta}";
 
         #endregion
 
@@ -85,15 +86,6 @@ namespace ObjetosZoo
         #endregion
 
         #region Overrides 
-        /// <summary>
-        /// Retorna uma representação em string do tipo de comida, mostrando seu nome e calorias.
-        /// </summary>
-        /// <returns>Representação em string do tipo de comida.</returns>
-        public override string ToString()
-        {
-            string outStr = String.Format(" {0} ,Calorias: {1}", NomeComida, Calorias);
-            return outStr;
-        }
         #endregion
 
         #region OtherMethods

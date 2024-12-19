@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dados", "DLLs\Dados\Dados.c
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frontend", "DLLs\Frontend\Frontend.csproj", "{5424A6BE-5C8F-4C55-9B6D-BFE9E87B97A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegrasZoo", "DLLs\RegrasZoo\RegrasZoo.csproj", "{A92C2B8D-DE20-4F8B-B75F-7D2A555F5A7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegrasZoo", "DLLs\RegrasZoo\RegrasZoo.csproj", "{A92C2B8D-DE20-4F8B-B75F-7D2A555F5A7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Programa", "Programa\Programa.csproj", "{5C719D92-F852-470D-937F-6148AE17EDEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{A92C2B8D-DE20-4F8B-B75F-7D2A555F5A7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A92C2B8D-DE20-4F8B-B75F-7D2A555F5A7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A92C2B8D-DE20-4F8B-B75F-7D2A555F5A7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C719D92-F852-470D-937F-6148AE17EDEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C719D92-F852-470D-937F-6148AE17EDEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C719D92-F852-470D-937F-6148AE17EDEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C719D92-F852-470D-937F-6148AE17EDEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

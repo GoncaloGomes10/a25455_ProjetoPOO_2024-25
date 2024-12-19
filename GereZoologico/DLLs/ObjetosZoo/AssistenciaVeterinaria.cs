@@ -25,6 +25,8 @@ namespace ObjetosZoo
         private Animal animal;
         DateTime datadotratamento;
 
+        public string Display => $"{Habitat} - {Animal} - {Datadotratamento}";
+
         #endregion
 
         #region Methods
