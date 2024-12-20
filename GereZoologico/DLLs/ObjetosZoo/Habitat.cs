@@ -37,9 +37,10 @@ namespace ObjetosZoo
                     ? string.Join(", ", ListaAnimaisHabitat.Select(a => a.Nome))
                     : "Nenhum animal";
 
-                return $"{IdHabitat} - {NomeHabitat} - {Zona}: {nomesAnimais}";
+                return $"{IdHabitat} - {NomeHabitat} - Zona {Zona}: {nomesAnimais}";
             }
         }
+
 
         #endregion
 

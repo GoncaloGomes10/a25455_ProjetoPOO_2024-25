@@ -62,5 +62,21 @@ namespace Frontend
             menuAdicionarAnimal.ShowDialog();
             this.Show();
         }
+
+        private void adicionarregistoalimentacao_Click(object sender, EventArgs e)
+        {
+            MenuAdicionarAlimentação menuAdicionarAlimentação = new MenuAdicionarAlimentação();
+            this.Hide();
+            menuAdicionarAlimentação.ShowDialog();
+            this.Show();
+        }
+
+        private void registolimpezahabitat_Click(object sender, EventArgs e)
+        {
+            MenuAdicionarLimpeza menuAdicionarLimpeza = new MenuAdicionarLimpeza();
+            this.Hide();
+            menuAdicionarLimpeza.ShowDialog();
+            this.Show();
+        }
     }
 }

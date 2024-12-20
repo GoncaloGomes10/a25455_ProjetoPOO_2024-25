@@ -107,6 +107,7 @@
             adicionarregistoalimentacao.TabIndex = 15;
             adicionarregistoalimentacao.Text = "Registar Alimentação";
             adicionarregistoalimentacao.UseVisualStyleBackColor = true;
+            adicionarregistoalimentacao.Click += adicionarregistoalimentacao_Click;
             // 
             // registolimpezahabitat
             // 
@@ -116,6 +117,7 @@
             registolimpezahabitat.TabIndex = 17;
             registolimpezahabitat.Text = "Registo Limpeza";
             registolimpezahabitat.UseVisualStyleBackColor = true;
+            registolimpezahabitat.Click += registolimpezahabitat_Click;
             // 
             // mostrarlistas
             // 

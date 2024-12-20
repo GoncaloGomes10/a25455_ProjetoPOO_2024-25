@@ -24,11 +24,10 @@ namespace Frontend
         {
             // Obtém os valores dos campos do formulário
             string nome = nometext.Text;
-            string especie = comboBoxespecie.SelectedItem.ToString();
             int idade = int.Parse(idadetext.Text);
             double peso = double.Parse(pesotext.Text);
-
-            // Obtém o valor selecionado no ComboBox de dieta e converte para o tipo DIETA
+            string especie = comboBoxespecie.SelectedItem.ToString();
+            
             DIETA dieta = (DIETA)comboBoxdieta.SelectedItem;  // Converte o valor selecionado para o tipo DIETA
 
             int idHabitat = (int)comboBoxhabitat.SelectedValue; // Obtém o ID do habitat selecionado
@@ -74,6 +73,7 @@ namespace Frontend
             PreencherComboBoxHabitat();
             PreencherComboBoxDieta();
 
+
             comboBoxespecie.Items.Add("Leão");
             comboBoxespecie.Items.Add("Elefante");
             comboBoxespecie.Items.Add("Camelo");
@@ -101,6 +101,7 @@ namespace Frontend
             // Preenche o ComboBox com os valores do enum DIETA
             comboBoxdieta.DataSource = Enum.GetValues(typeof(DIETA));
         }
+
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();

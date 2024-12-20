@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5424A6BE-5C8F-4C55-9B6D-BFE9E87B97A6}|DLLs\\Frontend\\Frontend.csproj|c:\\users\\gonca\\onedrive\\ambiente de trabalho\\a25455_projetopoo_2024-25\\gerezoologico\\dlls\\frontend\\menuadicionaranimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5424A6BE-5C8F-4C55-9B6D-BFE9E87B97A6}|DLLs\\Frontend\\Frontend.csproj|solutionrelative:dlls\\frontend\\menuadicionaranimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5424A6BE-5C8F-4C55-9B6D-BFE9E87B97A6}|DLLs\\Frontend\\Frontend.csproj|c:\\users\\gonca\\onedrive\\ambiente de trabalho\\a25455_projetopoo_2024-25\\gerezoologico\\dlls\\frontend\\menuadicionarlimpeza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5424A6BE-5C8F-4C55-9B6D-BFE9E87B97A6}|DLLs\\Frontend\\Frontend.csproj|solutionrelative:dlls\\frontend\\menuadicionarlimpeza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5424A6BE-5C8F-4C55-9B6D-BFE9E87B97A6}|DLLs\\Frontend\\Frontend.csproj|c:\\users\\gonca\\onedrive\\ambiente de trabalho\\a25455_projetopoo_2024-25\\gerezoologico\\dlls\\frontend\\menuadicionaranimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5424A6BE-5C8F-4C55-9B6D-BFE9E87B97A6}|DLLs\\Frontend\\Frontend.csproj|solutionrelative:dlls\\frontend\\menuadicionaranimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5424A6BE-5C8F-4C55-9B6D-BFE9E87B97A6}|DLLs\\Frontend\\Frontend.csproj|c:\\users\\gonca\\onedrive\\ambiente de trabalho\\a25455_projetopoo_2024-25\\gerezoologico\\dlls\\frontend\\menuadicionarlimpeza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5424A6BE-5C8F-4C55-9B6D-BFE9E87B97A6}|DLLs\\Frontend\\Frontend.csproj|solutionrelative:dlls\\frontend\\menuadicionarlimpeza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F720CE8D-5093-4C8D-9C2A-AF5D1E303402}|DLLs\\Dados\\Dados.csproj|c:\\users\\gonca\\onedrive\\ambiente de trabalho\\a25455_projetopoo_2024-25\\gerezoologico\\dlls\\dados\\habitats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F720CE8D-5093-4C8D-9C2A-AF5D1E303402}|DLLs\\Dados\\Dados.csproj|solutionrelative:dlls\\dados\\habitats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F720CE8D-5093-4C8D-9C2A-AF5D1E303402}|DLLs\\Dados\\Dados.csproj|c:\\users\\gonca\\onedrive\\ambiente de trabalho\\a25455_projetopoo_2024-25\\gerezoologico\\dlls\\dados\\limpezahabitats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F720CE8D-5093-4C8D-9C2A-AF5D1E303402}|DLLs\\Dados\\Dados.csproj|solutionrelative:dlls\\dados\\limpezahabitats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,41 +26,41 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Habitats.cs",
-              "DocumentMoniker": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Dados\\Habitats.cs",
-              "RelativeDocumentMoniker": "DLLs\\Dados\\Habitats.cs",
-              "ToolTip": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Dados\\Habitats.cs",
-              "RelativeToolTip": "DLLs\\Dados\\Habitats.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAzwEkAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "MenuAdicionarLimpeza.cs",
+              "DocumentMoniker": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Frontend\\MenuAdicionarLimpeza.cs",
+              "RelativeDocumentMoniker": "DLLs\\Frontend\\MenuAdicionarLimpeza.cs",
+              "ToolTip": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Frontend\\MenuAdicionarLimpeza.cs",
+              "RelativeToolTip": "DLLs\\Frontend\\MenuAdicionarLimpeza.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowDYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T00:55:36.509Z",
+              "WhenOpened": "2024-12-20T15:55:56.592Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MenuAdicionarAnimal.cs",
-              "DocumentMoniker": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Frontend\\MenuAdicionarAnimal.cs",
-              "RelativeDocumentMoniker": "DLLs\\Frontend\\MenuAdicionarAnimal.cs",
-              "ToolTip": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Frontend\\MenuAdicionarAnimal.cs",
-              "RelativeToolTip": "DLLs\\Frontend\\MenuAdicionarAnimal.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAqwBkAAAAiAAAAAAAAAA==",
+              "Title": "MenuAdicionarLimpeza.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Frontend\\MenuAdicionarLimpeza.cs",
+              "RelativeDocumentMoniker": "DLLs\\Frontend\\MenuAdicionarLimpeza.cs",
+              "ToolTip": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Frontend\\MenuAdicionarLimpeza.cs [Projeto]",
+              "RelativeToolTip": "DLLs\\Frontend\\MenuAdicionarLimpeza.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T00:47:12.067Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T15:46:44.3Z",
+              "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MenuAdicionarAnimal.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Frontend\\MenuAdicionarAnimal.cs",
-              "RelativeDocumentMoniker": "DLLs\\Frontend\\MenuAdicionarAnimal.cs",
-              "ToolTip": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Frontend\\MenuAdicionarAnimal.cs [Projeto]",
-              "RelativeToolTip": "DLLs\\Frontend\\MenuAdicionarAnimal.cs [Projeto]",
+              "DocumentIndex": 2,
+              "Title": "LimpezaHabitats.cs",
+              "DocumentMoniker": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Dados\\LimpezaHabitats.cs",
+              "RelativeDocumentMoniker": "DLLs\\Dados\\LimpezaHabitats.cs",
+              "ToolTip": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Dados\\LimpezaHabitats.cs",
+              "RelativeToolTip": "DLLs\\Dados\\LimpezaHabitats.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAwC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T00:41:02.752Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2024-12-20T15:46:53.434Z",
+              "EditorCaption": ""
             }
           ]
         }

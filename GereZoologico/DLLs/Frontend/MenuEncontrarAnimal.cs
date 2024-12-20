@@ -35,13 +35,13 @@ namespace Frontend
             int verificacao = RegrasUtilizadores.ObterTipoLogado();
             if(verificacao == 1)
             {
-                listBox1.DataSource = RegrasAnimais.MostraAnimais();
+                listBox1.DataSource = RegrasHabitats.MostraHabitats();
                 listBox1.DisplayMember = "Display";
             }
             else
             {
-                listBox1.DataSource = RegrasAnimais.MostraAnimais();
-                listBox1.DisplayMember = "Display1";
+                listBox1.DataSource = RegrasHabitats.MostraHabitats();
+                listBox1.DisplayMember = "Display";
             }
 
         }

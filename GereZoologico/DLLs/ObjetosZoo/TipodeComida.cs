@@ -32,6 +32,7 @@ namespace ObjetosZoo
         private double calorias;
 
         public string Display => $"{Id} - {NomeComida} - {Calorias} - {Dieta}";
+        public string Display1 => $"{NomeComida} - {Calorias} - {Dieta}";
 
         #endregion
 
