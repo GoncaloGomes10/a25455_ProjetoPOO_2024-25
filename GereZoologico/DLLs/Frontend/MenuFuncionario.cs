@@ -78,5 +78,13 @@ namespace Frontend
             menuAdicionarLimpeza.ShowDialog();
             this.Show();
         }
+
+        private void adicionarregistoassistencia_Click(object sender, EventArgs e)
+        {
+            MenuAdicionarAssistência menuAdicionarAssistência = new MenuAdicionarAssistência();
+            this.Hide();
+            menuAdicionarAssistência.ShowDialog();
+            this.Show();
+        }
     }
 }

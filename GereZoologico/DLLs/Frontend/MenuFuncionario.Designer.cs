@@ -98,6 +98,7 @@
             adicionarregistoassistencia.TabIndex = 11;
             adicionarregistoassistencia.Text = "Registar Assistência";
             adicionarregistoassistencia.UseVisualStyleBackColor = true;
+            adicionarregistoassistencia.Click += adicionarregistoassistencia_Click;
             // 
             // adicionarregistoalimentacao
             // 
