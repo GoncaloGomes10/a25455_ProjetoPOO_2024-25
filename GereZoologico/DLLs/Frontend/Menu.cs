@@ -26,6 +26,7 @@ namespace Frontend
             RegrasAssistenciasVeterinarias.CarregarAssistenciasVeterinarias(caminhodoficheiro + "AssistenciasVeterinarias.txt");
             RegrasAlimencoes.CarregaAlimentacoes(caminhodoficheiro + "Alimentacoes.txt");
             RegrasLimpezaHabitats.CarregarLimpezasHabitats(caminhodoficheiro + "LimpezasHabitats.txt");
+            RegrasBilhetes.CarregarPrecosBilhetes(caminhodoficheiro + "PreçoBilhetes.txt");
 
             InitializeComponent();
 

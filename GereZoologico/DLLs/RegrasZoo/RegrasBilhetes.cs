@@ -83,6 +83,25 @@ namespace RegrasZoo
 
             return true;
         }
+
+        public static bool CarregarPrecosBilhetes(string filePath)
+        {
+            if (File.Exists(filePath))
+            {
+                Bilhetes.CarregarPrecosBilhetes((string)filePath);
+            }
+            else
+            {
+                throw new FileNotFoundException();
+            }
+
+            return true;
+        }
+        public static decimal ObterPreco(TIPOBILHETE tipoBilhete)
+        {
+            return Bilhetes.ObterPreco(tipoBilhete);
+        }
+
         #endregion
 
         #region Destructor

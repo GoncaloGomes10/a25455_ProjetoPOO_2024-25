@@ -27,7 +27,20 @@ namespace ObjetosZoo
         private Habitat habitat;
         private DateTime horalimpeza;
 
-        public string Display => $"{Habitat} - {HoraLimpeza}";
+        public string Display
+        {
+            get
+            {
+                // Detalhes do habitat
+                string detalhesHabitat = habitat != null
+                    ? $"{habitat.IdHabitat} - {habitat.NomeHabitat}"
+                    : "Habitat não especificado";
+
+                // Retorno formatado
+                return $"Habitat: {detalhesHabitat} - Hora da Limpeza: {horalimpeza:yyyy-MM-dd HH:mm}";
+            }
+        }
+
 
         #endregion
 

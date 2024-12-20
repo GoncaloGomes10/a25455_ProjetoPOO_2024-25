@@ -61,7 +61,7 @@ namespace Dados
         }
 
 
-        // Método para adicionar um animal a um habitat
+        
         public static bool AdicionarAnimal(int idhabitat, Animal animal)
         {
             var habitat = listahabitats.Find(h => h.IdHabitat == idhabitat);

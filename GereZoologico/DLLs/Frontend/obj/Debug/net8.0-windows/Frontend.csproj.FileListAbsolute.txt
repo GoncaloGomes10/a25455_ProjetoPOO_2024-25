@@ -27,3 +27,8 @@ C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoolo
 C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\obj\Debug\net8.0-windows\Frontend.MenuFuncionario.resources
 C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\obj\Debug\net8.0-windows\Frontend.MenuMostrar.resources
 C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\obj\Debug\net8.0-windows\Frontend.MenuRemover.resources
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\obj\Debug\net8.0-windows\Frontend.MenuEncontrarAnimal.resources
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\obj\Debug\net8.0-windows\Frontend.MenuAdicionarAlimentação.resources
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\obj\Debug\net8.0-windows\Frontend.MenuAdicionarAnimal.resources
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\obj\Debug\net8.0-windows\Frontend.MenuAdicionarAssistência.resources
+C:\Users\gonca\OneDrive\Ambiente de Trabalho\a25455_ProjetoPOO_2024-25\GereZoologico\DLLs\Frontend\obj\Debug\net8.0-windows\Frontend.MenuAdicionarLimpeza.resources

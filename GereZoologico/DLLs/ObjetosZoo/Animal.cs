@@ -45,6 +45,8 @@ namespace ObjetosZoo
         private int idade; 
         private double peso;
         public string Display => $"{Id} - {Nome} - {Especie} - {Idade} Anos - {Peso}Kg - {Dieta}";
+        public string Display1 =>$"{Nome} - {Especie} - {Idade} Anos - {Peso}Kg - {Dieta}";
+
 
         #endregion
 

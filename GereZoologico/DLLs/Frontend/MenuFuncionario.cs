@@ -40,5 +40,27 @@ namespace Frontend
             menuRemover.ShowDialog();
             this.Show();
         }
+
+        private void encontraranimal_Click(object sender, EventArgs e)
+        {
+            MenuEncontrarAnimal menuEncontrarAnimal = new MenuEncontrarAnimal();
+            this.Hide();
+            menuEncontrarAnimal.ShowDialog();
+            this.Show();
+        }
+
+        private void direcionacriarcontafunc_Click(object sender, EventArgs e)
+        {
+            MenuCriarContaFuncionario menuCriarContaFuncionario = new MenuCriarContaFuncionario();
+            menuCriarContaFuncionario.Show();
+        }
+
+        private void adicionaranimal_Click(object sender, EventArgs e)
+        {
+            MenuAdicionarAnimal menuAdicionarAnimal = new MenuAdicionarAnimal();
+            this.Hide();
+            menuAdicionarAnimal.ShowDialog();
+            this.Show();
+        }
     }
 }

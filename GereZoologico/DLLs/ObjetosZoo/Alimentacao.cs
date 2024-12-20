@@ -31,8 +31,27 @@ namespace ObjetosZoo
         private Animal animal; 
         private DateTime tempoAlimentacao; 
         private double quantidade; 
-        private TipodeComida tipocomida; 
-        
+        private TipodeComida tipocomida;
+
+        public string Display
+        {
+            get
+            {
+                // Detalhes do animal (se existir)
+                string detalhesAnimal = animal != null
+                    ? $"{animal.Nome} (ID: {animal.Id})"
+                    : "Sem animal associado";
+
+                // Detalhes do tipo de comida (acessando diretamente o nome)
+                string detalhesComida = tipocomida != null
+                    ? tipocomida.NomeComida
+                    : "Comida não especificada";
+
+                // Retorno formatado
+                return $"{id} - Animal: {detalhesAnimal} - Tipo de Comida: {detalhesComida} - Quantidade: {quantidade}kg - Tempo de Alimentação: {tempoAlimentacao:yyyy-MM-dd HH:mm}";
+            }
+        }
+
 
         #endregion
 

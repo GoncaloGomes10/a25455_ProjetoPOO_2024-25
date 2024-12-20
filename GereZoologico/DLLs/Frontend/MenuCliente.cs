@@ -29,5 +29,13 @@ namespace Frontend
         {
             this.Close();
         }
+
+        private void encontraranimal_Click(object sender, EventArgs e)
+        {
+            MenuEncontrarAnimal menuEncontrarAnimal = new MenuEncontrarAnimal();
+            this.Hide();
+            menuEncontrarAnimal.ShowDialog();
+            this.Show();
+        }
     }
 }

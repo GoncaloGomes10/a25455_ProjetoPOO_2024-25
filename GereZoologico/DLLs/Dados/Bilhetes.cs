@@ -24,6 +24,8 @@ namespace Dados
     {
         #region Attributes
         private static List<Bilhete> listabilhetes = new List<Bilhete>();
+        private static Dictionary<TIPOBILHETE, decimal> precoBilhetes = new Dictionary<TIPOBILHETE, decimal>();
+
         #endregion
 
         #region Methods
@@ -119,11 +121,63 @@ namespace Dados
             }
             return true;
         }
+
+
+        public static void CarregarPrecosBilhetes(string filepath)
+        {
+
+            var linhas = File.ReadAllLines(filepath);
+
+            foreach (var linha in linhas)
+            {
+                // Separa a linha em duas partes: tipo de bilhete e preço
+                var partes = linha.Split(',');
+
+                if (partes.Length == 2)
+                {
+                    // Converte a primeira parte para o tipo de bilhete (TIPOBILHETE)
+                    var tipoBilhete = (TIPOBILHETE)Enum.Parse(typeof(TIPOBILHETE), partes[0].Trim());
+
+                    // Converte a segunda parte para o preço (decimal)
+                    var preco = decimal.Parse(partes[1].Trim());
+
+                    // Armazena o tipo de bilhete e o preço no dicionário
+                    precoBilhetes[tipoBilhete] = preco;
+                }
+            }
+        }
+
+
+        public static decimal ObterPreco(TIPOBILHETE tipoBilhete)
+        {
+            if (precoBilhetes.ContainsKey(tipoBilhete))
+            {
+                return precoBilhetes[tipoBilhete];
+            }
+            return 0; // Retorna 0 caso o tipo de bilhete não tenha preço definido
+        }
+    
+
         #endregion
+
 
         #region Destructor
         #endregion
 
+
         #endregion
     }
+
+
+
+
+
+
+
+   
+
+
+
+
+
 }

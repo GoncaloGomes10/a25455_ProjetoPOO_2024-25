@@ -25,7 +25,24 @@ namespace ObjetosZoo
         private Animal animal;
         DateTime datadotratamento;
 
-        public string Display => $"{Habitat} - {Animal} - {Datadotratamento}";
+        public string Display
+        {
+            get
+            {
+                // Detalhes do habitat
+                string detalhesHabitat = habitat != null
+                    ? $"{habitat.IdHabitat} - {habitat.NomeHabitat}"
+                    : "Habitat não especificado";
+
+                // Detalhes do animal
+                string detalhesAnimal = animal != null
+                    ? $"{animal.Nome} (ID: {animal.Id})"
+                    : "Animal não especificado";
+
+                // Retorno formatado
+                return $"Habitat: {detalhesHabitat} - Animal: {detalhesAnimal} - Data do Tratamento: {datadotratamento:yyyy-MM-dd HH:mm}";
+            }
+        }
 
         #endregion
 

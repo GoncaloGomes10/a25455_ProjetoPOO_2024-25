@@ -29,16 +29,13 @@
         private void InitializeComponent()
         {
             comprarbilhete = new Button();
-            adicionarsaldo = new Button();
             encontraranimal = new Button();
-            saldo = new Label();
-            mostrasaldo = new TextBox();
             logout = new Button();
             SuspendLayout();
             // 
             // comprarbilhete
             // 
-            comprarbilhete.Location = new Point(137, 111);
+            comprarbilhete.Location = new Point(137, 176);
             comprarbilhete.Name = "comprarbilhete";
             comprarbilhete.Size = new Size(547, 29);
             comprarbilhete.TabIndex = 0;
@@ -46,42 +43,15 @@
             comprarbilhete.UseVisualStyleBackColor = true;
             comprarbilhete.Click += comprarbilhete_Click;
             // 
-            // adicionarsaldo
-            // 
-            adicionarsaldo.Location = new Point(137, 186);
-            adicionarsaldo.Name = "adicionarsaldo";
-            adicionarsaldo.Size = new Size(547, 29);
-            adicionarsaldo.TabIndex = 1;
-            adicionarsaldo.Text = "Adicionar Saldo";
-            adicionarsaldo.UseVisualStyleBackColor = true;
-            // 
             // encontraranimal
             // 
-            encontraranimal.Location = new Point(137, 265);
+            encontraranimal.Location = new Point(137, 248);
             encontraranimal.Name = "encontraranimal";
             encontraranimal.Size = new Size(547, 29);
             encontraranimal.TabIndex = 2;
             encontraranimal.Text = "Encontrar Animal";
             encontraranimal.UseVisualStyleBackColor = true;
-            // 
-            // saldo
-            // 
-            saldo.AutoSize = true;
-            saldo.Location = new Point(573, 28);
-            saldo.Name = "saldo";
-            saldo.Size = new Size(50, 20);
-            saldo.TabIndex = 3;
-            saldo.Text = "Saldo:";
-            // 
-            // mostrasaldo
-            // 
-            mostrasaldo.Enabled = false;
-            mostrasaldo.Location = new Point(620, 25);
-            mostrasaldo.Name = "mostrasaldo";
-            mostrasaldo.ReadOnly = true;
-            mostrasaldo.Size = new Size(125, 27);
-            mostrasaldo.TabIndex = 4;
-            mostrasaldo.WordWrap = false;
+            encontraranimal.Click += encontraranimal_Click;
             // 
             // logout
             // 
@@ -99,24 +69,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(logout);
-            Controls.Add(mostrasaldo);
-            Controls.Add(saldo);
             Controls.Add(encontraranimal);
-            Controls.Add(adicionarsaldo);
             Controls.Add(comprarbilhete);
             Name = "MenuCliente";
             Text = "MenuCliente";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Button comprarbilhete;
-        private Button adicionarsaldo;
         private Button encontraranimal;
-        private Label saldo;
-        private TextBox mostrasaldo;
         private Button logout;
     }
 }

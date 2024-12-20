@@ -59,7 +59,7 @@ namespace Dados
             string especie = tipoespetaculo.ToString();
 
             // Seleciona aleatoriamente um animal da espécie especificada
-            Animal animalescolhido = Animais.EscolherAnimalAleatorio(especie);
+            Animal? animalescolhido = Animais.EscolherAnimalAleatorio(especie);
 
             // Verifica se foi encontrado um animal para a espécie
             if (animalescolhido == null) return false;

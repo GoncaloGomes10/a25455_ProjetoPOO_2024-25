@@ -43,7 +43,21 @@ namespace ObjetosZoo
         private DateTime horario;
         private Animal animalespetaculo;
 
-        public string Display => $"{Id} - {TipoEspetaculo} - {Nome} - {horario} - {animalespetaculo}";
+        public string Display
+        {
+            get
+            {
+                // Verifica se o animal do espetáculo é válido
+                string detalhesAnimal = animalespetaculo != null
+                    ? $"{animalespetaculo.Nome} (: {animalespetaculo.Especie})"
+                    : "Sem animal associado";
+
+                // Retorna o formato desejado
+                return $"{Id} - {TipoEspetaculo} - {Nome} - {Horario:yyyy-MM-dd HH:mm} - Animal: {detalhesAnimal}";
+            }
+        }
+
+
         #endregion
 
         #region Methods

@@ -35,7 +35,7 @@ namespace Frontend
 
         private void MenuMostrar_Load(object sender, EventArgs e)
         {
-            // Popula a ComboBox com as opções
+            
             comboBoxSelecionar.Items.Add("Animais");
             comboBoxSelecionar.Items.Add("Tipos de Comida");
             comboBoxSelecionar.Items.Add("Habitats");
@@ -49,7 +49,7 @@ namespace Frontend
             // Define a seleção padrão
             comboBoxSelecionar.SelectedIndex = 0;
 
-            // Exibe a lista de Animais ao iniciar
+            
             AtualizarListBox("Animais");
         }
 
@@ -85,7 +85,7 @@ namespace Frontend
                     listBox1.DataSource = RegrasUtilizadores.MostrarTodosUtilizadores();
                     listBox1.DisplayMember = "Display";
                     break;
-                case "Espetáculos": 
+                case "Espetáculos":
                     listBox1.DataSource = RegrasEspetaculos.MostrarTodosEspetaculos();
                     listBox1.DisplayMember = "Display";
                     break;
@@ -94,6 +94,11 @@ namespace Frontend
                     listBox1.DisplayMember = "Display";
                     break;
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

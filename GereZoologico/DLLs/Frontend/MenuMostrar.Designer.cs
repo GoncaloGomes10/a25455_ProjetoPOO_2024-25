@@ -39,8 +39,9 @@
             listBox1.FormattingEnabled = true;
             listBox1.Location = new Point(386, 1);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(632, 444);
+            listBox1.Size = new Size(901, 524);
             listBox1.TabIndex = 0;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // comboBoxSelecionar
             // 
@@ -53,7 +54,7 @@
             // 
             // exit
             // 
-            exit.Location = new Point(30, 396);
+            exit.Location = new Point(12, 490);
             exit.Name = "exit";
             exit.Size = new Size(94, 29);
             exit.TabIndex = 2;
@@ -74,7 +75,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1030, 454);
+            ClientSize = new Size(1289, 531);
             Controls.Add(label1);
             Controls.Add(exit);
             Controls.Add(comboBoxSelecionar);
