@@ -2,3 +2,5 @@ a;a;a;a;a;1
 b;b;b;b;b;2
 Carla23;carlinha123;carla@gmail.com;Carla;234678543;1
 pokemon;pokemon2;pokemonzinho@gmail.com;Charizard;234987456;2
+teste;teste;teste;teste;teste;2
+bb;bb;bb;bb;bb;1

@@ -104,6 +104,11 @@ namespace ObjetosZoo
         #endregion
 
         #region OtherMethods
+        /// <summary>
+        /// Contem animal
+        /// </summary>
+        /// <param name="animal"></param>
+        /// <returns></returns>
         public bool ContemAnimal(Animal animal)
         {
             // Verifica se o animal está na lista de animais do habitat

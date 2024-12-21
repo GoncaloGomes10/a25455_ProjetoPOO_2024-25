@@ -40,11 +40,10 @@ namespace ObjetosZoo
         public Utilizador()
         {
             Username = "";
-            Password = "12345";
+            Password = "1234";
             Email = "";
             NIF = "";
-            Nome = "";
-            Id = idstatic++;
+            Id = idstatic;
             idstatic++;
         }
         public Utilizador(string username, string password, string email, string nome, string nif)
@@ -54,7 +53,7 @@ namespace ObjetosZoo
             Email = email;
             NIF = nif;
             Nome = nome;
-            Id = idstatic++;
+            Id = idstatic;
             idstatic++;
         }
         #endregion

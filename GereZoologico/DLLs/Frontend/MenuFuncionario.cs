@@ -86,5 +86,13 @@ namespace Frontend
             menuAdicionarAssistência.ShowDialog();
             this.Show();
         }
+
+        private void alterarpassword_Click(object sender, EventArgs e)
+        {
+            MenuAlterarPassword menuAlterarPassword = new MenuAlterarPassword();
+            this.Hide();
+            menuAlterarPassword.ShowDialog();
+            this.Show();
+        }
     }
 }

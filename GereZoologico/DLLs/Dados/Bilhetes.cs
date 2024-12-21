@@ -60,7 +60,10 @@ namespace Dados
             listabilhetes.Add(bilhete);
             return true;
         }
-
+        /// <summary>
+        /// Apaga todos os bilhetes da lista.
+        /// </summary>
+        /// <returns>Retorna verdadeiro se existirem bilhetes removidos, caso contrário, retorna falso.</returns>
         public static bool ApagarTodosBilhetes()
         {
             int removidos = listabilhetes.Count;
@@ -69,7 +72,11 @@ namespace Dados
             if (removidos > 0) return true;
             return false;
         }
-
+        /// <summary>
+        /// Apaga um bilhete específico da lista, com base no ID do bilhete recebido.
+        /// </summary>
+        /// <param name="bilheterecebido">Bilhete a ser removido.</param>
+        /// <returns>Retorna verdadeiro se o bilhete foi removido, caso contrário, retorna falso.</returns>
         public static bool ApagarBilhete(Bilhete bilheterecebido)
         {
             Bilhete? bilhete = listabilhetes.Find(a => a.Id == bilheterecebido.Id);
@@ -80,7 +87,12 @@ namespace Dados
             }
             return false;
         }
-
+        /// <summary>
+        /// Carrega os bilhetes a partir de um ficheiro de texto especificado e adiciona à lista.
+        /// </summary>
+        /// <param name="filePath">Caminho do ficheiro contendo os dados dos bilhetes.</param>
+        /// <returns>Retorna verdadeiro se os bilhetes foram carregados com sucesso.</returns>
+        /// <exception cref="Exception">Lança uma exceção se o formato do ficheiro for inválido.</exception>
         public static bool CarregarBilhetes(string filePath)
         {
             // Lê todas as linhas do ficheiro
@@ -109,7 +121,11 @@ namespace Dados
 
             return true;
         }
-
+        /// <summary>
+        /// Guarda todos os bilhetes da lista num ficheiro de texto.
+        /// </summary>
+        /// <param name="filePath">Caminho do ficheiro onde os bilhetes serão armazenados.</param>
+        /// <returns>Retorna verdadeiro se os bilhetes foram guardados com sucesso.</returns>
         public static bool GuardarBilhetes(string filePath)
         {
             using (StreamWriter writer = new StreamWriter(filePath)) //Open the file to write
@@ -122,7 +138,10 @@ namespace Dados
             return true;
         }
 
-
+        /// <summary>
+        /// Carrega os preços dos bilhetes a partir de um ficheiro de texto especificado.
+        /// </summary>
+        /// <param name="filepath">Caminho do ficheiro contendo os preços dos bilhetes.</param>
         public static void CarregarPrecosBilhetes(string filepath)
         {
 
@@ -147,7 +166,11 @@ namespace Dados
             }
         }
 
-
+        /// <summary>
+        /// Obtém o preço de um bilhete com base no seu tipo.
+        /// </summary>
+        /// <param name="tipoBilhete">Tipo de bilhete para o qual se deseja obter o preço.</param>
+        /// <returns>Retorna o preço do bilhete, ou 0 se o preço não estiver definido.</returns>
         public static decimal ObterPreco(TIPOBILHETE tipoBilhete)
         {
             if (precoBilhetes.ContainsKey(tipoBilhete))

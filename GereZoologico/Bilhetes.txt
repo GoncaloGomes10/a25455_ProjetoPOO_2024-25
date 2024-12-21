@@ -6,3 +6,4 @@ Espetáculo;Aquática;12
 Passeio;Aquática;10
 Passeio;Floresta;10
 Passeio;Savana;10
+Completo;Aquática;25

@@ -157,7 +157,12 @@ namespace Dados
             }
             return false;
         }
-
+        /// <summary>
+        /// Carrega as assistências veterinárias a partir de um ficheiro de texto especificado.
+        /// </summary>
+        /// <param name="filePath">Caminho do ficheiro contendo os dados das assistências veterinárias.</param>
+        /// <returns>Retorna verdadeiro se as assistências veterinárias foram carregadas com sucesso.</returns>
+        /// <exception cref="Exception">Lança uma exceção se o formato do ficheiro for inválido ou se houver erro ao buscar os habitats ou animais.</exception>
         public static bool CarregarAssistenciasVeterinarias(string filePath)
         {
 
@@ -209,7 +214,11 @@ namespace Dados
 
             return true; // Indica sucesso
         }
-
+        /// <summary>
+        /// Guarda as assistências veterinárias num ficheiro de texto especificado.
+        /// </summary>
+        /// <param name="filePath">Caminho do ficheiro onde as assistências veterinárias serão guardadas.</param>
+        /// <returns>Retorna verdadeiro se as assistências veterinárias foram guardadas com sucesso.</returns>
         public static bool GuardarAssistenciasVeterinarias(string filePath)
         {
             // Lista para armazenar as linhas que serão gravadas no ficheiro

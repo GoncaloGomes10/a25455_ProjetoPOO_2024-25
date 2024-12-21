@@ -102,7 +102,15 @@ namespace Dados
             return -1;
         }
 
-
+        /// <summary>
+        /// Carrega os registos de limpezas de habitats a partir de um ficheiro especificado. 
+        /// Cada linha do ficheiro deve conter o ID do habitat e a data/hora da limpeza, separados por ';'.
+        /// </summary>
+        /// <param name="filePath">O caminho para o ficheiro que contém os dados das limpezas.</param>
+        /// <returns>True se os dados forem carregados com sucesso.</returns>
+        /// <exception cref="Exception">
+        /// Lançada se o formato de uma linha do ficheiro for inválido ou se o habitat especificado não for encontrado.
+        /// </exception>
         public static bool CarregarLimpezasHabitats(string filePath)
         {
             // Lê todas as linhas do ficheiro
@@ -139,7 +147,12 @@ namespace Dados
 
             return true; 
         }
-
+        /// <summary>
+        /// Guarda os registos de limpezas de habitats num ficheiro especificado.
+        /// Cada linha no ficheiro será formatada com o ID do habitat e a data/hora da limpeza.
+        /// </summary>
+        /// <param name="filePath">O caminho para o ficheiro onde os dados serão guardados.</param>
+        /// <returns>True se os dados forem guardados com sucesso; False caso ocorra um erro.</returns>
         public static bool GuardarLimpezasHabitats(string filePath)
         {
             try

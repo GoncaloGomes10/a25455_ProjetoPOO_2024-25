@@ -31,6 +31,7 @@
             comprarbilhete = new Button();
             encontraranimal = new Button();
             logout = new Button();
+            alterarpassword = new Button();
             SuspendLayout();
             // 
             // comprarbilhete
@@ -55,7 +56,7 @@
             // 
             // logout
             // 
-            logout.Location = new Point(27, 397);
+            logout.Location = new Point(12, 397);
             logout.Name = "logout";
             logout.Size = new Size(94, 29);
             logout.TabIndex = 5;
@@ -63,11 +64,22 @@
             logout.UseVisualStyleBackColor = true;
             logout.Click += logout_Click;
             // 
+            // alterarpassword
+            // 
+            alterarpassword.Location = new Point(645, 397);
+            alterarpassword.Name = "alterarpassword";
+            alterarpassword.Size = new Size(143, 29);
+            alterarpassword.TabIndex = 6;
+            alterarpassword.Text = "Alterar Password";
+            alterarpassword.UseVisualStyleBackColor = true;
+            alterarpassword.Click += alterarpassword_Click;
+            // 
             // MenuCliente
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(alterarpassword);
             Controls.Add(logout);
             Controls.Add(encontraranimal);
             Controls.Add(comprarbilhete);
@@ -81,5 +93,6 @@
         private Button comprarbilhete;
         private Button encontraranimal;
         private Button logout;
+        private Button alterarpassword;
     }
 }

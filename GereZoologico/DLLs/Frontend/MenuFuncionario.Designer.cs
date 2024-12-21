@@ -39,6 +39,7 @@
             mostrarlistas = new Button();
             removerdalista = new Button();
             label2 = new Label();
+            alterarpassword = new Button();
             SuspendLayout();
             // 
             // logout
@@ -149,11 +150,22 @@
             label2.TabIndex = 25;
             label2.Text = "Manipular as Listas:";
             // 
+            // alterarpassword
+            // 
+            alterarpassword.Location = new Point(549, 327);
+            alterarpassword.Name = "alterarpassword";
+            alterarpassword.Size = new Size(213, 29);
+            alterarpassword.TabIndex = 26;
+            alterarpassword.Text = "Alterar Password";
+            alterarpassword.UseVisualStyleBackColor = true;
+            alterarpassword.Click += alterarpassword_Click;
+            // 
             // MenuFuncionario
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(841, 502);
+            Controls.Add(alterarpassword);
             Controls.Add(label2);
             Controls.Add(removerdalista);
             Controls.Add(mostrarlistas);
@@ -184,5 +196,6 @@
         private Button mostrarlistas;
         private Button removerdalista;
         private Label label2;
+        private Button alterarpassword;
     }
 }

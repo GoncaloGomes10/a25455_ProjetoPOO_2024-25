@@ -80,10 +80,10 @@ namespace Dados
         }
 
         /// <summary>
-        /// 
+        /// Apaga todas as alimentações registadas.
         /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
+        /// <param name="id">ID utilizado para identificar as alimentações a serem apagadas.</param>
+        /// <returns>Retorna verdadeiro se alguma alimentação foi removida, caso contrário, retorna falso.</returns>
         public static bool ApagarTodasAlimentacoes(int id)
         {
             int removidos = listaalimentacoes.Count;
@@ -94,12 +94,12 @@ namespace Dados
         }
 
         /// <summary>
-        /// 
+        /// Edita a quantidade de uma alimentação específica, identificada pelo seu ID.
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="novaquantidade"></param>
-        /// <returns></returns>
-        public static bool EditarAlimentacao(int id,double novaQuantidade)
+        /// <param name="id">ID da alimentação a ser editada.</param>
+        /// <param name="novaquantidade">Nova quantidade de comida para a alimentação.</param>
+        /// <returns>Retorna verdadeiro se a alimentação foi editada com sucesso, caso contrário, retorna falso.</returns>
+        public static bool EditarAlimentacao(int id, double novaQuantidade)
         {
             // Encontrar o item na lista
             var alimentacao = listaalimentacoes.Find(a => a.Id == id);
@@ -110,7 +110,12 @@ namespace Dados
             }
             return false;
         }
-
+        /// <summary>
+        /// Carrega as alimentações a partir de um ficheiro especificado e processa cada linha.
+        /// </summary>
+        /// <param name="filePath">Caminho do ficheiro que contém os dados das alimentações.</param>
+        /// <returns>Retorna verdadeiro se as alimentações foram carregadas com sucesso.</returns>
+        /// <exception cref="Exception">Lança uma exceção se o formato do ficheiro for inválido ou se não encontrar o animal ou tipo de comida.</exception>
         public static bool CarregaAlimentacoes(string filePath)
         {
             // Lê todas as linhas do ficheiro
@@ -158,7 +163,11 @@ namespace Dados
 
             return true;
         }
-
+        /// <summary>
+        /// Guarda as alimentações atuais num ficheiro especificado.
+        /// </summary>
+        /// <param name="filePath">Caminho do ficheiro onde as alimentações serão guardadas.</param>
+        /// <returns>Retorna verdadeiro se as alimentações foram guardadas com sucesso.</returns>
         public static bool GuardarAlimentacoes(string filePath)
         {
             using (StreamWriter writer = new StreamWriter(filePath)) 

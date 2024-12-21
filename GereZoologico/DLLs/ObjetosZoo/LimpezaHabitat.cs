@@ -55,34 +55,34 @@ namespace ObjetosZoo
         /// <param name="horalimpeza">A hora em que a limpeza ocorreu.</param>
         public LimpezaHabitat(Habitat habitat, DateTime horalimpeza)
         {
-            Habitat = habitat; 
-            HoraLimpeza = horalimpeza; 
+            Habitat = habitat;
+            HoraLimpeza = horalimpeza;
         }
 
         #endregion
 
         #region Properties
-     
+
         public Habitat Habitat
         {
-            get { return habitat; } 
-            set { habitat = value; } 
+            get { return habitat; }
+            set { habitat = value; }
         }
 
         public DateTime HoraLimpeza
         {
-            get { return horalimpeza; } 
-            set { horalimpeza = value; } 
+            get { return horalimpeza; }
+            set { horalimpeza = value; }
         }
 
         #endregion
 
         #region Operators
-       
+
         #endregion
 
         #region Overrides
-       
+
         #endregion
 
         #region OtherMethods
@@ -92,11 +92,10 @@ namespace ObjetosZoo
 
 
         #endregion
+
+        #region Destructor
+        #endregion
+
+        #endregion
     }
-
-
-    #region Destructor
-    #endregion
-
-    #endregion
 }

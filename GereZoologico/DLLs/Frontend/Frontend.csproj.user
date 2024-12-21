@@ -16,6 +16,9 @@
     <Compile Update="MenuAdicionarLimpeza.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="MenuAlterarPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MenuBilhete.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -61,7 +61,12 @@ namespace Dados
         }
 
 
-        
+        /// <summary>
+        /// Adiciona um animal a um habitat específico.
+        /// </summary>
+        /// <param name="idhabitat">O ID do habitat onde o animal será adicionado.</param>
+        /// <param name="animal">O objeto do tipo Animal a ser adicionado.</param>
+        /// <returns>True se o animal for adicionado com sucesso; False se o habitat não for encontrado.</returns>
         public static bool AdicionarAnimal(int idhabitat, Animal animal)
         {
             var habitat = listahabitats.Find(h => h.IdHabitat == idhabitat);
@@ -73,7 +78,16 @@ namespace Dados
             return false;
         }
 
-        // Método para remover um animal de um habitat
+        /// <summary>
+        /// Remove um animal de um habitat específico.
+        /// </summary>
+        /// <param name="idhabitat">O ID do habitat de onde o animal será removido.</param>
+        /// <param name="idAnimal">O ID do animal a ser removido.</param>
+        /// <returns>
+        /// 1 se o animal for removido com sucesso, 
+        /// -1 se o animal não for encontrado no habitat, 
+        /// -2 se o habitat não for encontrado.
+        /// </returns>
         public static int RemoverAnimal(int idhabitat, int idAnimal)
         {
             var habitat = listahabitats.Find(h => h.IdHabitat == idhabitat);
@@ -90,7 +104,14 @@ namespace Dados
             return -2;
         }
 
-        // Método para listar os animais de um habitat
+        /// <summary>
+        /// Mostra todos os animais presentes num habitat específico.
+        /// </summary>
+        /// <param name="idhabitat">O ID do habitat cujos animais serão listados.</param>
+        /// <returns>
+        /// Uma lista de objetos do tipo Animal se o habitat for encontrado; 
+        /// Null se o habitat não for encontrado.
+        /// </returns>
         public static List<Animal>? MostrarAnimais(int idhabitat)
         {
             var habitat = listahabitats.Find(h => h.IdHabitat == idhabitat);
@@ -98,7 +119,12 @@ namespace Dados
             return null;
 
         }
-
+        /// <summary>
+        /// Obtém o ID do habitat onde um animal específico está localizado.
+        /// </summary>
+        /// <param name="animal">O objeto do tipo Animal para o qual se pretende encontrar o habitat.</param>
+        /// <returns>O ID do habitat onde o animal está localizado.</returns>
+        /// <exception cref="Exception">Lançada se nenhum habitat contendo o animal for encontrado.</exception>
         public static int ObterIdHabitat(Animal animal)
         {
             foreach (var habitat in Habitats.Listahabitats)

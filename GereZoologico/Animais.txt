@@ -11,3 +11,4 @@ Rafa;Gorila;9;300,00;Omnivoro;7
 Sara;Gorila;7;400,00;Omnivoro;7
 Diogo;Panda-Vermelho;4;240,00;Omnivoro;8
 António;Camelo;4;30,00;Herbivoro;3
+Ambrósio;Dromedário;3;20,00;Herbivoro;4

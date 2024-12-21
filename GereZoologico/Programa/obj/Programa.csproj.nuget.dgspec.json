@@ -92,6 +92,9 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
+              "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Dados\\Dados.csproj": {
+                "projectPath": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Dados\\Dados.csproj"
+              },
               "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\ObjetosZoo\\ObjetosZoo.csproj": {
                 "projectPath": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\ObjetosZoo\\ObjetosZoo.csproj"
               },

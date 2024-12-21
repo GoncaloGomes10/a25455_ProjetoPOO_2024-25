@@ -30,6 +30,7 @@
       },
       "Frontend/1.0.0": {
         "dependencies": {
+          "Dados": "1.0.0",
           "ObjetosZoo": "1.0.0",
           "RegrasZoo": "1.0.0"
         },

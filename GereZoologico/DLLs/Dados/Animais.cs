@@ -91,6 +91,12 @@ namespace Dados
 
             return true;
         }
+
+        /// <summary>
+        /// Guarda os dados dos animais num ficheiro especificado, incluindo informações como nome, espécie, idade, peso, dieta e habitat.
+        /// </summary>
+        /// <param name="filePath">Caminho do ficheiro onde os dados dos animais serão guardados.</param>
+        /// <returns>Retorna 1 se os dados dos animais foram guardados com sucesso, ou -1 em caso de erro.</returns>
         public static int GuardaAnimais(string filePath)
         {
             try

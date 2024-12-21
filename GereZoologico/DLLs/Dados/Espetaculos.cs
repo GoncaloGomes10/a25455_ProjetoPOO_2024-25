@@ -72,7 +72,13 @@ namespace Dados
 
             return true;
         }
-
+        /// <summary>
+        /// Apaga todos os espetáculos da lista.
+        /// </summary>
+        /// <returns>
+        /// Retorna True se ao menos um espetáculo foi removido com sucesso;
+        /// False se não houver espetáculos para remover (lista vazia).
+        /// </returns>
         public static bool ApagarTodosEspetaculos()
         {
             int removidos = listaespetaculos.Count;
@@ -81,7 +87,14 @@ namespace Dados
             if (removidos > 0) return true;
             return false;
         }
-
+        /// <summary>
+        /// Apaga um espetáculo específico da lista, dado o objeto de espetáculo fornecido.
+        /// </summary>
+        /// <param name="espetaculorecebido">O objeto do tipo Espetáculo a ser apagado, identificado pelo seu ID.</param>
+        /// <returns>
+        /// Retorna True se o espetáculo foi removido com sucesso;
+        /// False se o espetáculo não for encontrado na lista (caso o ID não corresponda a nenhum existente).
+        /// </returns>
         public static bool ApagarEspetaculo(Espetaculo espetaculorecebido)
         {
             Espetaculo? espetáculo = listaespetaculos.Find(a => a.Id == espetaculorecebido.Id);
