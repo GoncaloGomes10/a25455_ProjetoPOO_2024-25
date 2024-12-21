@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DAA13451-DF39-410D-B00F-9AE0DAF5199E}|DLLs\\ObjetosZoo\\ObjetosZoo.csproj|c:\\users\\gonca\\onedrive\\ambiente de trabalho\\a25455_projetopoo_2024-25\\gerezoologico\\dlls\\objetoszoo\\tipodecomida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAA13451-DF39-410D-B00F-9AE0DAF5199E}|DLLs\\ObjetosZoo\\ObjetosZoo.csproj|solutionrelative:dlls\\objetoszoo\\tipodecomida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5424A6BE-5C8F-4C55-9B6D-BFE9E87B97A6}|DLLs\\Frontend\\Frontend.csproj|c:\\users\\gonca\\onedrive\\ambiente de trabalho\\a25455_projetopoo_2024-25\\gerezoologico\\dlls\\frontend\\menumostrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5424A6BE-5C8F-4C55-9B6D-BFE9E87B97A6}|DLLs\\Frontend\\Frontend.csproj|solutionrelative:dlls\\frontend\\menumostrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F720CE8D-5093-4C8D-9C2A-AF5D1E303402}|DLLs\\Dados\\Dados.csproj|c:\\users\\gonca\\onedrive\\ambiente de trabalho\\a25455_projetopoo_2024-25\\gerezoologico\\dlls\\dados\\tiposdecomidas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F720CE8D-5093-4C8D-9C2A-AF5D1E303402}|DLLs\\Dados\\Dados.csproj|solutionrelative:dlls\\dados\\tiposdecomidas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A92C2B8D-DE20-4F8B-B75F-7D2A555F5A7C}|DLLs\\RegrasZoo\\RegrasZoo.csproj|c:\\users\\gonca\\onedrive\\ambiente de trabalho\\a25455_projetopoo_2024-25\\gerezoologico\\dlls\\regraszoo\\regrastiposdecomidas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92C2B8D-DE20-4F8B-B75F-7D2A555F5A7C}|DLLs\\RegrasZoo\\RegrasZoo.csproj|solutionrelative:dlls\\regraszoo\\regrastiposdecomidas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5424A6BE-5C8F-4C55-9B6D-BFE9E87B97A6}|DLLs\\Frontend\\Frontend.csproj|c:\\users\\gonca\\onedrive\\ambiente de trabalho\\a25455_projetopoo_2024-25\\gerezoologico\\dlls\\frontend\\menuadicionaranimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5424A6BE-5C8F-4C55-9B6D-BFE9E87B97A6}|DLLs\\Frontend\\Frontend.csproj|solutionrelative:dlls\\frontend\\menuadicionaranimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,41 +23,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TiposdeComidas.cs",
-              "DocumentMoniker": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Dados\\TiposdeComidas.cs",
-              "RelativeDocumentMoniker": "DLLs\\Dados\\TiposdeComidas.cs",
-              "ToolTip": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Dados\\TiposdeComidas.cs",
-              "RelativeToolTip": "DLLs\\Dados\\TiposdeComidas.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "MenuAdicionarAnimal.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Frontend\\MenuAdicionarAnimal.cs",
+              "RelativeDocumentMoniker": "DLLs\\Frontend\\MenuAdicionarAnimal.cs",
+              "ToolTip": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Frontend\\MenuAdicionarAnimal.cs [Projeto]",
+              "RelativeToolTip": "DLLs\\Frontend\\MenuAdicionarAnimal.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T15:11:18.989Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T16:45:52.547Z",
+              "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TipodeComida.cs",
-              "DocumentMoniker": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\ObjetosZoo\\TipodeComida.cs",
-              "RelativeDocumentMoniker": "DLLs\\ObjetosZoo\\TipodeComida.cs",
-              "ToolTip": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\ObjetosZoo\\TipodeComida.cs",
-              "RelativeToolTip": "DLLs\\ObjetosZoo\\TipodeComida.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Title": "MenuMostrar.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Frontend\\MenuMostrar.cs",
+              "RelativeDocumentMoniker": "DLLs\\Frontend\\MenuMostrar.cs",
+              "ToolTip": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\Frontend\\MenuMostrar.cs [Projeto]",
+              "RelativeToolTip": "DLLs\\Frontend\\MenuMostrar.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T15:11:16.887Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RegrasTiposdeComidas.cs",
-              "DocumentMoniker": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\RegrasZoo\\RegrasTiposdeComidas.cs",
-              "RelativeDocumentMoniker": "DLLs\\RegrasZoo\\RegrasTiposdeComidas.cs",
-              "ToolTip": "C:\\Users\\gonca\\OneDrive\\Ambiente de Trabalho\\a25455_ProjetoPOO_2024-25\\GereZoologico\\DLLs\\RegrasZoo\\RegrasTiposdeComidas.cs",
-              "RelativeToolTip": "DLLs\\RegrasZoo\\RegrasTiposdeComidas.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T15:11:15.23Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T16:45:38.849Z",
+              "EditorCaption": " [Projeto]"
             }
           ]
         }
